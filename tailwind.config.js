@@ -12,7 +12,12 @@ module.exports = {
         '9px': '9px',
         '11px': '11px',
         '56px':'56px',
-      }
+        'calc':'calc(100vh - 3.5rem)',
+      },
+      colors:{
+        'white':'#FFFFFF'
+      },
+      
     },
     screens: {
       'sm': {'max': '768px'},
@@ -26,6 +31,7 @@ module.exports = {
       // 'huge' : {'min': '1920px'}
     },
 
+    
     fontFamily: {
       'Montserrat': ['Montserrat'],
       'body': ['"Montserrat"'],

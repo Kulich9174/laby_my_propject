@@ -17,6 +17,10 @@ module.exports = {
       colors:{
         'white':'#FFFFFF'
       },
+      backgroundImage: {
+        'plane': "url('../pictures/Rectangle 2.png')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      }
       
     },
     screens: {

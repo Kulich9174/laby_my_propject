@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,js,ts,jsx,tsx,md}",
+    "./src/**/*.{html,js,ts,jsx,tsx,md,png}",
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './public/**/*.{html,js,ts,jsx,tsx,mdx}',
@@ -12,22 +12,21 @@ module.exports = {
         '9px': '9px',
         '11px': '11px',
         '56px':'56px',
-        'calc':'calc(100vh - 3.5rem)',
+        'calc':'calc(100% - 4px)',
       },
       colors:{
         'white':'#FFFFFF'
       },
       backgroundImage: {
-        'plane': "url('../pictures/Rectangle 2.png')",
-        'footer-texture': "url('/img/footer-texture.png')",
+        'plane': "url('/src/assets/images/Rectangle2.png')",
       }
       
     },
     screens: {
-      'sm': {'max': '768px'},
+      'sm': {'max': '765px'},
       // => @media (max-width: 639px) { ... }
       
-      'laptop': {'min': '768px', 'max': '1280px'},
+      'laptop': {'min': '765px', 'max': '1280px'},
       // => @media (min-width: 1024px) { ... }
 
       'desktop': {'min': '1280px'},

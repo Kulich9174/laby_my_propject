@@ -1,14 +1,12 @@
 import React, {useState} from 'react';
-import Logo from '../pictures/logo_image.svg';
-import Close from '../pictures/close-line.svg'
-import HeaderStyles from './module css/Header.module.css';
+import Logo from '../assets/images/logo_image.svg';
+import Close from '../assets/images/close-line.svg'
 import Navigation from './Navigation';
 
 
 interface HeaderProps {
     menuButtonState: boolean;
     setMenuButtonState: (state: boolean) => void;
-    // footerSize: number;
 }
 
 const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) => {
@@ -26,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) 
     if(menuButtonState){
         return(
         <header>
-        <div className=' bg-[#1A2633] flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
+        <div className='flex-grow-[0] bg-[#1A2633] flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
                 <div className='grid grid-cols-2 justify-between items-center desktop:pr-[10%]'>
                     <a href='#'><img src={Logo} alt='logo' className='min-w-[30px] max-w-56px min-h-[30px] max-h-56px pr-2'/></a> 
                     <div className='text-[#FFFFFF] text-sm pb-0.5 font-bold pt-2'>
@@ -49,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) 
 
 
 
-        <div className='sm:fixed'>
+        <div className='flex flex-grow-0'>
             <Navigation menuButtonState={menuButtonState}/>
         </div>
         </header>)
@@ -98,11 +96,6 @@ const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) 
                         <rect x="3" y="11" width="23" height="1" fill="white"/>
                         <rect y="22" width="26" height="1" fill="white"/></svg>
                         <img src={Close} alt='close' className={menuButtonState ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'}/>
-                        {/* <svg className={bool ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'} xmlns="http://www.w3.org/2000/svg" 
-                        width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <rect x="0.868164" width="24" height="1" transform="rotate(45 0.868164 0)" fill="white"/>
-                        <rect x="17.8389" y="0.707031" width="24" height="1" transform="rotate(135 17.8389 0.707031)" fill="white"/>
-                        </svg> */}
                     </div>
                 </div>
                 </div>

@@ -11,11 +11,18 @@
   --gray: #80828D;
 }
 
-body {
+html,body {
   margin: 0;
   font-family: 'Montserrat',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+
+  background-color: #1A2633;
+  min-height: 100vh;
 }
 
 code {

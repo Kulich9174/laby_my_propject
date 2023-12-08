@@ -6,13 +6,15 @@ import MainPage from './components/main slide';
 
 const App: React.FC = () => {
   const [menuButtonState, setMenuButtonState] = useState<boolean>(false);
-  // const [footerSize, setFooterSize] = useState<number>(0);
 
   return (
       <>
-          <Header menuButtonState={menuButtonState} setMenuButtonState={setMenuButtonState}  /*footerSize={footerSize}*//>
+      <div className=' h-full w-full flex flex-col flex-grow-3'>
+      <Header menuButtonState={menuButtonState} setMenuButtonState={setMenuButtonState}  /*footerSize={footerSize}*//>
           <MainPage  menuButtonState={menuButtonState}/>
-          <Footer menuButtonState={menuButtonState} /*setFooterSize={setFooterSize}*//>
+          <Footer menuButtonState={menuButtonState}/>
+      </div>
+        
       </>
   );
 }

@@ -19,6 +19,7 @@ module.exports = {
       },
       backgroundImage: {
         'plane': "url('/src/assets/images/Rectangle2.png')",
+        'flowers' : "url('/src/assets/images/Rectangle1.png')",
       }
       
     },

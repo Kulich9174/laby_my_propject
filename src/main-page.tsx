@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import '../src/global.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
-import MainPage from './components/main slide';
+import MainPage from './components/Main slide/main slide';
 
 const App: React.FC = () => {
   const [menuButtonState, setMenuButtonState] = useState<boolean>(false);

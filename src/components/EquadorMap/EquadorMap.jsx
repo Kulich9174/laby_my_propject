@@ -1,12 +1,17 @@
 import React from 'react';
 import Styles from './Equador.module.css'
 
+
 export default function EquadorMap (){
 
     return(
         <>
-        <div className='equador__map'>
-
+        <div className={Styles.equador__map}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13" viewBox="0 0 11 13" fill="none">
+        <path d="M4.75837 0.6842C2.29522 0.796161 0.279904 2.69951 0 5.10669C0 5.61052 0 6.05836 0.111962 6.50621C0.111962 6.50621 0.111962 6.56219 0.167943 6.67415C0.223923 7.01004 0.335885 7.34592 0.503828 7.62583C1.00766 8.80142 2.12727 10.7608 4.70239 12.888C4.87033 13 5.09426 13 5.2622 12.888C7.83732 10.7608 8.95694 8.80142 9.46076 7.62583C9.62871 7.28994 9.74067 7.01004 9.79665 6.67415C9.79665 6.56219 9.85263 6.50621 9.85263 6.50621C9.90861 6.2263 9.96459 5.89042 9.96459 5.55453C9.85263 2.81147 7.55742 0.572238 4.75837 0.6842ZM4.92632 8.01769C3.58278 8.01769 2.51914 6.95406 2.51914 5.61052C2.51914 4.26697 3.58278 3.20334 4.92632 3.20334C6.26986 3.20334 7.27751 4.32296 7.27751 5.6665C7.27751 7.01004 6.21388 8.01769 4.92632 8.01769Z" fill="white"/>
+        </svg>
+        <p className='font-medium text-[10px] uppercase z-1'>Equador</p>
+        <p className='py-2 pr-1 text-center text-sm font-normal leading-3'>Стоимость доставки 1 фулбокса <span className='text-sm font-semibold leading-3'>от 105 $</span></p>
         </div>
         </>
     )

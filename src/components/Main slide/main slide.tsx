@@ -56,7 +56,9 @@ const MainPage: React.FC<MainPageProps> = ({ menuButtonState}) => {
                         <span className='text-[10px] font-medium uppercase py-2'>EC</span>
                     </div>
 
-                    <EquadorMap/>
+                    <div className='right-[10%]'>
+                        <EquadorMap/>
+                    </div>
 
                     <div className='flex flex-col items-center justify-center text-center'>
                         <img src={flower1} alt='picture with pink flowers' className='min-w-[90px] h-[140px]'></img>

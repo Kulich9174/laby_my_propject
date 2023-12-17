@@ -2,15 +2,14 @@
 visibility:hidden;
 }
 .container{
-    @media (max-width: 765px){
+    @media (max-width: 1050px){
         background-image:url('/src/assets/images/Rectangle2.png');
         color:white;
         background-position: center; 
         padding-left: 15px;
         padding-top: 5px;
-
     }
-    @media (min-width: 765px) and (max-width: 1280px) { 
+    @media (min-width: 1050px) and (max-width: 1280px) { 
         width: 100%; /* Ширина контейнера */
         height: 100%; /* Высота контейнера */
         background-image: url('/src/assets/images/Rectangle 1.png'), url('/src/assets/images/Rectangle2.png');
@@ -18,24 +17,34 @@ visibility:hidden;
         background-position: left center, right center; /* Позиционирование изображений */
         background-repeat: no-repeat;
 
+        
+
         color:white;
         padding-left:30px;
         padding-top: 5px;
     }
     @media (min-width: 1280px){
-
+        width: 100%; /* Ширина контейнера */
+        height: 100%; /* Высота контейнера */
+        background-image: url('/src/assets/images/Rectangle 1.png'), url('/src/assets/images/Rectangle2.png');
+        background-size: 20% 100%, 80% 100%; /* Размеры изображений */
+        background-position: left center, right center; /* Позиционирование изображений */
+        background-repeat: no-repeat;
+        color:white;
+        padding-left:30px;
+        padding-top: 5px;
     }
 }
 .textarea{
     
-    @media (max-width: 765px){
+    @media (max-width: 1050px){
         padding-left: 15px;
 
     }
-    @media (min-width: 765px) and (max-width: 1280px) { 
-        padding-left: 22%;
+    @media (min-width: 1050px) and (max-width: 1280px) { 
+        padding-left: 30%;
     }
     @media (min-width: 1280px){
-        padding-left: 22%;
+        padding-left: 30%;
     }
 }

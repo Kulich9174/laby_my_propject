@@ -1,7 +1,17 @@
 .button_size{
     border: 1px solid white;
-    padding-left:70px;
-    padding-right:70px;
-    padding-top:21px;
-    padding-bottom:21px;
+    @media(max-width: 1050px){
+        padding-left:70px;
+        padding-right:70px;
+        padding-top:21px;
+        padding-bottom:21px;
+    }
+    @media(min-width: 1050px) and (max-width: 1280px){
+        white-space: nowrap;
+        padding:14px 32px;
+    }
+    @media(min-width: 1280px){
+        padding: 25px 55px;
+        white-space: nowrap;
+    }
 }

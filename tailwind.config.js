@@ -24,13 +24,13 @@ module.exports = {
       
     },
     screens: {
-      'sm': {'max': '765px'},
+      'sm': {'max': '1050px'},
       // => @media (max-width: 639px) { ... }
       
-      'laptop': {'min': '765px', 'max': '1280px'},
+      'laptop': {'min': '1050px', 'max': '1300px'},
       // => @media (min-width: 1024px) { ... }
 
-      'desktop': {'min': '1280px'},
+      'desktop': {'min': '1300px'},
       // => @media (min-width: 1280px) { ... }
     },
 

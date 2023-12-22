@@ -17,12 +17,11 @@ const MainPage: React.FC<MainPageProps> = ({ menuButtonState }) => {
     return (
         <>
 
-            <div className={menuButtonState ? Styles.container_hidden : Styles.container}>
+            <div className={menuButtonState ? `sm:hidden min-h-screen ${Styles.container_hidden}` : Styles.container}>
                 <div className='sm:block flex'>
                     <div className='sm:py-[30px]
                         laptop:py-[2%]
                         desktop:py-[3%]'>
-                        {/* <div className='border-r h-[100hv] border-white'> */}
                         <div className={Styles.textarea}>
                             <p className="uppercase font-medium text-[10px] tracking-[1px]
                                 sm:tracking-[.8px] sm:pb-[8px] sm:text-sm">Flower Fracht Karaganda</p>
@@ -32,7 +31,6 @@ const MainPage: React.FC<MainPageProps> = ({ menuButtonState }) => {
                                     Кении, Колумбии, Чили, Голландии, Израиля </span> до конечного заказчика.</p>
                                 <p className='text-base font-semibold leading-[18px]'>Максимальный срок достовки товара - 7 дней от заказа</p>
                             </div>
-                        {/* </div> */}
                         </div>
                     </div>
 
@@ -64,7 +62,7 @@ const MainPage: React.FC<MainPageProps> = ({ menuButtonState }) => {
                     <div className='
             flex overflow-auto sm:gap-[30px] sm:w-full no-scrollbar
             laptop:gap-4 pl-[5%]
-            desktop:'>
+            desktop: gap-[30px] '>
                         <div className='flex flex-col items-center justify-center text-center sm:hidden'>
                             <div className='min-w-[90px] h-[140px]'></div>
                             <span className='text-[10px] font-medium uppercase py-2'>Equador</span>

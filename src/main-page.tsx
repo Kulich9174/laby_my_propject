@@ -11,9 +11,10 @@ const App: React.FC = () => {
   return (
       <>
       <div className=' h-full w-full flex flex-col flex-grow-3'>
-      <Header menuButtonState={menuButtonState} setMenuButtonState={setMenuButtonState}  /*footerSize={footerSize}*//>
+      <Header menuButtonState={menuButtonState} setMenuButtonState={setMenuButtonState}/>
           <MainPage  menuButtonState={menuButtonState}/>
           <Numbers menuButtonState={menuButtonState}/>
+          <div className='border-[1px] border-red-300'></div>
           <Footer menuButtonState={menuButtonState}/>
       </div>
         

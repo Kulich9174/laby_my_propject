@@ -23,13 +23,24 @@ const MainPage: React.FC<MainPageProps> = ({ menuButtonState }) => {
                         laptop:py-[2%]
                         desktop:py-[3%]'>
                         <div className={Styles.textarea}>
-                            <p className="uppercase font-medium text-[10px] tracking-[1px]
-                                sm:tracking-[.8px] sm:pb-[8px] sm:text-sm">Flower Fracht Karaganda</p>
-                            <h1 className='max-w-[40%] sm:max-w-full text-[34px] font-semibold leading-10 pr-[15px] sm:whitespace-normal'>Авиаперевозка цветов</h1>
+                            <p className="uppercase font-medium tracking-[1px]
+                                sm:tracking-[.8px] sm:pb-[8px] sm:text-sm
+                                laptop:text-[10px]
+                                desktop:text-[12px]">Flower Fracht Karaganda</p>
+                            <h1 className='max-w-[40%] font-semibold leading-10 pr-[15px]
+                            sm:max-w-full sm:text-[38px] sm:whitespace-normal
+                            laptop:text-[44px] laptop:leading-[46px] laptop:pt-[10px]
+                            desktop:text-[60px] desktop:pt-[20px] desktop:leading-[65px]'>Авиаперевозка цветов</h1>
                             <div className='sm:max-w-[85%]'>
-                                <p className='py-[12px] text-base leading-[18px] font-normal'>Занимаемся только АВИА перевозкой свеже срезанных цветов и растений из <span className='text-base font-semibold leading-[18px]'> Эквадора,
+                                <p className='text-base leading-[18px] font-normal
+                                sm:py-[15px]
+                                laptop:py-[15px]
+                                desktop:text-[16px] desktop:pt-[28px] desktop:pb-[22px]'>Занимаемся только АВИА перевозкой свеже срезанных цветов и растений из <span className='text-base font-semibold leading-[18px]'> Эквадора,
                                     Кении, Колумбии, Чили, Голландии, Израиля </span> до конечного заказчика.</p>
-                                <p className='text-base font-semibold leading-[18px]'>Максимальный срок достовки товара - 7 дней от заказа</p>
+                                <p className='text-base font-semibold 
+                                sm:leading-[18px]
+                                lapltop:leading-[26px]
+                                desktop:leading-[26px]'>Максимальный срок достовки товара - 7 дней от заказа</p>
                             </div>
                         </div>
                     </div>
@@ -40,7 +51,9 @@ const MainPage: React.FC<MainPageProps> = ({ menuButtonState }) => {
                                 <div className='sm:hidden border-solid border-white border-[1px] h-10'>
                                     {/**линия разделяющая блоки */}
                                 </div>
-                                <div className='sm:hidden flex flex-col justify-between'>
+                                <div className='sm:hidden flex flex-col justify-between leading-[24px]
+                                laptop:text-[12px]
+                                desktop:text-[14px] desktop:font-semibold'>
                                     <li className='flex pb-[6%]'>
                                         <img src={Phone_icon} alt='phone icon' className='pr-2 pl-[14px]'></img>
                                         <a href='tel:+74957378585'>+7 (495) 737 8585</a>

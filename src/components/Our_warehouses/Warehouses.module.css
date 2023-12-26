@@ -1,0 +1,29 @@
+.section_hidden{
+    display:hidden;
+    visibility:hidden;
+}
+.warehouses__section{
+    background-color:#16212E;
+    color:var(--primary-text-color);
+}
+
+.warehouses__section_container{
+    display:flex;
+    
+}
+.logo__text_name{
+    color: var(--light-blue-text);;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+.header_text{
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}

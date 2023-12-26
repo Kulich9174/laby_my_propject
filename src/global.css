@@ -34,7 +34,14 @@ html,body {
   background-color: #1A2633;
   min-height: 100vh;
 
+  scroll-behavior: smooth;
   scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 code {

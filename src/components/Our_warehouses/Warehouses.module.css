@@ -4,13 +4,15 @@
 }
 .warehouses__section{
     background-color:#16212E;
+    opacity: 0.85;
     color:var(--primary-text-color);
+    position: relative;
+    background-image: url('../../assets/images/airplane_sec.png');
+    background-size: cover;
+    background-position: center;
 }
 
-.warehouses__section_container{
-    display:flex;
-    
-}
+
 .logo__text_name{
     color: var(--light-blue-text);;
     font-size: 8px;
@@ -26,4 +28,19 @@
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
+}
+
+.warehouse__text_bold{
+    color:var(--primary-text-color);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 153.846% */
+}
+.warehouse__text_italic{
+    color:var(--invisible-text);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 153.846% */
 }

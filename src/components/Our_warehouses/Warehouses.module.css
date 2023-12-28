@@ -12,7 +12,16 @@
     background-position: center;
 }
 
-
+.conteiner{
+    @media(min-width:600px) and (max-width:1050px){
+        max-width:90%;
+        padding-left:1%;
+        padding-right:1%;
+    }
+    @media(min-width:1050px){
+        /* max-width:90%; */
+    }
+}
 .logo__text_name{
     color: var(--light-blue-text);;
     font-size: 8px;
@@ -23,7 +32,7 @@
     text-transform: uppercase;
 }
 .header_text{
-    text-align: center;
+    /* text-align: center; */
     font-size: 28px;
     font-style: normal;
     font-weight: 600;

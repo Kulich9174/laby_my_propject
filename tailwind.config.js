@@ -46,6 +46,10 @@ module.exports = {
       base: '12px',
       xl: '1.25rem',
       '2xl': '1.563rem',
+    },
+    
+    gridTemplateColumns: {
+      '40/60': '40% 60%',
     }
   },
   plugins: [],

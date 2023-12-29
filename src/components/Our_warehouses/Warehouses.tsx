@@ -19,18 +19,19 @@ const Warehouses: React.FC<WarehousesProps> = ({ menuButtonState }) => {
                 <div className=' px-[15px] relative
                 sm:flex 
                 laptop:grid
-                desktop:'>
+                desktop:grid'>
                     {/* CONTAINER */}
                     <div className=" relative
                     sm:flex-col sm:justify-center sm:items-center sm:pt-[60px] sm:flex
                     laptop:grid laptop:grid-cols-40/60
-                    desktop:">
+                    desktop:grid desktop:grid-cols-2">
                         <div className="
                         sm:justify-center sm:items-center sm:flex sm:flex-col
-                        laptop:py-[80px]">
+                        laptop:py-[80px]
+                        desktop:py-[120px]">
                             <p className={`
                         sm:pb-[10px]
-                        laptop:pb-3 
+                        laptop:pb-3
                         desktop:pb-[20px] 
                         ${Styles.logo__text_name}`}> Flower fracht Karaganda</p>
                             <h1 className={`
@@ -78,7 +79,9 @@ const Warehouses: React.FC<WarehousesProps> = ({ menuButtonState }) => {
                             </div> 
 
                             {/* SMALL AIRPLANE */}
-                            <img className='absolute right-0 top-[120px]' src={smallAirplane} alt="small airplane"/>
+                            <img className='absolute
+                            sm:hidden
+                            laptop:right-[30%] laptop:top-[25%]' src={smallAirplane} alt="small airplane"/>
                             {/* MAP */}
                             <div className="w-full overflow-hidden cover">
                                 <img src={map} alt="map" />

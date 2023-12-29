@@ -3,8 +3,8 @@
     visibility:hidden;
 }
 .warehouses__section{
-    background-color:#16212E;
-    opacity: 0.85;
+    background-color:#041D2C;
+    opacity: 1;
     color:var(--primary-text-color);
     position: relative;
     background-image: url('../../assets/images/airplane_sec.png');
@@ -23,13 +23,26 @@
     }
 }
 .logo__text_name{
-    color: var(--light-blue-text);;
-    font-size: 8px;
+    color: var(--light-blue-text);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    letter-spacing: 0.8px;
     text-transform: uppercase;
+
+    @media (max-width:600px) {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+    @media(min-width:600px) and (max-width:1050px){
+        font-size:10px;
+        letter-spacing:1.2px;
+    }
+    @media(min-width:1050px)and(max-width:1300px){
+        font-size:10px;
+        letter-spacing:1.2px;
+    }
+    
+   
 }
 .header_text{
     /* text-align: center; */

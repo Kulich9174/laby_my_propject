@@ -50,6 +50,7 @@ module.exports = {
     
     gridTemplateColumns: {
       '40/60': '40% 60%',
+      '50/50':'50% 50%',
     }
   },
   plugins: [],

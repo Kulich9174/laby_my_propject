@@ -24,7 +24,7 @@ const Warehouses: React.FC<WarehousesProps> = ({ menuButtonState }) => {
                     <div className=" relative
                     sm:flex-col sm:justify-center sm:items-center sm:pt-[60px] sm:flex
                     laptop:grid laptop:grid-cols-40/60
-                    desktop:grid desktop:grid-cols-2">
+                    desktop:grid desktop:grid-cols-50/50">
                         <div className="
                         sm:justify-center sm:items-center sm:flex sm:flex-col
                         laptop:py-[80px]
@@ -32,12 +32,12 @@ const Warehouses: React.FC<WarehousesProps> = ({ menuButtonState }) => {
                             <p className={`
                         sm:pb-[10px]
                         laptop:pb-3
-                        desktop:pb-[20px] 
+                        desktop:pb-5 
                         ${Styles.logo__text_name}`}> Flower fracht Karaganda</p>
                             <h1 className={`
                         sm:pb-[30px]
-                        laptop:pb-3
-                        desktop:pb-[20px] 
+                        laptop:pb-6
+                        desktop:pb-[54px] 
                         ${Styles.header_text}`}>Откуда мы везем наши цветы</h1>
 
                             {/* TEXT SECTION */}
@@ -47,8 +47,8 @@ const Warehouses: React.FC<WarehousesProps> = ({ menuButtonState }) => {
                                 </span>
                                 <p className={`
                         sm:py-[14px]
-                        laptop:
-                        desktop:
+                        laptop:py-5
+                        desktop:py-6
                         ${Styles.warehouse__text_italic}`}>Прекрасные цветы, несут в себе великолепие и свежесть, привезенные непосредственно из самых питательных уголков природы. Наша компания Flower Fracht Karaganda гордится тем, что мы тщательно подбираем каждый вид цветов, организуя прямые поставки из регионов, известных своими уникальными сортами и безукоризненным качеством.</p>
                                 <p className={`
                         sm:pb-[30px]

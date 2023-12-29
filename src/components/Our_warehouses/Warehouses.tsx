@@ -27,8 +27,8 @@ const Warehouses: React.FC<WarehousesProps> = ({ menuButtonState }) => {
                     desktop:grid desktop:grid-cols-50/50">
                         <div className="
                         sm:justify-center sm:items-center sm:flex sm:flex-col
-                        laptop:py-[80px]
-                        desktop:py-[120px]">
+                        laptop:py-[80px] laptop:pr-[5%]
+                        desktop:py-[120px] desktop:max-w-[85%]">
                             <p className={`
                         sm:pb-[10px]
                         laptop:pb-3
@@ -43,48 +43,57 @@ const Warehouses: React.FC<WarehousesProps> = ({ menuButtonState }) => {
                             {/* TEXT SECTION */}
                             <div className={Styles.conteiner}>
                                 <span className={Styles.warehouse__text_bold}>
-                                    Наши цветы — не только произведения природы, но и воплощение мирового многообразия, доставляемого нам прямо из живописных уголков планеты, чтобы каждый букет из Flower Fracht Karaganda стал уникальным путеводителем в мир красоты и элегантности.
+                                    Наши цветы — не только произведения природы, но и воплощение мирового многообразия, доставляемого нам прямо из живописных уголков планеты.
                                 </span>
                                 <p className={`
                         sm:py-[14px]
                         laptop:py-5
                         desktop:py-6
-                        ${Styles.warehouse__text_italic}`}>Прекрасные цветы, несут в себе великолепие и свежесть, привезенные непосредственно из самых питательных уголков природы. Наша компания Flower Fracht Karaganda гордится тем, что мы тщательно подбираем каждый вид цветов, организуя прямые поставки из регионов, известных своими уникальными сортами и безукоризненным качеством.</p>
+                        ${Styles.warehouse__text_italic}`}>Прекрасные цветы, несут в себе великолепие и свежесть, привезенные непосредственно из самых питательных уголков природы. Наша компания Flower Fracht Karaganda гордится тем, что мы тщательно подбираем каждый вид цветов.</p>
                                 <p className={`
                         sm:pb-[30px]
                         laptop:pb-[40px]
-                        desktop:
+                        desktop:pb-[70px]
                         ${Styles.warehouse__text_italic}`}>
                                     Мы привозим цветы и растения в горшках из <span className={Styles.warehouse__text_bold}>Эквадора, Кении, Колумбии, Чили, Голландии, Израиля</span> и доставляем их свежими во все регионы <span>СНГ</span>.</p>
                             </div>
                             {/* BUTTON */}
                             <div className="sm:pb-[50px]">
-                                <Button />
+                                <button className={Styles.warehouse__button_size}>
+                                    Связаться с нами
+                                </button>
                             </div>
                         </div>
 
                         <div className="relative
                         sm:flex-col sm:items-center sm:justify-center sm:flex
                         ">
-                            <div className="flex justify-end items-start">
+                            <div className="flex 
+                            laptop:justify-end laptop:items-start">
                                 <img src={countriesLaptop} alt="" className="
                                 sm:hidden
-                                laptop:pb-5 "/>
+                                pb-5 "/>
                             </div>
-                            
+
                             {/* PARAGRAF LAPTOP/DESKTOP*/}
                             <div className="sm:hidden
-                            laptop: pb-10 pl-[20px] laptop:max-w-[30%]">
+                            laptop:pb-10 ml-[20%] max-w-[30%]
+                            desktop:pb-[60px] desktop:pl-5">
                                 <p className={Styles.warehouse__text_italic}>Доставка в Москву занимает от <span className={Styles.warehouse__text_bold}>1</span> до <span className={Styles.warehouse__text_bold}>2</span> дней</p>
-                            </div> 
+                            </div>
 
                             {/* SMALL AIRPLANE */}
                             <img className='absolute
                             sm:hidden
-                            laptop:right-[30%] laptop:top-[25%]' src={smallAirplane} alt="small airplane"/>
+                            laptop:right-[30%] laptop:top-[25%]
+                            desktop:right-[10%] desktop:top-[25%]' src={smallAirplane} alt="small airplane" />
                             {/* MAP */}
-                            <div className="w-full overflow-hidden cover">
-                                <img src={map} alt="map" />
+                            <div className="w-full overflow-hidden contain
+                            laptop:flex laptop:justify-center laptop:items-center">
+                                <img src={map} alt="map" className="
+                                sm:w-[850px] sm:h-[100%] sm:overflow-hidden
+                                laptop:w-full laptop:h-full
+                                desktop:w-[850px] desktop:h-[470px]"/>
                             </div>
 
                             {/* PARAGRAF SMARTPHONE*/}

@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) 
         return(
         <header>
         <div className='flex-grow-[0] bg-[#1A2633] flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
-                <div className='grid grid-cols-2 justify-between items-center desktop:pr-[10%]'>
+                <div className='grid grid-cols-50/50 justify-between items-center desktop:pr-[10%]'>
                     <a href='#'><img src={Logo} alt='logo' className='min-w-[30px] max-w-56px min-h-[30px] max-h-56px pr-2'/></a> 
                     <div className='text-[#FFFFFF] text-sm pb-0.5 font-bold pt-2'>
                         <p  className='pb-0.5'>Flower</p>

@@ -15,7 +15,7 @@ const App: React.FC = () => {
           <MainPage  menuButtonState={menuButtonState}/>
           <Numbers menuButtonState={menuButtonState}/>
           <Warehouses menuButtonState={menuButtonState}/>
-          <div className='border-[1px] border-red-300'></div>
+          {/* <div className='border-[1px] border-red-300'></div> */}
           <Footer menuButtonState={menuButtonState}/>
       </div>
         

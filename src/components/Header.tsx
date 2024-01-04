@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) 
     if(menuButtonState){
         return(
         <header>
-        <div className='flex-grow-[0] bg-[#1A2633] flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
+            <div className='flex-grow-[0] bg-[#1A2633] flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
                 <div className='flex justify-between items-center desktop:pr-[10%]'>
                     <a href='#'><img src={Logo} alt='logo' className='min-w-[30px] max-w-56px min-h-[30px] max-h-56px pr-2'/></a> 
                     <div className='text-[#FFFFFF] text-sm pb-0.5 font-bold pt-2'>
@@ -32,17 +32,15 @@ const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) 
                         <p  className='pb-0.5'>Fracht</p>
                         <p  className='pb-0.5'>Karaganda</p>
                     </div>
-                    
-                </div>
+                </div> 
                 <div id='toggleID' className='pl-[1%] w-32px h-32px sm:pl-2 laptop:hidden desktop:hidden'onClick={changeMenuState}>
                     <svg className={menuButtonState ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
                         <rect width="26" height="1" fill="white"/>
                         <rect x="3" y="11" width="23" height="1" fill="white"/>
                         <rect y="22" width="26" height="1" fill="white"/></svg>
                         <img src={Close} alt='close' className={menuButtonState ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'}/>
-                        
-                    </div>
                 </div>
+            </div>
         
 
 
@@ -57,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) 
             <>
             <header className='bg-[#1A2633]' >
                 <div className='flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
-                <div className='grid grid-cols-2 justify-between items-center desktop:pr-[10%]'>
+                <div className='flex justify-between items-center desktop:pr-[10%]'>
                     <a href='#'><img src={Logo} alt='logo' className='min-w-[30px] max-w-56px min-h-[30px] max-h-56px pr-2'/></a> 
                     <div className='text-[#FFFFFF] text-sm pb-0.5 font-bold pt-2'>
                         <p  className='pb-0.5'>Flower</p>

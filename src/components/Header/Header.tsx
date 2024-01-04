@@ -1,38 +1,38 @@
-import React, {useState} from 'react';
-import Logo from '../assets/images/logo_image.svg';
-import Close from '../assets/images/close-line.svg'
-import Navigation from './Navigation';
-
-
+import React, { useEffect } from 'react';
+import Close from '../../assets/images/close-line.svg';
+import Navigation from '../Navigation';
+import HeaderLogo from './HeaderLogo';
+import {changeValue} from '../../state/HeaderMenuReducer/HeaderMenuReducer';
+import { useDispatch,useSelector } from 'react-redux';
+import { RootState } from '../../state/store';
 interface HeaderProps {
     menuButtonState: boolean;
-    setMenuButtonState: (state: boolean) => void;
+    // setMenuButtonState: (state: boolean) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) => {
+const Header: React.FC<HeaderProps> = ({ menuButtonState }) => {
+    const dispatch = useDispatch();
+    const headerstatevalue = useSelector((state: RootState)=>state.headerMenuState.value);
+    // const changeMenuState = () => {
+    //     setMenuButtonState(!menuButtonState);
+    // };
 
     const changeMenuState = () => {
-        setMenuButtonState(!menuButtonState);
-    };
-
-
+        dispatch(changeValue())
+    }
     function ChangeLanguage(){
 
     }
-
+useEffect(()=>{
+    console.log('header',headerstatevalue)
+})
 
     if(menuButtonState){
         return(
         <header>
             <div className='flex-grow-[0] bg-[#1A2633] flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
-                <div className='flex justify-between items-center desktop:pr-[10%]'>
-                    <a href='#'><img src={Logo} alt='logo' className='min-w-[30px] max-w-56px min-h-[30px] max-h-56px pr-2'/></a> 
-                    <div className='text-[#FFFFFF] text-sm pb-0.5 font-bold pt-2'>
-                        <p  className='pb-0.5'>Flower</p>
-                        <p  className='pb-0.5'>Fracht</p>
-                        <p  className='pb-0.5'>Karaganda</p>
-                    </div>
-                </div> 
+                <HeaderLogo/> 
+                {/* крестик */}
                 <div id='toggleID' className='pl-[1%] w-32px h-32px sm:pl-2 laptop:hidden desktop:hidden'onClick={changeMenuState}>
                     <svg className={menuButtonState ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
                         <rect width="26" height="1" fill="white"/>
@@ -42,9 +42,6 @@ const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) 
                 </div>
             </div>
         
-
-
-
         <div className='flex flex-grow-0'>
             <Navigation menuButtonState={menuButtonState}/>
         </div>
@@ -55,16 +52,7 @@ const Header: React.FC<HeaderProps> = ({ menuButtonState, setMenuButtonState }) 
             <>
             <header className='bg-[#1A2633]' >
                 <div className='flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
-                <div className='flex justify-between items-center desktop:pr-[10%]'>
-                    <a href='#'><img src={Logo} alt='logo' className='min-w-[30px] max-w-56px min-h-[30px] max-h-56px pr-2'/></a> 
-                    <div className='text-[#FFFFFF] text-sm pb-0.5 font-bold pt-2'>
-                        <p  className='pb-0.5'>Flower</p>
-                        <p  className='pb-0.5'>Fracht</p>
-                        <p  className='pb-0.5'>Karaganda</p>
-                    </div>
-                    
-                </div>
-    
+                <HeaderLogo/>
                 {/* menu bar */}
                 <Navigation menuButtonState={menuButtonState}/>
                 <div className='flex items-center gap-2 sm:pr-5px laptop:float-left'>

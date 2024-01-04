@@ -1,4 +1,5 @@
 import Button from '../ButtonConnect/Button_connection';
+import React from 'react';
 import flower1 from '../../assets/images/flower1.jpg';
 import EquadorMap from '../EquadorMap/EquadorMap';
 import flower2 from '../../assets/images/flower2.jpg';
@@ -7,17 +8,16 @@ import flower4 from '../../assets/images/Rectangle 1.png';
 import Phone_icon from '../../assets/images/Phone_icon.svg';
 import Mail_icon from '../../assets/images/Mail_icon.svg';
 import Styles from './MainSlide.module.css';
+import { useSelector} from 'react-redux';
+import { RootState } from '../../state/store';
 
-interface MainPageProps {
-    menuButtonState: boolean;
-}
 
-const MainPage: React.FC<MainPageProps> = ({ menuButtonState }) => {
+const MainPage: React.FC = () => {
+    const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
 
     return (
         <>
-
-            <div className={menuButtonState ? `sm:hidden min-h-screen ${Styles.container_hidden}` : Styles.container}>
+            <div className={headerStateValue ? `sm:hidden min-h-screen ${Styles.container_hidden}` : Styles.container}>
                 <div className='sm:block flex'>
                     <div className='sm:py-[30px]
                         laptop:py-[2%]

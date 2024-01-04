@@ -1,20 +1,18 @@
 import React from "react";
 import Styles from './Warehouses.module.css';
-import Button from "../ButtonConnect/Button_connection";
 import map from '../../assets/images/MAPS2.svg';
-import Ruler from '../Ruler_cities/Ruler_cities';
 import countries from '../../assets/images/Country.svg';
 import countriesLaptop from '../../assets/images/Countries_laptop.svg';
 import smallAirplane from '../../assets/images/Small_airplane.svg';
-interface WarehousesProps {
-    menuButtonState: boolean;
-}
+import { useSelector} from 'react-redux';
+import { RootState } from '../../state/store';
 
-const Warehouses: React.FC<WarehousesProps> = ({ menuButtonState }) => {
+const Warehouses: React.FC = () => {
+    const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
 
     return (
         <>
-            <section className={menuButtonState ? `sm:hidden min-h-screen ${Styles.section_hidden}` : Styles.warehouses__section} >
+            <section className={headerStateValue ? `sm:hidden min-h-screen ${Styles.section_hidden}` : Styles.warehouses__section} >
                 {/* CONTAINER GLOBAL*/}
                 <div className=' px-[15px] relative
                 sm:flex 

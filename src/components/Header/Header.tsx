@@ -5,41 +5,41 @@ import HeaderLogo from './HeaderLogo';
 import {changeValue} from '../../state/HeaderMenuReducer/HeaderMenuReducer';
 import { useDispatch,useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
-interface HeaderProps {
-    menuButtonState: boolean;
-    // setMenuButtonState: (state: boolean) => void;
-}
+// interface HeaderProps {
+//     headerStateValue: boolean;
+//     // setheaderStateValue: (state: boolean) => void;
+// }
 
-const Header: React.FC<HeaderProps> = ({ menuButtonState }) => {
+const Header: React.FC = () => {
     const dispatch = useDispatch();
-    const headerstatevalue = useSelector((state: RootState)=>state.headerMenuState.value);
+    const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
     // const changeMenuState = () => {
-    //     setMenuButtonState(!menuButtonState);
+    //     setheaderStateValue(!headerStateValue);
     // };
 
     const changeMenuState = () => {
         dispatch(changeValue())}
 useEffect(()=>{
-    console.log('header',headerstatevalue)
+    console.log('header',headerStateValue)
 })
 
-    if(menuButtonState){
+    if(headerStateValue){
         return(
         <header>
             <div className='flex-grow-[0] bg-[#1A2633] flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
                 <HeaderLogo/> 
                 {/* крестик */}
                 <div id='toggleID' className='pl-[1%] w-32px h-32px sm:pl-2 laptop:hidden desktop:hidden'onClick={changeMenuState}>
-                    <svg className={menuButtonState ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
+                    <svg className={headerStateValue ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
                         <rect width="26" height="1" fill="white"/>
                         <rect x="3" y="11" width="23" height="1" fill="white"/>
                         <rect y="22" width="26" height="1" fill="white"/></svg>
-                        <img src={Close} alt='close' className={menuButtonState ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'}/>
+                        <img src={Close} alt='close' className={headerStateValue ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'}/>
                 </div>
             </div>
         
         <div className='flex flex-grow-0'>
-            <Navigation menuButtonState={menuButtonState}/>
+            <Navigation/>
         </div>
         </header>)
     }
@@ -50,7 +50,7 @@ useEffect(()=>{
                 <div className='flex w-full justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
                 <HeaderLogo/>
                 {/* menu bar */}
-                <Navigation menuButtonState={menuButtonState}/>
+                <Navigation/>
                 <div className='flex items-center gap-2 sm:pr-5px laptop:float-left'>
                     <div className='border-solid border border-[#80828D]'>
                         <p className='text-[#FFFFFF] font-header not-italic font-semibold uppercase text-sm tracking-[1.2px] px-9px py-11px'>RU</p>
@@ -73,11 +73,11 @@ useEffect(()=>{
     
                     {/* menu burger */}
                     <div id='toggleID' className='pl-[1%] w-32px h-32px sm:pl-2 laptop:hidden desktop:hidden'onClick={changeMenuState}>
-                    <svg className={menuButtonState ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
+                    <svg className={headerStateValue ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
                         <rect width="26" height="1" fill="white"/>
                         <rect x="3" y="11" width="23" height="1" fill="white"/>
                         <rect y="22" width="26" height="1" fill="white"/></svg>
-                        <img src={Close} alt='close' className={menuButtonState ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'}/>
+                        <img src={Close} alt='close' className={headerStateValue ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'}/>
                     </div>
                 </div>
                 </div>

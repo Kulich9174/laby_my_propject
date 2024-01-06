@@ -1,4 +1,5 @@
 import Logo from '../../assets/images/logo_image.svg';
+import React from 'react';
 
 function HeaderLogo (){
     return(

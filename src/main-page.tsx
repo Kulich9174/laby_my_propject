@@ -3,7 +3,7 @@ import '../src/global.css'
 import Header from './components/Header/Header';
 import Footer from './components/Footer';
 import {MainPage} from './pages/Main/MainPage';
-import { Route,Routes,Link } from 'react-router-dom';
+import { Route,Routes } from 'react-router-dom';
 import {Info} from './pages/AboutUs/AboutUs';
 import { Contacts } from './pages/Contacts/Contacts';
 import { ErrorPage } from './pages/ErrorPage/ErrorPage';

@@ -1,13 +1,18 @@
-import React,{useState} from "react";
-import Style from './CalculationShipment.module.css';
+import React,{ useState} from "react";
+import Style from './CalculationShipment_1step.module.css';
+import location_icon from '../../assets/images/Location_icon.svg';
+import { useSelector} from 'react-redux';
+import { RootState } from '../../state/store';
+
 
 const CaulculationShipment = () => {
-    const [country, setCountry] = useState<string>(''); // Тип для страны
+    const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
+    const [country, setCountry] = useState<string>('ecuador'); // Тип для страны
     const currentDate = new Date();
-    const formattedDate = currentDate.toISOString().substr(0, 10);
+    const formattedDate = currentDate.toISOString();
     const [startDate, setStartDate] = useState<string>(formattedDate); // Тип для начальной даты
-    const [shipmentDate, setShipmentDate] = useState<string>('');
-    const [shipmentCollectionDate, setShipmentCollectionDate] = useState(formattedDate);
+    const [shipmentDate, setShipmentDate] = useState<string>('XX-XX-2024');
+    const [shipmentCollectionDate, setShipmentCollectionDate] = useState('XX-XX-2024');
 
     const countryNames: { [key: string]: string } = {
         ecuador: 'Эквадор',
@@ -23,6 +28,7 @@ const CaulculationShipment = () => {
         setCountry(event.target.value); // Обновить состояние при выборе страны
     };
 
+
     function calculateShipmentDateCollection(date:string) {
         const current = new Date(date);
         current.setDate(current.getDate() + 3);
@@ -34,7 +40,7 @@ const CaulculationShipment = () => {
 
     const calculateShipmentDate = (date: string) => {
         const current = new Date(date);
-        current.setDate(current.getDate() + 10);  // Добавляем 10 дней к текущей дате
+        current.setDate(current.getDate() + 7);  // Добавляем 10 дней к текущей дате
         // Форматируем дату в строку "день месяц в 16:00"
         const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
         const shipmentDateString = new Intl.DateTimeFormat('ru-RU', options).format(current);
@@ -43,8 +49,8 @@ const CaulculationShipment = () => {
 
     return(
         <>
-            <section className={Style.calc__container_section}>
-                <div className={Style.calc__container}>
+            <section className={headerStateValue ? `sm:hidden min-h-screen ${Style.section_hidden}` : Style.calc__container_section}>
+                <div className={Style.calc__container_stepOne}>
                     <p className={Style.calc__logo_textName}>flower fracht karaganda</p>
                     <h2 className={Style.calc__header_text}>Калькулятор доставки</h2>
 
@@ -160,9 +166,11 @@ const CaulculationShipment = () => {
                             </div>
                         </div>
                         </fieldset>
-                        <div className={Style.separate_line}></div>
-                        {/* DATE CHOICE BAR */}
-                        <div>
+                </div>
+                <div className={Style.separate_line}></div>
+                <div className={Style.calc__container_stepTwo}>
+                    {/* DATE CHOICE BAR */}
+                    <div>
                         <legend> 
                                 <div className={Style.calc__text_step}>
                                     <div className={Style.calc__container_number}>
@@ -171,19 +179,17 @@ const CaulculationShipment = () => {
                                     <p className={Style.calc__text}>Что бы рассчитать дату доставки выберите день когда планируете сделать заказ</p>
                                 </div>
                         </legend>
-                        <div>
-                        
-
-
-
-
-                            <div>
-                                <img src="" alt="location icon"/>
-                                <p>Выбранная страна: {countryNames[country]}</p>
+                        <div className='flex flex-col'>
+                            <div className="flex gap-2 sm:pb-6">
+                                <img src={location_icon} alt="location icon"/>
+                                <p className="w-full uppercase leading-6">{countryNames[country]}</p>
                             </div>
-                            <div>
+                        <div  className={Style.calc__container_results}>
+                            <div className={Style.calc__container_results_date}>
                                 <label>Дата заказа</label>
-                                <input  type="date" 
+                                <span>
+                                    <span></span>
+                                    <input  type="date" className={Style.datepicker_input} 
                                         id="start" 
                                         name="ship-start" 
                                         value={startDate} // Используем состояние для значения
@@ -194,20 +200,22 @@ const CaulculationShipment = () => {
                                             calculateShipmentDateCollection(e.target.value);
                                             calculateShipmentDate(e.target.value);
                                             }} />
+                                </span>
                             </div>
-                            <div>
+                            <div className={`${Style.calc__container_results_date} `}>
                                 <p>Конец сбора заказов</p>
                                 <p>{shipmentCollectionDate}</p>
                             </div>
-                            <div>
+                            <div className={Style.calc__container_results_date}>
                                 <p>Доставка</p>
                                 <p>7 дней</p>
                             </div>
 
-                            <div>
+                            <div className={Style.calc__container_results_date}>
                                 <p>День поставки</p>
                                 <p>{shipmentDate}</p>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>

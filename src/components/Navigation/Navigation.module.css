@@ -1,0 +1,19 @@
+
+.nav__link{
+    media(max-width: 1050px){
+        padding-top:24px;
+    }
+}
+
+.nav__link:hover{
+    color: #227CE4;
+    media(max-width: 1050px){
+        color:#227CE4;
+        background-color:#28394c;
+    }
+}
+.active{
+    cursor:default;
+    color: #227CE4;
+    font-weight:600;
+}

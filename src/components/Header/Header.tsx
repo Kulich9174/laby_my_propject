@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Close from '../../assets/images/close-line.svg';
-import Navigation from '../Navigation';
+import Navigation from '../Navigation/Navigation';
 import HeaderLogo from './HeaderLogo';
 import {changeValue} from '../../state/HeaderMenuReducer/HeaderMenuReducer';
 import { useDispatch,useSelector } from 'react-redux';

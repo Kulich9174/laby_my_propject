@@ -1,0 +1,173 @@
+.calc__container_section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.calc__container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:60px 15px ;
+}
+
+.calc__logo_textName{
+    color: var(--light-blue-text);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    padding-bottom:10px;
+}
+
+.calc__header_text{
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 114.286% */
+
+    padding-bottom:30px;
+}
+
+.calc__text_step{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:25px;
+}
+
+.calc__container_number{
+    border: 1px solid rgba(188, 201, 218, 0.2);
+    min-width:40px;
+    min-height:40px;
+    border-radius:1px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.calc__number{
+    color: var(--light-blue-text);
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.calc__text{
+    padding-left:15px;
+
+    color: var(--invisible-text);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 153.846% */
+}
+
+.calc__radio_container{
+    display: grid;
+    grid-template-rows:20px;
+    grid-template-columns: 50% 50%;
+    gap:20px;
+    padding-bottom:35px;
+}
+
+.custom__radio{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+}
+
+
+/* Скрываем штатные радио-кнопки */
+.custom__radio input{
+    position: absolute;
+    opacity: 0;
+    display: block;
+    height: 0;
+    width: 0;
+}
+/* Устанавливаем параметры элементов, заменяющих штатные радио-кнопки */
+.custom__radio .radio{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    margin-right: 5px;
+    border: 1px solid rgba(34, 124, 228, 0.36);
+    background-color: inherit;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+    transition: .5s all;
+}
+
+  /* Устанавливаем параметры элементов, заменяющих штатные радио-кнопки при наведении */
+.custom__radio:hover .radio{
+    background-color: inherit;
+    transform: scale(1.1);
+    box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
+}
+
+  /* Устанавливаем параметры элементов, заменяющих штатные выбранные радио-кнопки */
+/* .custom__radio input:checked + .radio{
+    border-color: rgba(34, 124, 228, 0.36);
+    background-color: inherit;
+    box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
+    cursor: default;
+}   */
+  /* Добавляем декор */
+.custom__radio:hover .radio::before, .custom__radio input:checked + .radio::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background-color:rgba(34, 124, 228, 0.4);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.custom__radio input:checked + .radio::before{
+    background-color: rgba(34, 124, 228, 1);
+    box-shadow: 1px 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+  /* Устанавливаем параметры подписей радио-кнопок */
+.custom__radio input + .radio + .text{
+    cursor: pointer;
+    color: var(--White, #FFF);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    margin-right: 15px;
+    align-self: center;
+}
+
+/* Устанавливаем параметры подписей выбранных радио-кнопок
+.custom__radio input:checked + .radio + .text{
+    color: #555;
+    cursor: default;
+  } */
+
+.separate_line{
+    border: 1px solid rgba(85, 122, 161, 0.30);
+    /* width:100svw; */
+}

@@ -9,6 +9,20 @@ const CaulculationShipment = () => {
     const [shipmentDate, setShipmentDate] = useState<string>('');
     const [shipmentCollectionDate, setShipmentCollectionDate] = useState(formattedDate);
 
+    const countryNames: { [key: string]: string } = {
+        ecuador: 'Эквадор',
+        kenia: 'Кения',
+        columbia: 'Колумбия',
+        chilli: 'Чили',
+        israel: 'Израиль',
+        golland: 'Голландия',
+        spain: 'Испания'
+    };
+
+    const handleCountryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setCountry(event.target.value); // Обновить состояние при выборе страны
+    };
+
     function calculateShipmentDateCollection(date:string) {
         const current = new Date(date);
         current.setDate(current.getDate() + 3);
@@ -29,61 +43,143 @@ const CaulculationShipment = () => {
 
     return(
         <>
-            <section>
-                <div>
-                    <p>flower fracht karaganda</p>
-                    <h2>Калькулятор доставки</h2>
+            <section className={Style.calc__container_section}>
+                <div className={Style.calc__container}>
+                    <p className={Style.calc__logo_textName}>flower fracht karaganda</p>
+                    <h2 className={Style.calc__header_text}>Калькулятор доставки</h2>
 
                     {/* COUNTY CHOICE BAR */}
-                    <fieldset>
+                    <fieldset className={Style.radioGroup}>
                             <legend> 
-                                <div>
-                                <div>
-                                    <p>01</p>
-                                </div>
-                                    <p>Выберите страну по которой хотите узнать время достатвки</p>
+                                <div className={Style.calc__text_step}>
+                                    <div className={Style.calc__container_number}>
+                                        <p className={Style.calc__number}>01</p>
+                                    </div>
+                                    <p className={Style.calc__text}>Выберите страну по которой хотите узнать время достатвки</p>
                                 </div>
                         </legend>
-                            <div>
-                                <input type="radio" id="ecuador" name="country" value="ecuador" checked />
-                                <label>Эквадор</label>
+
+                        <div  className={Style.calc__radio_container}>
+                            <div className={Style.calc__radio}>
+                                <label htmlFor="ecuador" className={Style.custom__radio}>
+                                <input 
+                                    type="radio" 
+                                    id="ecuador" 
+                                    name="country" 
+                                    value="ecuador" 
+                                    checked={country === 'ecuador'} 
+                                    onChange={handleCountryChange} 
+                                />
+                                <span className={Style.radio}></span>
+                                <span className={Style.text}>Эквадор</span>
+                                </label>
                             </div>
-                            <div>
-                                <input type="radio" id="kenia" name="country" value="kenia" />
-                                <label>Кения</label>
+
+                            <div className={Style.calc__radio}>
+                            <label htmlFor="kenia" className={Style.custom__radio}>
+                            <input 
+                                    type="radio" 
+                                    id="kenia" 
+                                    name="country" 
+                                    value="kenia" 
+                                    checked={country === 'kenia'} 
+                                    onChange={handleCountryChange}/>
+                                <span className={Style.radio}></span>
+                                <span className={Style.text}>Кения</span>
+                                </label>
                             </div>
-                            <div>
-                                <input type="radio" id="columbia" name="country" value="columbia" />
-                                <label>Колумбия</label>
+
+                            <div className={Style.calc__radio}>
+                                <label htmlFor="columbia" className={Style.custom__radio}>
+                                <input 
+                                    type="radio" 
+                                    id="columbia" 
+                                    name="country" 
+                                    value="columbia"
+                                    checked={country === 'columbia'} 
+                                    onChange={handleCountryChange} />
+                                <span className={Style.radio}></span>
+                                <span className={Style.text}>Колумбия</span>
+                                </label>
                             </div>
-                            <div>
-                                <input type="radio" id="chilli" name="country" value="chilli" />
-                                <label>Чили</label>
+
+                            <div className={Style.calc__radio}>
+                                <label htmlFor="chilli" className={Style.custom__radio}>
+                                <input 
+                                    type="radio" 
+                                    id="chilli" 
+                                    name="country" 
+                                    value="chilli" 
+                                    checked={country === 'chilli'} 
+                                    onChange={handleCountryChange}/>
+                                <span className={Style.radio}></span>
+                                <span className={Style.text}>Чили</span>
+                                </label>
                             </div>
-                            <div>
-                                <input type="radio" id="israel" name="country" value="israel" />
-                                <label>Израель</label>
+
+                            <div className={Style.calc__radio}>
+                                <label htmlFor="israel" className={Style.custom__radio}>
+                                <input 
+                                    type="radio" 
+                                    id="israel" 
+                                    name="country" 
+                                    value="israel" 
+                                    checked={country === 'israel'} 
+                                    onChange={handleCountryChange}/>
+                                <span className={Style.radio}></span>
+                                <span className={Style.text}>Израель</span>
+                                </label>
                             </div>
-                            <div>
-                                <input type="radio" id="golland" name="country" value="golland" />
-                                <label>Голландия</label>
+
+                            <div className={Style.calc__radio}>
+                                <label htmlFor="golland" className={Style.custom__radio}>
+                                <input 
+                                    type="radio" 
+                                    id="golland" 
+                                    name="country" 
+                                    value="golland" 
+                                    checked={country === 'golland'} 
+                                    onChange={handleCountryChange}/>
+                                <span className={Style.radio}></span>
+                                <span className={Style.text}>Голландия</span>
+                                </label>
                             </div>
-                            <div>
-                                <input type="radio" id="spain" name="country" value="spain" />
-                                <label>Испания</label>
+
+                            <div className={Style.calc__radio}>
+                                <label htmlFor="spain" className={Style.custom__radio}>
+                                <input 
+                                    type="radio" 
+                                    id="spain" 
+                                    name="country" 
+                                    value="spain" 
+                                    checked={country === 'spain'} 
+                                    onChange={handleCountryChange}/>
+                                <span className={Style.radio}></span>
+                                <span className={Style.text}>Испания</span>
+                                </label>
                             </div>
+                        </div>
                         </fieldset>
+                        <div className={Style.separate_line}></div>
                         {/* DATE CHOICE BAR */}
                         <div>
+                        <legend> 
+                                <div className={Style.calc__text_step}>
+                                    <div className={Style.calc__container_number}>
+                                        <p className={Style.calc__number}>02</p>
+                                    </div>
+                                    <p className={Style.calc__text}>Что бы рассчитать дату доставки выберите день когда планируете сделать заказ</p>
+                                </div>
+                        </legend>
                         <div>
-                            <p>02</p>
-                        </div>
-                        <p>Что бы рассчитать дату доставки выберите день когда планируете сделать заказ</p>
                         
-                        <div>
+
+
+
+
                             <div>
                                 <img src="" alt="location icon"/>
-                                <p>{country}</p>
+                                <p>Выбранная страна: {countryNames[country]}</p>
                             </div>
                             <div>
                                 <label>Дата заказа</label>

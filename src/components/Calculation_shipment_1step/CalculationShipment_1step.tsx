@@ -4,16 +4,22 @@ import location_icon from '../../assets/images/Location_icon.svg';
 import map from '../../assets/images/mapSmall.svg';
 import map2 from '../../assets/images/mapSmall2.svg';
 import arrow from '../../assets/images/arrow.svg';
-import { useSelector} from 'react-redux';
-import { RootState } from '../../state/store';
+// import { useSelector} from 'react-redux';
+// import { RootState } from '../../state/store';
 
 
 const CaulculationShipment = () => {
-    const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
+    // const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
     const [country, setCountry] = useState<string>('ecuador'); // Тип для страны
     const currentDate = new Date();
-    const formattedDate = currentDate.toISOString();
+    // Получаем день, месяц и год в виде строк
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Месяцы начинаются с 0
+    const year = String(currentDate.getFullYear()).substring(2); // Получаем последние 2 цифры года
+
+    const formattedDate = `${year}-${month}-${day}`;
     const [startDate, setStartDate] = useState<string>(formattedDate); // Тип для начальной даты
+
     const [shipmentDate, setShipmentDate] = useState<string>('XX-XX-2024');
     const [shipmentCollectionDate, setShipmentCollectionDate] = useState('XX-XX-2024');
 
@@ -52,7 +58,8 @@ const CaulculationShipment = () => {
 
     return(
         <>
-            <section className={headerStateValue ? `sm:hidden min-h-screen ${Style.section_hidden}` : Style.calc__container_section}>
+            {/* <section className={headerStateValue ? `sm:hidden min-h-screen ${Style.section_hidden}` : Style.calc__container_section}> */}
+                <section className={Style.calc__container_section}>
                 <div className={Style.calc__container_stepOne}>
                 <img src={map} alt="map" className="absolute right-0 top-0"/>
                 

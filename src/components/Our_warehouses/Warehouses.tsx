@@ -4,15 +4,16 @@ import map from '../../assets/images/MAPS2.svg';
 import countries from '../../assets/images/Country.svg';
 import countriesLaptop from '../../assets/images/Countries_laptop.svg';
 import smallAirplane from '../../assets/images/Small_airplane.svg';
-import { useSelector} from 'react-redux';
-import { RootState } from '../../state/store';
+// import { useSelector} from 'react-redux';
+// import { RootState } from '../../state/store';
 
 const Warehouses: React.FC = () => {
-    const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
+    // const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
 
     return (
         <>
-            <section className={headerStateValue ? `sm:hidden min-h-screen ${Styles.section_hidden}` : Styles.warehouses__section} >
+            {/* <section className={headerStateValue ? `sm:hidden min-h-screen ${Styles.section_hidden}` : Styles.warehouses__section} > */}
+            <section className={Styles.warehouses__section} >
                 {/* CONTAINER GLOBAL*/}
                 <div className=' px-[15px] relative
                 sm:flex 

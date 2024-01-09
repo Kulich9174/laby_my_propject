@@ -8,6 +8,7 @@ import { Contacts } from './pages/Contacts/Contacts';
 import { ErrorPage } from './pages/ErrorPage/ErrorPage';
 import { BrockersPage} from './pages/For_brockers/BrockersPage';
 import { WarehousesPage } from './pages/Our_warehouses/WarehousesPage';
+import { MenuNavPage } from './pages/MenuNavPage/MenuNavPage';
 
 import { Layout } from './components/Layout';
 
@@ -24,6 +25,7 @@ const App: React.FC = () => {
           <Route path='/error-page' element={<ErrorPage/>}/>
           <Route path='/brockers-page' element={<BrockersPage/>}/>
           <Route path='/warehouses-page' element={<WarehousesPage/>}/>
+          <Route path='/MenuNav' element={<MenuNavPage/>}/>
         </Route>
                 
         </Routes>

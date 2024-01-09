@@ -1,6 +1,9 @@
 import React,{ useState} from "react";
 import Style from './CalculationShipment_1step.module.css';
 import location_icon from '../../assets/images/Location_icon.svg';
+import map from '../../assets/images/mapSmall.svg';
+import map2 from '../../assets/images/mapSmall2.svg';
+import arrow from '../../assets/images/arrow.svg';
 import { useSelector} from 'react-redux';
 import { RootState } from '../../state/store';
 
@@ -51,6 +54,8 @@ const CaulculationShipment = () => {
         <>
             <section className={headerStateValue ? `sm:hidden min-h-screen ${Style.section_hidden}` : Style.calc__container_section}>
                 <div className={Style.calc__container_stepOne}>
+                <img src={map} alt="map" className="absolute right-0 top-0"/>
+                
                     <p className={Style.calc__logo_textName}>flower fracht karaganda</p>
                     <h2 className={Style.calc__header_text}>Калькулятор доставки</h2>
 
@@ -169,6 +174,7 @@ const CaulculationShipment = () => {
                 </div>
                 <div className={Style.separate_line}></div>
                 <div className={Style.calc__container_stepTwo}>
+                    <img src={map2} alt="map left" className="absolute left-0 bottom-[-15%]"/>
                     {/* DATE CHOICE BAR */}
                     <div>
                         <legend> 
@@ -187,8 +193,12 @@ const CaulculationShipment = () => {
                         <div  className={Style.calc__container_results}>
                             <div className={Style.calc__container_results_date}>
                                 <label>Дата заказа</label>
-                                <span>
-                                    <span></span>
+                                <span className="relative">
+                                    <span className={Style.datepicker__toggle_button}>
+                                        <img src={arrow} alt="arrow" className="absolute right-3"/>
+                                        <p className="pl-4">{startDate}</p>
+                                    </span>
+                                    
                                     <input  type="date" className={Style.datepicker_input} 
                                         id="start" 
                                         name="ship-start" 

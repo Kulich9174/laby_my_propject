@@ -4,6 +4,7 @@ import location_icon from '../../assets/images/Location_icon.svg';
 import map from '../../assets/images/mapSmall.svg';
 import map2 from '../../assets/images/mapSmall2.svg';
 import arrow from '../../assets/images/arrow.svg';
+import Way from '../../assets/images/Way.svg';
 // import { useSelector} from 'react-redux';
 // import { RootState } from '../../state/store';
 
@@ -178,13 +179,10 @@ const CaulculationShipment = () => {
                             </div>
                         </div>
                         </fieldset>
-                </div>
-                <div className={Style.separate_line}></div>
-                <div className={Style.calc__container_stepTwo}>
-                    <img src={map2} alt="map left" className="absolute left-0 bottom-[-15%]"/>
-                    {/* DATE CHOICE BAR */}
-                    <div>
-                        <legend> 
+
+                        <div className={Style.separate_line}></div>
+
+                        <legend className={Style.legend_second}> 
                                 <div className={Style.calc__text_step}>
                                     <div className={Style.calc__container_number}>
                                         <p className={Style.calc__number}>02</p>
@@ -192,13 +190,28 @@ const CaulculationShipment = () => {
                                     <p className={Style.calc__text}>Что бы рассчитать дату доставки выберите день когда планируете сделать заказ</p>
                                 </div>
                         </legend>
-                        <div className='flex flex-col'>
+                </div>
+                
+                <div className={Style.calc__container_stepTwo}>
+                    <img src={map2} alt="map left" className="absolute left-0 bottom-[-15%]"/>
+                    {/* DATE CHOICE BAR */}
+                    <div className={Style.calc__container_stepTwo_without_number}>
+                        
+                        {/* MAP WAY */}
+                            <div className={Style.map__section}>
                             <div className="flex gap-2 sm:pb-6">
-                                <img src={location_icon} alt="location icon"/>
-                                <p className="w-full uppercase leading-6">{countryNames[country]}</p>
+                                    <img src={location_icon} alt="location icon"/>
+                                    <p className="w-full uppercase leading-6">{countryNames[country]}</p>
+                                </div>
+
+                                <div className={Style.map__way}>
+                                    <img src={Way} alt="way of" className={Style.way}/>
+                                </div>
                             </div>
+                            
+                        {/* DATES */}
                         <div  className={Style.calc__container_results}>
-                            <div className={Style.calc__container_results_date}>
+                            <div className={Style.calc__container_results_date1}>
                                 <label>Дата заказа</label>
                                 <span className="relative">
                                     <span className={Style.datepicker__toggle_button}>
@@ -219,6 +232,7 @@ const CaulculationShipment = () => {
                                             }} />
                                 </span>
                             </div>
+
                             <div className={`${Style.calc__container_results_date} `}>
                                 <p>Конец сбора заказов</p>
                                 <p>{shipmentCollectionDate}</p>
@@ -232,7 +246,6 @@ const CaulculationShipment = () => {
                                 <p>День поставки</p>
                                 <p>{shipmentDate}</p>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>

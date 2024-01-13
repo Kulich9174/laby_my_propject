@@ -1,12 +1,23 @@
 .calc__container_section{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
     color:white;
     position:relative;
 
+    @media(max-width: 800px){
+        display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
     background-image:'/src/assets/images/mapSmall.svg';
+    }
+    @media(min-width:800px){
+        display:grid;
+        grid-template-columns:40% 60%;
+        /* display:flex;
+        flex-direction: row-reverse;
+        flex-basis: auto;
+        align-items:center;
+        justify-content:space-between; */
+    }
 }
 .section_hidden{
     display:hidden;
@@ -14,25 +25,31 @@
 }
 .calc__container_stepOne{
     display:flex;
-    justify-content:center;
     align-items:center;
     flex-direction:column;
     padding:60px 15px 0px 15px ;
     max-width:400px;
-    border-left: 1px solid rgba(43, 61, 82, 0.30);
-    border-right: 1px solid rgba(43, 61, 82, 0.30);
+    @media(max-width:800px){
+        border-left: 1px solid rgba(43, 61, 82, 0.30);
+        border-right: 1px solid rgba(43, 61, 82, 0.30);
+        justify-content:center;
+    }
 }
 .calc__container_stepTwo{
-    padding:25px 15px 60px 15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    max-width:400px;
-
-    border-left: 1px solid rgba(43, 61, 82, 0.30);
-    border-right: 1px solid rgba(43, 61, 82, 0.30);
+    @media(max-width:800px){
+        padding:0px 15px 60px 15px;
+        display:flex;
+        /* align-items:center; */
+        flex-direction:column;
+        width:400px; 
+        border-left: 1px solid rgba(43, 61, 82, 0.30);
+        border-right: 1px solid rgba(43, 61, 82, 0.30);
+    }
+    @media(min-width:800px){
+        
+    }
 }
+
 
 .calc__logo_textName{
     color: var(--light-blue-text);
@@ -145,7 +162,6 @@
     transform: scale(1.1);
     box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
 }
-
   /* Устанавливаем параметры элементов, заменяющих штатные выбранные радио-кнопки */
 /* .custom__radio input:checked + .radio{
     border-color: rgba(34, 124, 228, 0.36);
@@ -169,7 +185,6 @@
     background-color: rgba(34, 124, 228, 1);
     box-shadow: 1px 2px 2px 0 rgba(0,0,0,0.2);
 }
-
   /* Устанавливаем параметры подписей радио-кнопок */
 .custom__radio input + .radio + .text{
     cursor: pointer;
@@ -182,7 +197,6 @@
     margin-right: 15px;
     align-self: center;
 }
-
 /* Устанавливаем параметры подписей выбранных радио-кнопок
 .custom__radio input:checked + .radio + .text{
     color: #555;
@@ -190,18 +204,51 @@
   } */
 
 .separate_line{
-    border: 1px solid rgba(85, 122, 161, 0.30);
-    width:100svw;
+    @media(max-width:800px){
+        border: 1px solid rgba(85, 122, 161, 0.30);
+        width:100svw;
+    }
+    @media(min-width:800px){
+        display:hidden;
+        visibility:hidden;
+    }
 }
 
 .calc__container_results{
-    display:grid;
-    grid-template-rows:auto auto auto auto;
+    @media(max-width:800px){
+        display:grid;
+        grid-template-rows:auto auto auto auto;
+    }
+    @media(min-width:800px){
+        display:grid;
+        justify-content:center;
+    }
 }
 .calc__container_results_date{
-    display:grid;
-    grid-template-columns: 60% 40%;
-    padding-bottom:25px;
+    @media(max-width:800px){
+        display:grid;
+        grid-template-columns: 60% 40%;
+        padding-bottom:25px;
+    }
+    @media(min-width:800px){
+        display:none;
+        visibility:hidden;
+    }
+}
+.calc__container_results_date1{
+    
+    @media(max-width:800px){
+        display:grid;
+        grid-template-columns: 60% 40%;
+        padding-bottom:25px;
+    }
+    @media(min-width:800px){
+        padding-top:45px;
+        display:grid;
+        grid-template-columns: 60% 40%;
+        width:250px;
+        justify-content:center;
+    }
 }
 
 .datepicker_input {
@@ -233,4 +280,37 @@
     width: 100%;
     height: 100%;
     border-bottom: 1px solid rgba(188, 201, 218, 0.2);
+}
+
+.legend_second{
+    @media(max-width:800px){
+        padding-top:25px;
+    }
+    @media(min-width:800px){
+        
+    }
+}
+
+.map__section{
+    @media(min-width:800px){
+        padding-left:30px;
+    padding-right:30px;
+    padding-top:60px;
+    }
+}
+.map__way{
+    @media(max-width:800px){
+        background-color:inherit;
+        display:none;
+        visibility:hidden;
+    }
+    @media(min-width:800px){
+        background-color:rgba(85, 122, 161, 0.2);
+        width:100%;
+        height:300px;
+    }
+    
+}
+.way{
+    height:300px;
 }

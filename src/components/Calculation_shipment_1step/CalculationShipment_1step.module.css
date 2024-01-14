@@ -2,14 +2,14 @@
     color:white;
     position:relative;
 
-    @media(max-width: 800px){
+    @media(max-width: 1050px){
         display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
     background-image:'/src/assets/images/mapSmall.svg';
     }
-    @media(min-width:800px){
+    @media(min-width:1050px){
         display:grid;
         grid-template-columns:40% 60%;
         /* display:flex;
@@ -29,14 +29,14 @@
     flex-direction:column;
     padding:60px 15px 0px 15px ;
     max-width:400px;
-    @media(max-width:800px){
+    @media(max-width:1050px){
         border-left: 1px solid rgba(43, 61, 82, 0.30);
         border-right: 1px solid rgba(43, 61, 82, 0.30);
         justify-content:center;
     }
 }
 .calc__container_stepTwo{
-    @media(max-width:800px){
+    @media(max-width:1050px){
         padding:0px 15px 60px 15px;
         display:flex;
         /* align-items:center; */
@@ -45,7 +45,7 @@
         border-left: 1px solid rgba(43, 61, 82, 0.30);
         border-right: 1px solid rgba(43, 61, 82, 0.30);
     }
-    @media(min-width:800px){
+    @media(min-width:1050px){
         
     }
 }
@@ -204,45 +204,45 @@
   } */
 
 .separate_line{
-    @media(max-width:800px){
+    @media(max-width:1050px){
         border: 1px solid rgba(85, 122, 161, 0.30);
         width:100svw;
     }
-    @media(min-width:800px){
+    @media(min-width:1050px){
         display:hidden;
         visibility:hidden;
     }
 }
 
 .calc__container_results{
-    @media(max-width:800px){
+    @media(max-width:1050px){
         display:grid;
         grid-template-rows:auto auto auto auto;
     }
-    @media(min-width:800px){
+    @media(min-width:1050px){
         display:grid;
         justify-content:center;
     }
 }
 .calc__container_results_date{
-    @media(max-width:800px){
+    @media(max-width:1050px){
         display:grid;
         grid-template-columns: 60% 40%;
         padding-bottom:25px;
     }
-    @media(min-width:800px){
+    @media(min-width:1050px){
         display:none;
         visibility:hidden;
     }
 }
 .calc__container_results_date1{
     
-    @media(max-width:800px){
+    @media(max-width:1050px){
         display:grid;
         grid-template-columns: 60% 40%;
         padding-bottom:25px;
     }
-    @media(min-width:800px){
+    @media(min-width:1050px){
         padding-top:45px;
         display:grid;
         grid-template-columns: 60% 40%;
@@ -283,34 +283,62 @@
 }
 
 .legend_second{
-    @media(max-width:800px){
+    @media(max-width:1050px){
         padding-top:25px;
     }
-    @media(min-width:800px){
+    @media(min-width:1050px){
         
     }
 }
 
 .map__section{
-    @media(min-width:800px){
+    @media(min-width:1050px){
         padding-left:30px;
-    padding-right:30px;
-    padding-top:60px;
+        padding-right:30px;
+        padding-top:60px;
+        display:flex;
+    }
+}
+.map__div{
+    @media(min-width:1050px){
+        padding-left:2%;
+        padding-right:2%;
+        padding-top:3%;
+        display:flex;
     }
 }
 .map__way{
-    @media(max-width:800px){
+    @media(max-width:1050px){
         background-color:inherit;
         display:none;
         visibility:hidden;
     }
-    @media(min-width:800px){
+    @media(min-width:1050px){
         background-color:rgba(85, 122, 161, 0.2);
         width:100%;
-        height:300px;
+        height:500px;
     }
-    
+}
+.country__name{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    text-transform: uppercase;
+}
+
+.country__name_main{
+    @media(max-width:1050px){
+        display:flex;
+        gap:8px;
+        padding-bottom:30px;
+    }
+    @media(min-width:1050px){
+        display:none;
+        visibility:hidden;
+    }
 }
 .way{
-    height:300px;
+    height:400px;
+    width:90%;
 }

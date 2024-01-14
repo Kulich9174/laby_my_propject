@@ -199,14 +199,19 @@ const CaulculationShipment = () => {
                         
                         {/* MAP WAY */}
                             <div className={Style.map__section}>
-                            <div className="flex gap-2 sm:pb-6">
-                                    <img src={location_icon} alt="location icon"/>
-                                    <p className="w-full uppercase leading-6">{countryNames[country]}</p>
-                                </div>
-
                                 <div className={Style.map__way}>
-                                    <img src={Way} alt="way of" className={Style.way}/>
+                                    <div className={Style.map__div}>
+                                        <div className="flex h-[1%] gap-2 left sm:pb-6">
+                                            <img src={location_icon} alt="location icon"/>
+                                            <p className={Style.country__name}>{countryNames[country]}</p>
+                                        </div>
+                                        <img src={Way} alt="way of" className={Style.way}/>
+                                    </div>
                                 </div>
+                            </div>
+                            <div className={Style.country__name_main}>
+                                <img src={location_icon} alt="location icon"/>
+                                <p className={Style.country__name}>{countryNames[country]}</p>
                             </div>
                             
                         {/* DATES */}

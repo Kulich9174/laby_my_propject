@@ -10,7 +10,7 @@
     visibility:hidden;
 }
 .borders{
-
+    padding-top:60px;
     @media(max-width: 1050px){
         /* background-image:'/src/assets/images/mapSmall.svg'; */
         border-left: 2px solid rgba(43, 61, 82, 0.30);
@@ -28,7 +28,6 @@
         border-right: 2px solid rgba(43, 61, 82, 0.30);
 }}
 .container{
-    margin-top:60px;
     @media(max-width: 1050px){
         display:flex;
         justify-content:center;

@@ -1,0 +1,119 @@
+.tariff__container_section{
+    color:white;
+    position:relative;
+    padding-left:5%;
+    padding-right:5%;
+    width:100svw;
+}
+.tariff__container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    padding-top:60px;
+    padding-bottom:60px;
+    position:relative;
+    padding-left:1%;
+    padding-right:1%;
+    border-left: 1px solid rgba(43, 61, 82, 0.30);
+    border-right: 1px solid rgba(43, 61, 82, 0.30);
+}
+.tariff__gallery{
+    display:flex;
+    @media(max-width:700px){
+        flex-direction:column;
+        gap:20px;
+    }
+    @media(min-width:700px) and (max-width:1050px){
+        justify-content:space-between;
+        max-width:90%;
+        gap:30px;
+    }
+}
+.tariff__name{
+    color: var(--LightBlue, #9FCCFF);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    @media(max-width:700px){
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+    @media(min-width:700px) and (max-width:1050px){
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    @media(min-width:1050px){
+        font-size: 12px;
+        letter-spacing: 1.2px;
+    }
+}
+.tariff__header_name{
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    @media(max-width:700px){
+        font-size: 28px;
+        line-height: 32px; /* 114.286% */
+    }
+    @media(min-width:700px) and (max-width:1050px){
+        font-size: 32px;
+        line-height: 60px; /* 187.5% */
+    }
+    @media(min-width:1050px){
+        font-size: 50px;
+        line-height: 60px; /* 120% */
+    }
+}
+.tariff__gallery_element{
+    border: 1px solid rgba(85, 122, 161, 0.30);
+    background: #23303F;      
+    @media(max-width:700px){
+        width: 290px;
+        height: 183px;
+    }
+    @media(min-width:700px) and (max-width:1050px){
+        width: 310px;
+        height: 168px;
+    }
+    @media(min-width:1050px){
+        width: 490px;
+        height: 266px;
+    }
+}
+.tariff__makePrice{
+    border: 1px solid rgba(85, 122, 161, 0.30);
+    background: url('../../assets/images/Airplane_tariff_gallery_price.png');
+    /* , lightgray 0px -2.43px / 100% 122.957% no-repeat, #23303F */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-x: right 32px;
+    @media(max-width:700px){
+        width: 290px;
+        height: 183px;
+    }
+    @media(min-width:700px) and (max-width:1050px){
+        width: 310px;
+        height: 168px;
+    }
+    @media(min-width:1050px){
+        width: 490px;
+        height: 266px;
+    }
+}
+.tariff__gallery_elementInfo{
+    display:flex;
+}
+.tariff__gallery_text_section{
+    display:flex;
+    flex-direction:column;
+}
+.tariff__gallery_header{
+
+}
+.tariff__gallery_text{
+
+}

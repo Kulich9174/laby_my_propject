@@ -3,7 +3,7 @@
     visibility:hidden;
 }
 .warehouses__section{
-    background-color:#041D2C;
+    /* background-color:#041D2C; */
     opacity: 1;
     color:var(--primary-text-color);
     position: relative;
@@ -17,26 +17,15 @@
 
 .borders{
     position:relative;
-    @media(max-width:600px){
+    padding-left:1%;
+    padding-right:1%;
+    border-left: 1px solid rgba(43, 61, 82, 0.30);
+    border-right: 1px solid rgba(43, 61, 82, 0.30);
+    @media(max-width:1050px){
         display:flex;
-        padding-left:1%;
-        padding-right:1%;
-        border-left: 1px solid rgba(43, 61, 82, 0.30);
-        border-right: 1px solid rgba(43, 61, 82, 0.30);
-    }
-    @media(min-width:600px) and (max-width:1050px){
-        display:flex;
-        padding-left:1%;
-        padding-right:1%;
-        border-left: 1px solid rgba(43, 61, 82, 0.30);
-        border-right: 1px solid rgba(43, 61, 82, 0.30);
     }
     @media(min-width:1050px){
         display:grid;
-        padding-left:1%;
-        padding-right:1%;
-        border-left: 1px solid rgba(43, 61, 82, 0.30);
-        border-right: 1px solid rgba(43, 61, 82, 0.30);
     }
 }
 

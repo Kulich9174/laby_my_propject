@@ -14,7 +14,8 @@ export const theme = {
       'calc': 'calc(100% - 4px)',
     },
     colors: {
-      'white': '#FFFFFF'
+      'white': '#FFFFFF',
+      'border':' rgba(43, 61, 82, 0.30)',
     },
     backgroundImage: {
       'plane': "url('/src/assets/images/Rectangle2.png')",

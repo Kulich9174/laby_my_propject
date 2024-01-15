@@ -75,7 +75,7 @@ const MainPage: React.FC = () => {
                 <section className='my-5 py-[12px] relative'>
                     <div className='
             flex overflow-auto sm:gap-[30px] sm:w-full no-scrollbar
-            laptop:gap-4 pl-[5%]
+            laptop:gap-4
             desktop: gap-[30px] '>
                         <div className='flex flex-col items-center justify-center text-center sm:hidden'>
                             <div className='min-w-[90px] h-[140px]'></div>

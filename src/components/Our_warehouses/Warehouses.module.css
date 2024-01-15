@@ -10,17 +10,36 @@
     background-image: url('../../assets/images/airplane_sec.png');
     background-size: cover;
     background-position: center;
+    padding-left:5%;
+    padding-right:5%;
+    
 }
 
-.conteiner{
-    @media(min-width:600px) and (max-width:1050px){
+.borders{
+    position:relative;
+    @media(max-width:600px){
+        display:flex;
         padding-left:1%;
         padding-right:1%;
+        border-left: 1px solid rgba(43, 61, 82, 0.30);
+        border-right: 1px solid rgba(43, 61, 82, 0.30);
+    }
+    @media(min-width:600px) and (max-width:1050px){
+        display:flex;
+        padding-left:1%;
+        padding-right:1%;
+        border-left: 1px solid rgba(43, 61, 82, 0.30);
+        border-right: 1px solid rgba(43, 61, 82, 0.30);
     }
     @media(min-width:1050px){
-        /* max-width:80%; */
+        display:grid;
+        padding-left:1%;
+        padding-right:1%;
+        border-left: 1px solid rgba(43, 61, 82, 0.30);
+        border-right: 1px solid rgba(43, 61, 82, 0.30);
     }
 }
+
 .logo__text_name{
     color: var(--light-blue-text);
     font-style: normal;

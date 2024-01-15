@@ -15,10 +15,7 @@ const Warehouses: React.FC = () => {
             {/* <section className={headerStateValue ? `sm:hidden min-h-screen ${Styles.section_hidden}` : Styles.warehouses__section} > */}
             <section className={Styles.warehouses__section} >
                 {/* CONTAINER GLOBAL*/}
-                <div className=' px-[15px] relative
-                sm:flex 
-                laptop:grid
-                desktop:grid'>
+                <div className={Styles.borders}>
                     {/* CONTAINER */}
                     <div className=" relative
                     sm:flex-col sm:justify-center sm:items-center sm:pt-[60px] sm:flex

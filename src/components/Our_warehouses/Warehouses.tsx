@@ -20,11 +20,11 @@ const Warehouses: React.FC = () => {
                     <div className={Styles.container_div}>
                         <div className=" 
                         sm:justify-center sm:items-center sm:flex sm:flex-col
-                        laptop:py-[80px] laptop:pr-[5%]
+                        laptop:py-[80px] laptop:pr-5
                         desktop:py-[120px] desktop:max-w-[85%]">
                             <p className={Styles.logo__text_name}> Flower fracht Karaganda</p>
                             <h1 className={`
-                        sm:pb-[30px] sm:max-w-[75%]
+                        sm:pb-[30px] sm:text-center
                         laptop:pb-6
                         desktop:pb-[54px] 
                         ${Styles.header_text}`}>Откуда мы везем наши цветы</h1>
@@ -35,15 +35,15 @@ const Warehouses: React.FC = () => {
                                     Наши цветы — не только произведения природы, но и воплощение мирового многообразия, доставляемого нам прямо из живописных уголков планеты.
                                 </span>
                                 <p className={`
-                        sm:py-[14px]
-                        laptop:py-5
-                        desktop:py-6
-                        ${Styles.warehouse__text_italic}`}>Прекрасные цветы, несут в себе великолепие и свежесть, привезенные непосредственно из самых питательных уголков природы. Наша компания Flower Fracht Karaganda гордится тем, что мы тщательно подбираем каждый вид цветов.</p>
+                                    sm:py-[14px]
+                                    laptop:py-5
+                                    desktop:py-6
+                                    ${Styles.warehouse__text_italic}`}>Прекрасные цветы, несут в себе великолепие и свежесть, привезенные непосредственно из самых питательных уголков природы. Наша компания Flower Fracht Karaganda гордится тем, что мы тщательно подбираем каждый вид цветов.</p>
                                 <p className={`
-                        sm:pb-[30px]
-                        laptop:pb-[40px]
-                        desktop:pb-[70px]
-                        ${Styles.warehouse__text_italic}`}>
+                                    sm:pb-[30px]
+                                    laptop:pb-[40px]
+                                    desktop:pb-[70px]
+                                    ${Styles.warehouse__text_italic}`}>
                                     Мы привозим цветы и растения в горшках из <span className={Styles.warehouse__text_bold}>Эквадора, Кении, Колумбии, Чили, Голландии, Израиля</span> и доставляем их свежими во все регионы <span>СНГ</span>.</p>
                             </div>
                             {/* BUTTON */}
@@ -54,14 +54,10 @@ const Warehouses: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="relative
-                        sm:flex-col sm:items-center sm:justify-center sm:flex
-                        ">
+                        <div className={Styles.container_map}>
                             <div className="flex 
                             laptop:justify-end laptop:items-start">
-                                <img src={countriesLaptop} alt="" className="
-                                sm:hidden
-                                pb-5 "/>
+                                <img src={countriesLaptop} alt="" className={Styles.countriesLaptop}/>
                             </div>
 
                             {/* PARAGRAF LAPTOP/DESKTOP*/}
@@ -76,6 +72,14 @@ const Warehouses: React.FC = () => {
                             sm:hidden
                             laptop:right-[30%] laptop:top-[25%]
                             desktop:right-[10%] desktop:top-[25%]' src={smallAirplane} alt="small airplane" />
+                            
+
+                            {/* PARAGRAF SMARTPHONE*/}
+                            <div className="sm:py-[20px]
+                            laptop:hidden
+                            desktop:hidden">
+                                <p className={Styles.warehouse__text_italic}>Доставка в Москву занимает от <span className={Styles.warehouse__text_bold}>1</span> до <span className={Styles.warehouse__text_bold}>2</span> дней</p>
+                            </div>
                             {/* MAP */}
                             <div className="w-full overflow-hidden contain
                             laptop:flex laptop:justify-center laptop:items-center">
@@ -84,17 +88,7 @@ const Warehouses: React.FC = () => {
                                 laptop:w-full laptop:h-full
                                 desktop:w-[850px] desktop:h-[470px]"/>
                             </div>
-
-                            {/* PARAGRAF SMARTPHONE*/}
-                            <div className="sm:py-[20px]
-                            laptop:hidden
-                            desktop:hidden">
-                                <p className={Styles.warehouse__text_italic}>Доставка в Москву занимает от <span className={Styles.warehouse__text_bold}>1</span> до <span className={Styles.warehouse__text_bold}>2</span> дней</p>
-                            </div>
-
-                            <img className="
-                            laptop:hidden
-                            desktop:hidden" src={countries} alt="Ruler countries" />
+                            <img className={Styles.countriesMobile} src={countries} alt="Ruler countries" />
                         </div>
                     </div>
                 </div>

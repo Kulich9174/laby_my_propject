@@ -30,13 +30,15 @@
 .container_div{
     position: relative; 
     max-width:1600px;
-    @media (max-width: 950px) { 
+    @media (max-width: 1050px) { 
         flex-direction: column; 
         justify-content: center; 
         align-items: center; 
         padding-top: 60px;
+        padding-left:3%;
+        padding-right:3%;
     }
-    @media(min-width:950px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         display:grid;
         grid-template-columns:50% 50%;
     }
@@ -45,8 +47,46 @@
         grid-template-columns:50% 50%;
     }
 }
-.conteiner{
+/* .conteiner{
     max-width:75%;
+} */
+.container_map{
+    display:flex;
+    flex-direction: column; 
+    @media (max-width: 1050px) { 
+        display:flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        /* flex-direction: column-reverse; */
+    }
+    @media(min-width:1300px){
+        /* flex-direction: column-reverse; */
+    }
+}
+.countriesLaptop{
+    @media (max-width: 1050px) { 
+        display:none;
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        
+    }
+    @media(min-width:1300px){
+        
+    }
+}
+.countriesMobile{
+    @media (max-width: 1050px) { 
+        
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        display:none;
+    }
+    @media(min-width:1300px){
+        display:none;
+    }
 }
 .logo__text_name{
     color: var(--light-blue-text);
@@ -60,12 +100,12 @@
         letter-spacing: 0.8px;
         padding-bottom: 10px;
     }
-    @media(min-width:600px) and (max-width:950px){
+    @media(min-width:600px) and (max-width:1050px){
         font-size:10px;
         letter-spacing:1px;
         padding-bottom: 10px;
     }
-    @media(min-width:950px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         font-size:12px;
         letter-spacing:1.2px;
         padding-top: 60px;
@@ -100,15 +140,15 @@
     font-style: normal;
     font-weight: 600;
 
-    @media(max-width:950px){
+    @media(max-width:1050px){
         font-size: 14px;
         line-height: 20px;
     }
-    @media(min-width:600px) and (max-width:950px){
+    @media(min-width:600px) and (max-width:1050px){
         font-size: 14px;
         line-height: 24px;
     }
-    @media(min-width:950px){
+    @media(min-width:1050px){
         font-size: 16px;
         line-height: 24px;
     }
@@ -118,21 +158,21 @@
     color:var(--invisible-text);
     font-style: normal;
     font-weight: 400;
-    @media(max-width:950px){
+    @media(max-width:1050px){
         font-size: 14px;
         line-height: 20px;
     }
-    @media(min-width:950px){
+    @media(min-width:1050px){
         font-size: 16px;
         line-height: 24px;
     }
 }
 .warehouse__button_size{
     border: 1px solid rgba(255, 255, 255, 0.36);
-    @media(max-width:950px) {
+    @media(max-width:1050px) {
         padding:22px 70px;
     }
-    @media(min-width:950px){
+    @media(min-width:1050px){
         padding:24px 56px;
     }
     

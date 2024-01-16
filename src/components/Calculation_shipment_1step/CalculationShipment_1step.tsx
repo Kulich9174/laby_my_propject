@@ -2,7 +2,7 @@ import React,{ useState} from "react";
 import Style from './CalculationShipment_1step.module.css';
 import location_icon from '../../assets/images/Location_icon.svg';
 // import map from '../../assets/images/mapSmall.svg';
-import map from '../../assets/images/map_calc_bg_small.svg';
+// import map from '../../assets/images/map_calc_bg_small.svg';
 // import map2 from '../../assets/images/mapSmall2.svg';
 import arrow from '../../assets/images/arrow.svg';
 import Way from '../../assets/images/Way.svg';
@@ -63,6 +63,9 @@ const CaulculationShipment = () => {
         <>
             {/* <section className={headerStateValue ? `sm:hidden min-h-screen ${Style.section_hidden}` : Style.calc__container_section}> */}
                 <section className={Style.calc__container_section}>
+                    <div className={Style.calc__container_section}>
+                        
+                    </div>
                     <img src={Map_icon} alt="map background icon" className={Style.bg_icon_big}/>
                     <div className={Style.borders}>
                         <div className={Style.container}>
@@ -208,7 +211,9 @@ const CaulculationShipment = () => {
                         </div>
                         
                         <div className={Style.calc__container_stepTwo}>
-                            <img src={map} alt="map left" className="absolute left-0 bottom-0"/>
+                            <div className={Style.map_icon_small_bg}></div>
+
+                            {/* <img src={map} alt="map left" className="absolute left-0 bottom-0"/> */}
                             {/* DATE CHOICE BAR */}
                             <div className={Style.calc__container_stepTwo_without_number}>
                                 

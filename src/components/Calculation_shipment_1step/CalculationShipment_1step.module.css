@@ -1,20 +1,40 @@
+.calc__section{
+    background:url('../../assets/images/map_calc_bg_small.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position:relative;
+}
 .calc__container_section{
     color:white;
     position:relative;
     padding-left:5%;
     padding-right:5%;
-    width:100svw;
+    /*max-width:1850px; */
+    
 }
 .section_hidden{
     display:hidden;
     visibility:hidden;
 }
 .borders{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
     padding-top:60px;
+    padding-bottom:60px;
+    
+    position:relative;
+    padding-left:1%;
+    padding-right:1%;
+    border-left: 1px solid rgba(43, 61, 82, 0.30);
+    border-right: 1px solid rgba(43, 61, 82, 0.30);
+    /* padding:60px;
+    border-left: 2px solid rgba(43, 61, 82, 0.30);
+    border-right: 2px solid rgba(43, 61, 82, 0.30); */
     @media(max-width: 1050px){
         /* background-image:'/src/assets/images/mapSmall.svg'; */
-        border-left: 2px solid rgba(43, 61, 82, 0.30);
-        border-right: 2px solid rgba(43, 61, 82, 0.30);
     }
     @media(min-width:1050px){
         /* display:flex;
@@ -22,10 +42,7 @@
         flex-basis: auto;
         align-items:center;
         justify-content:space-between; */
-        padding-left:1%;
-        padding-right:1%;
-        border-left: 2px solid rgba(43, 61, 82, 0.30);
-        border-right: 2px solid rgba(43, 61, 82, 0.30);
+        
 }}
 .container{
     @media(max-width: 1050px){
@@ -36,18 +53,21 @@
     }
     @media(min-width:1050px){
         display:grid;
-        grid-template-columns:35% 65%;
-        gap:30px;
+        grid-template-columns:40% 60%;
+        gap:50px;
         padding-left:1%;
         padding-right:1%;
 }
 }
 .calc__container_stepOne{
+    
     display:flex;
     align-items:center;
     flex-direction:column;
+    justify-content:space-between;
     /* padding:60px 0px ; */
-    max-width:400px;
+    max-width:470px;
+    /* max-width:75%; */
     @media(max-width:1050px){
         justify-content:center;
     }
@@ -58,7 +78,7 @@
         display:flex;
         /* align-items:center; */
         flex-direction:column;
-        width:400px; 
+        width:470px; 
     }
     @media(min-width:1050px){
         display:flex;
@@ -388,4 +408,10 @@
     position:absolute;
     right:0;
     top:0;
+}
+.map_icon_small_bg{
+    position:absolute;
+    left:0;
+    bottom:0;
+    background:url('../../assets/images/map_calc_bg_small.svg');
 }

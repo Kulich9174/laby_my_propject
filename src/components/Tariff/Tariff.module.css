@@ -1,9 +1,26 @@
+.separate_line{
+    /* @media(max-width:1050px){
+        border: 1px solid rgba(85, 122, 161, 0.30);
+        width:100svw;
+    } */
+    @media(min-width:1050px){
+        display:hidden;
+        visibility:hidden;
+    }
+}
 .tariff__container_section{
     color:white;
     position:relative;
     padding-left:5%;
     padding-right:5%;
     width:100svw;
+    background-image: image-set(
+        url("../../assets/images/tariff_bg_mobile.png") 1x,
+        url("../../assets/images/tariff_bg_laptop.png") 2x,
+        url("") 3x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .tariff__container{
     display:flex;
@@ -20,15 +37,22 @@
     border-right: 1px solid rgba(43, 61, 82, 0.30);
 }
 .tariff__gallery{
-    display:flex;
-    @media(max-width:700px){
+    padding-left:1%;
+    padding-right:1%;
+    @media(max-width:900px){
+        display:flex;
         flex-direction:column;
         gap:20px;
     }
-    @media(min-width:700px) and (max-width:1050px){
-        justify-content:space-between;
-        max-width:90%;
+    @media(min-width:900px) and (max-width:1300px){
+        display:grid;
+        grid-template-columns:50% 50%;
         gap:30px;
+    }
+    @media(min-width:1300px){
+        display:grid;
+        grid-template-columns:33% 33% 33%;
+        gap:35px;
     }
 }
 .tariff__name{
@@ -37,15 +61,17 @@
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
-    @media(max-width:700px){
+    padding-bottom:2%;
+    text-align: center;
+    @media(max-width:900px){
         font-size: 8px;
         letter-spacing: 0.8px;
     }
-    @media(min-width:700px) and (max-width:1050px){
+    @media(min-width:900px) and (max-width:1300px){
         font-size: 10px;
         letter-spacing: 1px;
     }
-    @media(min-width:1050px){
+    @media(min-width:1300px){
         font-size: 12px;
         letter-spacing: 1.2px;
     }
@@ -53,67 +79,198 @@
 .tariff__header_name{
     text-align: center;
     font-style: normal;
-    font-weight: 700;
-    @media(max-width:700px){
+    font-weight: 900;
+    @media(max-width:900px){
         font-size: 28px;
         line-height: 32px; /* 114.286% */
+        padding-bottom:30px;
     }
-    @media(min-width:700px) and (max-width:1050px){
+    @media(min-width:900px) and (max-width:1300px){
         font-size: 32px;
         line-height: 60px; /* 187.5% */
+        padding-bottom:40px;
     }
-    @media(min-width:1050px){
+    @media(min-width:1300px){
         font-size: 50px;
         line-height: 60px; /* 120% */
+        padding-bottom:55px;
     }
 }
 .tariff__gallery_element{
     border: 1px solid rgba(85, 122, 161, 0.30);
     background: #23303F;      
-    @media(max-width:700px){
-        width: 290px;
-        height: 183px;
+    @media(max-width:900px){
+        padding:24px;
+
     }
-    @media(min-width:700px) and (max-width:1050px){
-        width: 310px;
-        height: 168px;
+    @media(min-width:900px) and (max-width:1300px){
+        padding:40px 20px;
+        width:400px
     }
-    @media(min-width:1050px){
-        width: 490px;
-        height: 266px;
+    @media(min-width:1300px){
+        padding:40px 30px;
+        
     }
 }
 .tariff__makePrice{
     border: 1px solid rgba(85, 122, 161, 0.30);
     background: url('../../assets/images/Airplane_tariff_gallery_price.png');
-    /* , lightgray 0px -2.43px / 100% 122.957% no-repeat, #23303F */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-position-x: right 32px;
-    @media(max-width:700px){
-        width: 290px;
-        height: 183px;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    @media(max-width:900px){
+        
     }
-    @media(min-width:700px) and (max-width:1050px){
-        width: 310px;
-        height: 168px;
+    @media(min-width:900px) and (max-width:1300px){
+        width:400px;
     }
-    @media(min-width:1050px){
-        width: 490px;
-        height: 266px;
+    @media(min-width:1300px){
+        
     }
 }
 .tariff__gallery_elementInfo{
     display:flex;
+    align-items:center;
+    @media(max-width:900px){
+        padding-bottom:16px;
+    }
+    @media(min-width:900px) and (max-width:1300px){
+        padding-bottom:18px;
+    }
+    @media(min-width:1300px){
+        padding-bottom:24px;
+    }
 }
 .tariff__gallery_text_section{
     display:flex;
     flex-direction:column;
+    gap:8px;
+    @media(max-width:900px){
+        padding-left:20px;
+    }
+    @media(min-width:900px) and (max-width:1300px){
+        padding-left:20px;
+    }
+    @media(min-width:1300px){
+        padding-left:30px;
+    }
 }
 .tariff__gallery_header{
+    color: var(--light-blue-text);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media(max-width:900px){
+        font-size: 20px;
+        /* letter-spacing: 0.8px; */
+    }
+    @media(min-width:900px) and (max-width:1300px){
+        font-size: 24px;
+        /* letter-spacing: 1px; */
+    }
+    @media(min-width:1300px){
+        font-size: 30px;
+        /* letter-spacing: 1.2px; */
+    }
+}
+.tariff__gallery_header_bold{
+    color: var(--light-blue-text);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media(max-width:900px){
+        font-size: 20px;
+        /* letter-spacing: 0.8px; */
+    }
+    @media(min-width:900px) and (max-width:1300px){
+        font-size: 24px;
+        /* letter-spacing: 1px; */
+    }
+    @media(min-width:1300px){
+        font-size: 30px;
+        /* letter-spacing: 1.2px; */
+    }
 
 }
 .tariff__gallery_text{
+    color: #BCC9DA;;
+    font-style: normal;
+    font-weight: 400;; 
+    @media(max-width:900px){
+        font-size: 16px;
+        line-height: 24px; /* 150% */
+    }
+    @media(min-width:900px) and (max-width:1300px){
+        font-size: 16px;
+        line-height: 20px;
+    }
+    @media(min-width:1300px){
+        font-size: 22px;
+        line-height: 22px;
+    }
 
+}
+.tariff__gallery_icon{
+    /* max-width:60px;
+    max-height:82px; */
+    width:100%;
+    max-width:70px;
+}
+.tariff__small_text{
+    color: #BCC9DA;
+    font-style: normal;
+    font-weight: 400;
+    @media(max-width:900px){
+        font-size: 10px;
+        line-height: 14px; /* 150% */
+        padding-top:16px;
+    }
+    @media(min-width:900px) and (max-width:1300px){
+        font-size: 13px;
+        line-height: 16px;
+        padding-top:18px;
+    }
+    @media(min-width:1300px){
+        font-size: 16px;
+        line-height: 22px;
+        padding-top:24px;
+    }
+}
+.tariff__button_container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    @media(max-width:900px){
+        padding:60px 24px;
+    }
+    @media(min-width:900px) and (max-width:1300px){
+        padding:60px;
+    }
+}
+.tariff__dowland_button{
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+
+    border:1px solid white;
+    @media(max-width:900px){
+        padding:20px 60px;
+    }
+    @media(min-width:900px) and (max-width:1300px){
+        padding:18px 36px;
+    }
+    @media(min-width:1300px){
+        font-size: 16px;
+        line-height: 22px;
+        padding:25px 60px;
+    }
 }

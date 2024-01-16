@@ -17,21 +17,14 @@ const Warehouses: React.FC = () => {
                 {/* CONTAINER GLOBAL*/}
                 <div className={Styles.borders}>
                     {/* CONTAINER */}
-                    <div className=" relative
-                    sm:flex-col sm:justify-center sm:items-center sm:pt-[60px] sm:flex
-                    laptop:grid laptop:grid-cols-40/60
-                    desktop:grid desktop:grid-cols-50/50">
-                        <div className="
+                    <div className={Styles.container_div}>
+                        <div className=" 
                         sm:justify-center sm:items-center sm:flex sm:flex-col
                         laptop:py-[80px] laptop:pr-[5%]
                         desktop:py-[120px] desktop:max-w-[85%]">
-                            <p className={`
-                        sm:pb-[10px]
-                        laptop:pb-3
-                        desktop:pb-5 
-                        ${Styles.logo__text_name}`}> Flower fracht Karaganda</p>
+                            <p className={Styles.logo__text_name}> Flower fracht Karaganda</p>
                             <h1 className={`
-                        sm:pb-[30px]
+                        sm:pb-[30px] sm:max-w-[75%]
                         laptop:pb-6
                         desktop:pb-[54px] 
                         ${Styles.header_text}`}>Откуда мы везем наши цветы</h1>

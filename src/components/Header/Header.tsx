@@ -62,7 +62,7 @@ const Header: React.FC = () => {
                 <HeaderLogo/>
                 {/* menu bar */}
                 <Navigation/>
-                <div className='flex items-center gap-2 sm:pr-5px laptop:float-left'>
+                <div className='flex items-center gap-2 pl-[50px] sm:pr-5px laptop:float-left'>
                     <div className='border-solid border border-[#80828D]'>
                         <p className='text-[#FFFFFF] font-header not-italic font-semibold uppercase text-sm tracking-[1.2px] px-9px py-11px'>RU</p>
                     </div>

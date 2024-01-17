@@ -8,27 +8,29 @@
     text-transform: uppercase; 
     grid-template-columns: repeat(5, minmax(0, 1fr)); 
     /* gap: 5%;  */
-    width: 60%;
+    width: 70%;
 
     @media (max-width: 1050px) { 
     display: none; 
     }
     @media(min-width: 1050px){
-        display:grid;
-        grid-template-columns:20% 20% 20% 20% 20%;
-        gap: 4%; 
+        /* display:grid;
+        grid-template-columns:19% 19% 19% 19% 19%;
+        gap: 5%;  */
+        display: flex;
+        justify-content: space-between;
     }
 }
 /* 'm-0 gap-4  not-italic list-none' */
 .nav__link{
-    media(max-width: 1050px){
+    @media(max-width: 1050px){
         padding-top:24px;
     }
 }
 
 .nav__link:hover{
     color: #227CE4;
-    media(max-width: 1050px){
+    @media(max-width: 1050px){
         color:#227CE4;
         background-color:#28394c;
     }

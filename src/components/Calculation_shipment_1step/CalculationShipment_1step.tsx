@@ -187,7 +187,7 @@ const CaulculationShipment = () => {
                                 </div>
                                 </fieldset>
 
-                                <div className={Style.separate_line}></div>
+                                <div className={Style.separate_line_mob}></div>
 
                                 <legend className={Style.legend_second}> 
                                         <div className={Style.calc__text_step}>
@@ -241,7 +241,7 @@ const CaulculationShipment = () => {
                                 <div  className={Style.calc__container_results}>
                                     <div className={Style.calc__container_results_date1}>
                                         <label>Дата заказа</label>
-                                        <span className="relative">
+                                        <span className={Style.date}>
                                             <span className={Style.datepicker__toggle_button}>
                                                 <img src={arrow} alt="arrow" className="absolute right-3"/>
                                                 <p className="sm:pl-6">{startDate}</p>

@@ -16,7 +16,6 @@ const Numbers: React.FC = () => {
         <>
             {/* <section id='About_us' className={headerStateValue ? `sm:hidden min-h-screen ${Styles.section_hidden}` : Styles.main__section} > */}
             <section id='About_us' className={Styles.main__section} >
-                
                 <div className={Styles.border__container}>
                 <svg className={Styles.section__info_bg_smallest} xmlns="http://www.w3.org/2000/svg" width="55" height="214" viewBox="0 0 55 214" fill="none">
                     <mask id="path-1-inside-1_405_7718" fill="white">

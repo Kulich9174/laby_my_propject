@@ -1,4 +1,25 @@
+.container{
+    padding: 0; 
+    color: #ffffff; 
+    font-size: 0.75rem;
+    line-height: 1rem; 
+    font-style: normal; 
+    font-weight: 500; 
+    text-transform: uppercase; 
+    grid-template-columns: repeat(5, minmax(0, 1fr)); 
+    /* gap: 5%;  */
+    width: 60%;
 
+    @media (max-width: 1050px) { 
+    display: none; 
+    }
+    @media(min-width: 1050px){
+        display:grid;
+        grid-template-columns:20% 20% 20% 20% 20%;
+        gap: 4%; 
+    }
+}
+/* 'm-0 gap-4  not-italic list-none' */
 .nav__link{
     media(max-width: 1050px){
         padding-top:24px;

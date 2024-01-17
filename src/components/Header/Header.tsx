@@ -58,7 +58,7 @@ const Header: React.FC = () => {
         return (
             <>
             <header className='bg-[#1A2633] max-w-[1600px] laptop:mx-auto desktop:mx-auto laptop:min-w-[1050px] desktop:min-w-[1300px]' >
-                <div className='flex max-w-[1600px] justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[10px] desktop:px-[30px] desktop:py-[10px]'>
+                <div className='flex max-w-[1600px] justify-between items-center sm:px-4 sm:py-3 laptop:px-[30px] laptop:py-[16px] desktop:px-[30px] desktop:py-[20px]'>
                 <HeaderLogo/>
                 {/* menu bar */}
                 <Navigation/>

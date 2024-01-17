@@ -45,6 +45,7 @@
         width: 90%;
     }
     @media(min-width: 1300px){
+        padding-right:10%;
         width: 90%;
     }
 }

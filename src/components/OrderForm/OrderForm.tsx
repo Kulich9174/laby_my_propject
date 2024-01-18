@@ -10,7 +10,7 @@ const OrderForm = () => {
                         <div>
                             <p className={`${Styles.flowerLogoWhite} flowerLogo`}>Flower Fraught Karaganda</p>
                             <h1>Заказать звонок</h1>
-                            <p>Закажите звонок и наш менеджер свяжется с вами в близжайшее время</p>
+                            <p className="text_normal_itallic">Закажите звонок и наш менеджер свяжется с вами в близжайшее время</p>
                         </div>
                         <div>
                             <input type="text" placeholder="Имя"></input>
@@ -21,10 +21,10 @@ const OrderForm = () => {
 
                         <div>
                             <input type="checkbox"/>
-                            <label>Даю согласие на обработку <span>персональных данных</span></label>
+                            <label className="text_normal_itallic">Даю согласие на обработку <span>персональных данных</span></label>
                         </div>
                         <div>
-                            <button>Заказать звонок</button>
+                            <button className="text_button">Заказать звонок</button>
                         </div>
                     </form>
                     <div className={Styles.form__pict_container}>

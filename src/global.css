@@ -53,7 +53,7 @@ h1{
   color: var(--White, #FFF);
   font-style: normal;
   font-weight: 600;
-  @media(max-width:800x){
+  @media(max-width:800px){
     font-size: 28px;
   }
   @media(min-width:800px) and (max-width:1500px){
@@ -70,19 +70,65 @@ h1{
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
-  @media(max-width:800x){
-    font-size: 10px;
+  @media(max-width:800px){
+    font-size: 8px;
     letter-spacing: 0.8px;
     padding-bottom:10px;
   }
   @media(min-width:800px) and (max-width:1500px){
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 1px;
     padding-bottom:16px;
   }
   @media(min-width:1500px){
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1.2px;
     padding-bottom:20px;
   }
+}
+
+.text_normal_itallic{
+  color: #FFF;
+  font-style: normal;
+  font-weight: 400;
+  @media(max-width:800px){
+    font-size: 13px;
+    line-height: 20px; /* 153.846% */
+  }
+  @media(min-width:800px) and (max-width:1500px){
+    font-size: 14px;
+    line-height: 24px;
+  }
+  @media(min-width:1500px){
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.text_normal_bold{
+  color: #FFF;
+  font-style: normal;
+  font-weight: 600;
+  @media(max-width:800px){
+    font-size: 13px;
+    line-height: 20px; /* 153.846% */
+  }
+  @media(min-width:800px) and (max-width:1500px){
+    font-size: 14px;
+    line-height: 24px;
+  }
+  @media(min-width:1500px){
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.text_button{
+  color: #FFF;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }

@@ -31,15 +31,9 @@ const MainPage: React.FC = () => {
                                 laptop:text-[44px] laptop:leading-[46px]
                                 desktop:text-[60px] desktop:leading-[65px]'>Авиаперевозка цветов</h1>
                                 <div className='sm:max-w-[85%]'>
-                                    <p className='text-base leading-[18px] font-normal
-                                    sm:py-[15px]
-                                    laptop:py-[15px]
-                                    desktop:text-[16px] desktop:pt-[28px] desktop:pb-[22px]'>Занимаемся только АВИА перевозкой свеже срезанных цветов и растений из <span className='text-base font-semibold leading-[18px]'> Эквадора,
-                                        Кении, Колумбии, Чили, Голландии, Израиля </span> до конечного заказчика.</p>
-                                    <p className='text-base font-semibold 
-                                    sm:leading-[18px]
-                                    lapltop:leading-[26px]
-                                    desktop:leading-[26px]'>Максимальный срок достовки товара - 7 дней от заказа</p>
+                                    <p className={`${Styles.mainSlide__text_norm} text_normal_itallic`}>Занимаемся только АВИА перевозкой свеже срезанных цветов и растений из <span className={`${Styles.mainSlide__text_bold} text_normal_bold`}>
+                                        Эквадора, Кении, Колумбии, Чили, Голландии, Израиля </span> до конечного заказчика.</p>
+                                    <p className={`${Styles.mainSlide__text_bold} sm:leading-[18px] leading-[26px]`}>Максимальный срок достовки товара - 7 дней от заказа</p>
                                 </div>
                             </div>
                         </div>
@@ -50,9 +44,7 @@ const MainPage: React.FC = () => {
                                     <div className='sm:hidden border-solid border-white border-[1px] h-10'>
                                         {/**линия разделяющая блоки */}
                                     </div>
-                                    <div className='sm:hidden flex flex-col justify-between leading-[24px]
-                                    laptop:text-[12px]
-                                    desktop:text-[14px] desktop:font-semibold'>
+                                    <div className={`${Styles.mainSlide__text_bold} sm:hidden flex flex-col justify-between` }>
                                         <li className='flex pb-[6%]'>
                                             <img src={Phone_icon} alt='phone icon' className='pr-2 pl-[14px]'></img>
                                             <a href='tel:+74957378585'>+7 (495) 737 8585</a>
@@ -77,12 +69,12 @@ const MainPage: React.FC = () => {
                             desktop: gap-[30px] '>
                             <div className='flex flex-col items-center justify-center text-center sm:hidden'>
                                 <div className='min-w-[90px] h-[140px]'></div>
-                                <span className='text-[10px] font-medium uppercase py-2'>Equador</span>
+                                <span className={Styles.countries}>Equador</span>
                             </div>
                             <div className='hidden
                         sm:flex sm:flex-col sm:items-center sm:justify-center sm:text-center'>
                                 <img src={flower4} alt='picture with pink flowers' className='min-w-[90px] h-[140px]'></img>
-                                <span className='text-[10px] font-medium uppercase py-2'>EC</span>
+                                <span className={Styles.countries}>EC</span>
                             </div>
 
                             <div className='right-[10%]'>
@@ -91,27 +83,27 @@ const MainPage: React.FC = () => {
 
                             <div className='flex flex-col items-center justify-center text-center'>
                                 <img src={flower1} alt='picture with pink flowers' className='min-w-[90px] h-[140px]'></img>
-                                <span className='text-[10px] font-medium uppercase py-2'>EC</span>
+                                <span className={Styles.countries}>EC</span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>
                                 <img src={flower2} alt='picture with pink flowers' className='min-w-[90px] h-[140px]'></img>
-                                <span className='text-[10px] font-medium uppercase py-2'>CO</span>
+                                <span className={Styles.countries}>CO</span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>
                                 <img src={flower3} alt='picture with pink flowers' className='min-w-[90px] h-[140px]'></img>
-                                <span className='text-[10px] font-medium uppercase py-2'>CL</span>
+                                <span className={Styles.countries}>CL</span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>
                                 <div className='min-w-[90px] h-[140px]'></div>
-                                <span className='text-[10px] font-medium uppercase py-2'>holl</span>
+                                <span className={Styles.countries}>holl</span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>
                                 <div className='min-w-[90px] h-[140px]'></div>
-                                <span className='text-[10px] font-medium uppercase py-2'>isr</span>
+                                <span className={Styles.countries}>isr</span>
                             </div>
                         </div>
                     </section>

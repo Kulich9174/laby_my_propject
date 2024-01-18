@@ -31,15 +31,15 @@ const Warehouses: React.FC = () => {
 
                             {/* TEXT SECTION */}
                             <div className={Styles.conteiner}>
-                                <span className={Styles.warehouse__text_bold}>
+                                <span className= "text_normal_bold">
                                     Наши цветы — не только произведения природы, но и воплощение мирового многообразия, доставляемого нам прямо из живописных уголков планеты.
                                 </span>
-                                <p className={`
+                                <p className={`text_normal_itallic
                                     sm:py-[14px]
                                     laptop:py-5
                                     desktop:py-6
                                     ${Styles.warehouse__text_italic}`}>Прекрасные цветы, несут в себе великолепие и свежесть, привезенные непосредственно из самых питательных уголков природы. Наша компания Flower Fracht Karaganda гордится тем, что мы тщательно подбираем каждый вид цветов.</p>
-                                <p className={`
+                                <p className={`text_normal_itallic
                                     sm:pb-[30px]
                                     laptop:pb-[40px]
                                     desktop:pb-[70px]
@@ -49,7 +49,7 @@ const Warehouses: React.FC = () => {
                             {/* BUTTON */}
                             <div className="sm:pb-[50px]">
                                 <button className={Styles.warehouse__button_size}>
-                                    Связаться с нами
+                                    <p className="text_button">Связаться с нами</p>
                                 </button>
                             </div>
                         </div>
@@ -62,9 +62,9 @@ const Warehouses: React.FC = () => {
 
                             {/* PARAGRAF LAPTOP/DESKTOP*/}
                             <div className="sm:hidden
-                            laptop:pb-10 ml-[20%] max-w-[30%]
-                            desktop:pb-[60px] desktop:pl-5">
-                                <p className={Styles.warehouse__text_italic}>Доставка в Москву занимает от <span className={Styles.warehouse__text_bold}>1</span> до <span className={Styles.warehouse__text_bold}>2</span> дней</p>
+                            laptop:pb-10 laptop:ml-[20%] max-w-[30%] laptop:pt-2 desktop:pt-2
+                            desktop:pb-[60px] ">
+                                <p className={`text_normal_itallic ${Styles.warehouse__text_italic}`}>Доставка в Москву занимает от <span className={Styles.warehouse__text_bold}>1</span> до <span className={Styles.warehouse__text_bold}>2</span> дней</p>
                             </div>
 
                             {/* SMALL AIRPLANE */}
@@ -78,7 +78,7 @@ const Warehouses: React.FC = () => {
                             <div className="sm:py-[20px]
                             laptop:hidden
                             desktop:hidden">
-                                <p className={Styles.warehouse__text_italic}>Доставка в Москву занимает от <span className={Styles.warehouse__text_bold}>1</span> до <span className={Styles.warehouse__text_bold}>2</span> дней</p>
+                                <p className={`text_normal_itallic ${Styles.warehouse__text_italic}`}>Доставка в Москву занимает от <span className={Styles.warehouse__text_bold}>1</span> до <span className={Styles.warehouse__text_bold}>2</span> дней</p>
                             </div>
                             {/* MAP */}
                             <div className="w-full overflow-hidden contain
@@ -86,7 +86,7 @@ const Warehouses: React.FC = () => {
                                 <img src={map} alt="map" className="
                                 sm:w-[850px] sm:h-[100%] sm:overflow-hidden
                                 laptop:w-full laptop:h-full
-                                desktop:w-[850px] desktop:h-[470px]"/>
+                                desktop:w-[850px] desktop:h-auto"/>
                             </div>
                             <img className={Styles.countriesMobile} src={countries} alt="Ruler countries" />
                         </div>

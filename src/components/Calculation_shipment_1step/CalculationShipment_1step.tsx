@@ -81,7 +81,7 @@ const CaulculationShipment = () => {
                                             <div className={Style.calc__container_number}>
                                                 <p className={Style.calc__number}>01</p>
                                             </div>
-                                            <p className={Style.calc__text}>Выберите страну по которой хотите узнать время достатвки</p>
+                                            <p className={`${Style.calc__text} text_normal_itallic`}>Выберите страну по которой хотите узнать время достатвки</p>
                                         </div>
                                 </legend>
 
@@ -181,7 +181,7 @@ const CaulculationShipment = () => {
                                             checked={country === 'spain'} 
                                             onChange={handleCountryChange}/>
                                         <span className={Style.radio}></span>
-                                        <span className={Style.text}>Испания</span>
+                                        <span className={`${Style.text} text_normal_itallic`}>Испания</span>
                                         </label>
                                     </div>
                                 </div>
@@ -194,16 +194,16 @@ const CaulculationShipment = () => {
                                             <div className={Style.calc__container_number}>
                                                 <p className={Style.calc__number}>02</p>
                                             </div>
-                                            <p className={Style.calc__text}>Что бы рассчитать дату доставки выберите день когда планируете сделать заказ</p>
+                                            <p className={`${Style.calc__text} text_normal_itallic`}>Что бы рассчитать дату доставки выберите день когда планируете сделать заказ</p>
                                         </div>
                                         <div className={Style.visibility}>
                                             <div className={`${Style.calc__container_results_date2} `}>
-                                                <p>Конец сбора заказов</p>
-                                                <p>{shipmentCollectionDate}</p>
+                                                <p className="text_normal_itallic">Конец сбора заказов</p>
+                                                <p className="text_normal_itallic">{shipmentCollectionDate}</p>
                                             </div>
                                             <div className={Style.calc__container_results_date2}>
-                                                <p>День поставки</p>
-                                                <p>{shipmentDate}</p>
+                                                <p className="text_normal_itallic">День поставки</p>
+                                                <p className="text_normal_itallic">{shipmentDate}</p>
                                             </div>
                                         </div>
                                 </legend>
@@ -240,11 +240,11 @@ const CaulculationShipment = () => {
                                 {/* DATES */}
                                 <div  className={Style.calc__container_results}>
                                     <div className={Style.calc__container_results_date1}>
-                                        <label>Дата заказа</label>
+                                        <label className="text_normal_itallic">Дата заказа</label>
                                         <span className={Style.date}>
                                             <span className={Style.datepicker__toggle_button}>
                                                 <img src={arrow} alt="arrow" className="absolute right-3"/>
-                                                <p className="sm:pl-6">{startDate}</p>
+                                                <p className="text_normal_itallic sm:pl-6">{startDate}</p>
                                             </span>
                                             
                                             <input  type="date" className={Style.datepicker_input} 
@@ -262,17 +262,17 @@ const CaulculationShipment = () => {
                                     </div>
 
                                     <div className={`${Style.calc__container_results_date} `}>
-                                        <p>Конец сбора заказов</p>
-                                        <p>{shipmentCollectionDate}</p>
+                                        <p className="text_normal_itallic">Конец сбора заказов</p>
+                                        <p className="text_normal_itallic">{shipmentCollectionDate}</p>
                                     </div>
                                     <div className={Style.calc__container_results_date}>
-                                        <p>Доставка</p>
-                                        <p>7 дней</p>
+                                        <p className="text_normal_itallic">Доставка</p>
+                                        <p className="text_normal_itallic">7 дней</p>
                                     </div>
 
                                     <div className={Style.calc__container_results_date}>
-                                        <p>День поставки</p>
-                                        <p>{shipmentDate}</p>
+                                        <p className="text_normal_itallic">День поставки</p>
+                                        <p className="text_normal_itallic">{shipmentDate}</p>
                                     </div>
                                 </div>
                             </div>

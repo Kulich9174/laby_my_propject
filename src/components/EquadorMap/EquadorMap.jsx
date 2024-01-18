@@ -10,7 +10,7 @@ export default function EquadorMap (){
         <div className={Styles.equador__map}>
             <div className={Styles.countainer}>
                 <img src={location_icon} className={Styles.location_icon}alt='location_icon'/>
-                <p className={Styles.country_text}>Equador</p>
+                <p className={`${Styles.text_bold} font-medium uppercase z-10`}>Equador</p>
                 <p className={Styles.text}>Стоимость доставки 1 фулбокса <span className={Styles.text_bold}>от 105 $</span></p>
             </div>
         

@@ -25,14 +25,11 @@ const MainPage: React.FC = () => {
                             laptop:py-[2%]
                             desktop:py-[3%]'>
                             <div className={Styles.textarea}>
-                                <p className="uppercase font-medium tracking-[1px]
-                                    sm:tracking-[.8px] sm:pb-[8px] sm:text-sm
-                                    laptop:text-[10px]
-                                    desktop:text-[12px]">Flower Fracht Karaganda</p>
+                                <p className={`${Styles.flowerLogoWhite} flowerLogo`}>Flower Fracht Karaganda</p>
                                 <h1 className='max-w-[40%] font-semibold leading-10 pr-[15px]
                                 sm:max-w-full sm:text-[38px] sm:whitespace-normal
-                                laptop:text-[44px] laptop:leading-[46px] laptop:pt-[10px]
-                                desktop:text-[60px] desktop:pt-[20px] desktop:leading-[65px]'>Авиаперевозка цветов</h1>
+                                laptop:text-[44px] laptop:leading-[46px]
+                                desktop:text-[60px] desktop:leading-[65px]'>Авиаперевозка цветов</h1>
                                 <div className='sm:max-w-[85%]'>
                                     <p className='text-base leading-[18px] font-normal
                                     sm:py-[15px]

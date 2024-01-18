@@ -22,7 +22,7 @@ const Warehouses: React.FC = () => {
                         sm:justify-center sm:items-center sm:flex sm:flex-col
                         laptop:py-[80px] laptop:pr-5
                         desktop:py-[120px] desktop:max-w-[85%]">
-                            <p className={Styles.logo__text_name}> Flower fracht Karaganda</p>
+                            <p className="flowerLogo"> Flower fracht Karaganda</p>
                             <h1 className={`
                         sm:pb-[30px] sm:text-center
                         laptop:pb-6

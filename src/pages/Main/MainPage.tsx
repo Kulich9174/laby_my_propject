@@ -5,6 +5,7 @@ import MainSlide from '../../components/Main slide/main slide';
 import Warehouses from '../../components/Our_warehouses/Warehouses';
 import CaulculationShipment from "../../components/Calculation_shipment_1step/CalculationShipment_1step";
 import Tariff from "../../components/Tariff/Tariff";
+import OrderForm from "../../components/OrderForm/OrderForm";
 const MainPage: React.FC = () => {
 
     return (
@@ -15,6 +16,7 @@ const MainPage: React.FC = () => {
             <Warehouses/> 
             <CaulculationShipment/>
             <Tariff/>
+            <OrderForm/>
         </div>
         
         </>

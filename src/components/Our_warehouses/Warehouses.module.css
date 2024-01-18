@@ -88,49 +88,16 @@
         display:none;
     }
 }
-.logo__text_name{
-    color: var(--light-blue-text);
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
 
-    @media(max-width:600px) {
-        font-size: 8px;
-        letter-spacing: 0.8px;
-        padding-bottom: 10px;
-    }
-    @media(min-width:600px) and (max-width:1050px){
-        font-size:10px;
-        letter-spacing:1px;
-        padding-bottom: 10px;
-    }
-    @media(min-width:1050px) and (max-width:1300px){
-        font-size:12px;
-        letter-spacing:1.2px;
-        padding-top: 60px;
-        padding-bottom: 0.75rem;
-    }
-    @media(min-width:1300px) {
-        font-size: 14px;
-        letter-spacing: 1.4px;
-        padding-bottom: 1.25rem;
-    }
-}
 
 .header_text{
-    font-style: normal;
-    font-weight: 600;
-    @media(max-width:600px) {
-        font-size: 28px;
+    @media(max-width:800px) {
         line-height: 32px;
     }
-    @media(min-width:600px) and (max-width:1300px){
-        font-size: 32px;
+    @media(min-width:800px) and (max-width:1500px){
         line-height: 42px;
     }
-    @media(min-width:1300px) {
-        font-size: 50px;
+    @media(min-width:1500px) {
         line-height: 60px;
     }
 }

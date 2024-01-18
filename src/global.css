@@ -49,3 +49,40 @@ code {
     monospace;
   
 }
+h1{
+  color: var(--White, #FFF);
+  font-style: normal;
+  font-weight: 600;
+  @media(max-width:800x){
+    font-size: 28px;
+  }
+  @media(min-width:800px) and (max-width:1500px){
+    font-size: 32px;
+  }
+  @media(min-width:1500px){
+    font-size: 50px;
+  }
+  
+}
+.flowerLogo{
+  color: var(--light-blue-text);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  @media(max-width:800x){
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    padding-bottom:10px;
+  }
+  @media(min-width:800px) and (max-width:1500px){
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-bottom:16px;
+  }
+  @media(min-width:1500px){
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    padding-bottom:20px;
+  }
+}

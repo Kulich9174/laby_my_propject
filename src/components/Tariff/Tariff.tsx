@@ -8,7 +8,7 @@ const Tariff = () =>{
         <div className={Styles.separate_line}></div>
             <section className={Styles.tariff__container_section}>
                 <div className={Styles.tariff__container}>
-                    <p className={Styles.tariff__name}>flower fraught karaganda</p>
+                    <p className={`${Styles.tariff__name} flowerLogo`}>flower fraught karaganda</p>
                     <h1 className={Styles.tariff__header_name}>Основные тарифы</h1>
                     <div className={Styles.tariff__gallery}>
                         <div className={Styles.tariff__gallery_element}>

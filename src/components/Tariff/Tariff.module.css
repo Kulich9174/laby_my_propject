@@ -56,42 +56,19 @@
     }
 }
 .tariff__name{
-    color: var(--LightBlue, #9FCCFF);
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-    padding-bottom:2%;
     text-align: center;
-    @media(max-width:900px){
-        font-size: 8px;
-        letter-spacing: 0.8px;
-    }
-    @media(min-width:900px) and (max-width:1300px){
-        font-size: 10px;
-        letter-spacing: 1px;
-    }
-    @media(min-width:1300px){
-        font-size: 12px;
-        letter-spacing: 1.2px;
-    }
 }
 .tariff__header_name{
     text-align: center;
-    font-style: normal;
-    font-weight: 900;
     @media(max-width:900px){
-        font-size: 28px;
         line-height: 32px; /* 114.286% */
         padding-bottom:30px;
     }
     @media(min-width:900px) and (max-width:1300px){
-        font-size: 32px;
         line-height: 60px; /* 187.5% */
         padding-bottom:40px;
     }
     @media(min-width:1300px){
-        font-size: 50px;
         line-height: 60px; /* 120% */
         padding-bottom:55px;
     }

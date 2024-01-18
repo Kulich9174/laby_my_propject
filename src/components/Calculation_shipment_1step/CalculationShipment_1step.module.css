@@ -89,28 +89,21 @@
     }
 }
 
-
-.calc__logo_textName{
-    color: var(--light-blue-text);
-    font-size: 8px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-
-    padding-bottom:10px;
-}
-
 .calc__header_text{
-    color: #FFF;
     text-align: center;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px; /* 114.286% */
-
-    padding-bottom:30px;
+    
+    @media(max-width:1050px){
+        line-height: 32px; /* 114.286% */
+        padding-bottom:30px;
+    }
+    @media(min-width:1050px) and (max-width:1500px) {
+        line-height: 42px; /* 131.25% */
+        padding-bottom:20px;
+    }
+    @media(min-width:1500px){
+        line-height: 60px; /* 120% */
+        padding-bottom:64px;
+    }
 }
 
 .calc__text_step{

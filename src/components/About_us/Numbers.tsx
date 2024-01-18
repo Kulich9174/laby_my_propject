@@ -38,7 +38,7 @@ const Numbers: React.FC = () => {
                 {/* "flex items-center justify-center flex-col py-[60px]" */}
                 <div className={Styles.section__info}>
                     <div className={Styles.section__info_textContainer}>
-                        <p className="text-[#9FCCFF] sm:text-sm tracking-[.8px] uppercase font-medium laptop:text-[10px] desktop:text-[12px]">Flower Fracht Karaganda</p>
+                        <p className="flowerLogo">Flower Fracht Karaganda</p>
                         <h1 className={Styles.header__section_name}>О нас в цифрах</h1>
                     </div>
                     

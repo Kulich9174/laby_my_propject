@@ -71,8 +71,8 @@ const CaulculationShipment = () => {
                         <div className={Style.container}>
                             <div className={Style.calc__container_stepOne}>
                                 {/* <img src={map} alt="map" className="absolute right-0 top-0"/> */}
-                            <p className={Style.calc__logo_textName}>flower fracht karaganda</p>
-                            <h2 className={Style.calc__header_text}>Калькулятор доставки</h2>
+                            <p className="flowerLogo">flower fracht karaganda</p>
+                            <h1 className={Style.calc__header_text}>Калькулятор доставки</h1>
 
                             {/* COUNTY CHOICE BAR */}
                             <fieldset className={Style.radioGroup}>

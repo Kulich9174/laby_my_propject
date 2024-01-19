@@ -37,9 +37,10 @@ visibility:hidden;
     @media (min-width: 1600px) {
         width: 100%; /* Ширина контейнера */
         height: 100%; /* Высота контейнера */
-        background-image: url('/src/assets/images/New_Flowers_bg_mainSlide.jpg'), url('/src/assets/images/Rectangle 1.png'), url('/src/assets/images/Rectangle2.png'),url('');
+        background-image: url('/src/assets/images/New_Flowers_bg_mainSlide.jpg');
         /* background-size: cover, fixed, fixed, cover; Размеры изображений */
-        background-position: left center, center, center, right center; /* Позиционирование изображений */
+        /* background-position: left center, center, center, right center; Позиционирование изображений */
+        background-position:center;
         background-repeat: no-repeat;
         /* background-size: contain, 800px, 800px, auto;  */
         color: white;

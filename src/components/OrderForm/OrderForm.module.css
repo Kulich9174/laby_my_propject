@@ -1,12 +1,162 @@
-.form__conteiner_section{
+.form__container_section{
+    color:white;
+    position:relative;
+    width:100svw;
 
+    height: 100%; /* Высота контейнера */
+    background-image: url('/src/assets/images/Rectangle 1.png'), url('/src/assets/images/Rectangle2Mob.png');
+    background-size: 50% 100%, 50% 100%; /* Размеры изображений */
+    background-position: left center, right center; /* Позиционирование изображений */
+    background-repeat: no-repeat;
+}
+.borders{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position:relative;
 }
 .form__borders{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position:relative;
+    /* border-left: 1px solid rgba(43, 61, 82, 0.30);
+    border-right: 1px solid rgba(43, 61, 82, 0.30); */
+}
+.form__container{
+    width:100%;
+    max-width:1600px;
+    @media(min-width:1050px) and (max-width:1500px){
+        display:grid;
+        grid-template-columns:50% 50%;
+    }
+    @media(min-width:1500px){
+        display:grid;
+        grid-template-columns:40% 60%;
+    }
+}
+.form__container_bg{
+    background-image:url('/src/assets/images/Illuminative_window_form.jpg');
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size:cover; 
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.form__container_paddings{
+    padding-left:5%;
+    padding-right:5%;
+    max-width:1600px;
+}
+.form__text_container{
+    text-align:center
 }
 .form__pict_container{
-    
+    display:flex;
 }
 .flowerLogoWhite{
+    padding-top:60px;
     color:white;
+    font-weight:300;
+    opacity:0.7;
+}
+.form_textWhite{
+    color:white;
+    font-weight:300;
+    opacity:0.7;
+    @media(max-width:1050px){
+        padding-bottom:35px;
+    }
+    @media(min-width:1050px) and (max-width:1500px){
+        padding-bottom:70px;
+    }
+    @media(min-width:1500px){
+        padding-bottom:60px;
+    }
+}
+.form__text_header{
+    @media(max-width:1050px){
+        padding-bottom:12px;
+    }
+    @media(min-width:1050px) and (max-width:1500px){
+        padding-bottom:10px;
+    }
+    @media(min-width:1500px){
+        padding-bottom:30px;
+    }
+}
+.form__container_inputs{
+    @media(max-width:1050px){
+        display:flex;
+        flex-direction:column;
+    }
+    @media(min-width:1050px) and (max-width:1500px){
+        display:flex;
+        flex-direction:column;
+    }
+    @media(min-width:1500px){
+        display:flex;
+    }
+}
+.form__container_button{
+    padding-bottom:60px;
+}
+
+.form__pict_container{
+    display:grid;
+    grid-template-columns:50% 50%;
+    /* @media(max-width:1050px){
+        grid-template-columns:50% 50%;
+    }
+    @media(min-width:1050px) and (max-width:1500px){
+        display:grid;
+        grid-template-columns:50% 50%;
+    }
+    @media(min-width:1500px){
+        display:flex;
+    } */
+    /* display:flex; */
+    /* align-items:center;
+    justify-content:center; */
+}
+
+.pict1{
+    background-image:url('/src/assets/images/flower4.jpg');
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size:cover; 
+
+    @media(max-width:1050px){
+        max-height:300px;
+        min-height:200px;
+    }
+    @media(min-width:1050px) and (max-width:1500px){
+        height:100%;
+    }
+    @media(min-width:1500px){
+        height:auto;
+    }
+    /* border: 1px solid red; */
+}
+.pict2{
+    @media(max-width:1050px){
+        max-height:300px;
+        min-height:200px;
+    }
+    @media(min-width:1050px) and (max-width:1500px){
+        height:auto;
+    }
+    @media(min-width:1500px){
+        height:auto;
+    }
+    background-image:url('/src/assets/images/flower5.jpg');
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size:cover; 
+    /* border: 1px solid red; */
 }

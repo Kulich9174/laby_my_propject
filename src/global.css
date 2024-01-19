@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,1050;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,1050;1,900&display=swap');
 
 @layer utilities {
   .no-scrollbar {
@@ -53,10 +53,10 @@ h1{
   color: var(--White, #FFF);
   font-style: normal;
   font-weight: 600;
-  @media(max-width:800px){
+  @media(max-width:1050px){
     font-size: 28px;
   }
-  @media(min-width:800px) and (max-width:1500px){
+  @media(min-width:1050px) and (max-width:1500px){
     font-size: 32px;
   }
   @media(min-width:1500px){
@@ -70,20 +70,20 @@ h1{
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
-  @media(max-width:800px){
+  @media(max-width:1050px){
     font-size: 8px;
     letter-spacing: 0.8px;
     padding-bottom:10px;
   }
-  @media(min-width:800px) and (max-width:1500px){
+  @media(min-width:1050px) and (max-width:1500px){
     font-size: 10px;
     letter-spacing: 1px;
-    padding-bottom:16px;
+    padding-bottom:12px;
   }
   @media(min-width:1500px){
     font-size: 12px;
     letter-spacing: 1.2px;
-    padding-bottom:20px;
+    padding-bottom:16px;
   }
 }
 
@@ -91,11 +91,11 @@ h1{
   color: #FFF;
   font-style: normal;
   font-weight: 400;
-  @media(max-width:800px){
+  @media(max-width:1050px){
     font-size: 13px;
     line-height: 20px; /* 153.846% */
   }
-  @media(min-width:800px) and (max-width:1500px){
+  @media(min-width:1050px) and (max-width:1500px){
     font-size: 14px;
     line-height: 24px;
   }
@@ -109,11 +109,11 @@ h1{
   color: #FFF;
   font-style: normal;
   font-weight: 600;
-  @media(max-width:800px){
+  @media(max-width:1050px){
     font-size: 13px;
     line-height: 20px; /* 153.846% */
   }
-  @media(min-width:800px) and (max-width:1500px){
+  @media(min-width:1050px) and (max-width:1500px){
     font-size: 14px;
     line-height: 24px;
   }

@@ -39,12 +39,12 @@
 .tariff__gallery{
     padding-left:1%;
     padding-right:1%;
-    @media(max-width:900px){
+    @media(max-width:1050px){
         display:flex;
         flex-direction:column;
         gap:20px;
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         display:grid;
         grid-template-columns:50% 50%;
         gap:30px;
@@ -60,27 +60,27 @@
 }
 .tariff__header_name{
     text-align: center;
-    @media(max-width:900px){
+    @media(max-width:1050px){
         line-height: 32px; /* 114.286% */
         padding-bottom:30px;
     }
-    @media(min-width:900px) and (max-width:1300px){
-        line-height: 60px; /* 187.5% */
+    @media(min-width:1050px) and (max-width:1300px){
+        line-height: 40px; /* 187.5% */
         padding-bottom:40px;
     }
     @media(min-width:1300px){
-        line-height: 60px; /* 120% */
+        line-height: 40px; /* 120% */
         padding-bottom:55px;
     }
 }
 .tariff__gallery_element{
     border: 1px solid rgba(85, 122, 161, 0.30);
     background: #23303F;      
-    @media(max-width:900px){
+    @media(max-width:1050px){
         padding:24px;
 
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         padding:40px 20px;
         width:400px
     }
@@ -99,10 +99,10 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    @media(max-width:900px){
+    @media(max-width:1050px){
         
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         width:400px;
     }
     @media(min-width:1300px){
@@ -112,10 +112,10 @@
 .tariff__gallery_elementInfo{
     display:flex;
     align-items:center;
-    @media(max-width:900px){
+    @media(max-width:1050px){
         padding-bottom:16px;
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         padding-bottom:18px;
     }
     @media(min-width:1300px){
@@ -126,10 +126,10 @@
     display:flex;
     flex-direction:column;
     gap:8px;
-    @media(max-width:900px){
+    @media(max-width:1050px){
         padding-left:20px;
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         padding-left:20px;
     }
     @media(min-width:1300px){
@@ -141,11 +141,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    @media(max-width:900px){
+    @media(max-width:1050px){
         font-size: 20px;
         /* letter-spacing: 0.8px; */
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         font-size: 24px;
         /* letter-spacing: 1px; */
     }
@@ -159,11 +159,11 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    @media(max-width:900px){
+    @media(max-width:1050px){
         font-size: 20px;
         /* letter-spacing: 0.8px; */
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         font-size: 24px;
         /* letter-spacing: 1px; */
     }
@@ -177,11 +177,11 @@
     color: #BCC9DA;;
     font-style: normal;
     font-weight: 400;; 
-    @media(max-width:900px){
+    @media(max-width:1050px){
         font-size: 16px;
         line-height: 24px; /* 150% */
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         font-size: 16px;
         line-height: 20px;
     }
@@ -201,12 +201,12 @@
     color: #BCC9DA;
     font-style: normal;
     font-weight: 400;
-    @media(max-width:900px){
+    @media(max-width:1050px){
         font-size: 10px;
         line-height: 14px; /* 150% */
         padding-top:16px;
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         font-size: 13px;
         line-height: 16px;
         padding-top:18px;
@@ -222,10 +222,10 @@
     justify-content:center;
     align-items:center;
 
-    @media(max-width:900px){
+    @media(max-width:1050px){
         padding:60px 24px;
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         padding:60px;
     }
 }
@@ -239,10 +239,10 @@
     letter-spacing: 1.2px;
 
     border:1px solid white;
-    @media(max-width:900px){
+    @media(max-width:1050px){
         padding:20px 60px;
     }
-    @media(min-width:900px) and (max-width:1300px){
+    @media(min-width:1050px) and (max-width:1300px){
         padding:18px 36px;
     }
     @media(min-width:1300px){

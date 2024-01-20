@@ -4,10 +4,16 @@
     width:100svw;
 
     height: 100%; /* Высота контейнера */
-    background-image: url('/src/assets/images/Rectangle 1.png'), url('/src/assets/images/Rectangle2Mob.png');
-    background-size: 50% 100%, 50% 100%; /* Размеры изображений */
-    background-position: left center, right center; /* Позиционирование изображений */
+    /* background-image: url('/src/assets/images/FormBG.jpg'), url('/src/assets/images/flower5BG.jpg');
+    background-size: 50% 100%, 50% 100%;
+    background-position: left center, right center;
+    background-repeat: no-repeat; */
+    /* background-image: url('/src/assets/images/FormBG.jpg');
+    background-repeat: no-repeat; */
+    background-image: url('/src/assets/images/New_Flowers_bg_mainSlide.jpg');
+    background-position:center;
     background-repeat: no-repeat;
+
 }
 .borders{
     display:flex;
@@ -38,7 +44,7 @@
     }
 }
 .form__container_bg{
-    background-image:url('/src/assets/images/Illuminative_window_form.jpg');
+    background-image:url('/src/assets/images/illuminatorDark.jpg');
     background-position: center; 
     background-repeat: no-repeat;
     background-size:cover; 

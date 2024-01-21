@@ -17,18 +17,22 @@ const OrderForm = () => {
                                             <p className={`${Styles.form_textWhite} text_normal_itallic`}>Закажите звонок и наш менеджер свяжется с вами в близжайшее время</p>
                                         </div>
                                         <div className={Styles.form__container_inputs}>
-                                            <input type="text" placeholder="Имя"></input>
+                                            <div className={Styles.form__input_div}>
+                                                <input type="text" placeholder="Имя"></input>
+                                            </div>
+                                            <div className={Styles.form__input_div}>
+                                                <input type="phone" placeholder="Номер телефона"/>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <input type="phone" placeholder="Номер телефона"/>
-                                        </div>
-
-                                        <div>
-                                            <input type="checkbox"/>
-                                            <label className="text_normal_itallic">Даю согласие на обработку <span>персональных данных</span></label>
-                                        </div>
-                                        <div className={Styles.form__container_button}>
-                                            <button className="text_button">Заказать звонок</button>
+                                       
+                                        <div className={Styles.form__checkboxButton_container}>
+                                            <div className={Styles.form__checkbox}>
+                                                <input type="checkbox"/>
+                                                <label className="text_normal_itallic">Даю согласие на обработку <span>персональных данных</span></label>
+                                            </div>
+                                            <div className={Styles.form__container_button}>
+                                                <button className={`text_button ${Styles.form__button}`}>Заказать звонок</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

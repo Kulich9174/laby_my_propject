@@ -63,9 +63,7 @@ const CaulculationShipment = () => {
         <>
             {/* <section className={headerStateValue ? `sm:hidden min-h-screen ${Style.section_hidden}` : Style.calc__container_section}> */}
                 <section className={Style.calc__container_section}>
-                    <div className={Style.calc__container_section}>
-                        
-                    </div>
+                    <div className={Style.calc__container_div}>
                     <img src={Map_icon} alt="map background icon" className={Style.bg_icon_big}/>
                     <div className={Style.borders}>
                         <div className={Style.container}>
@@ -279,6 +277,7 @@ const CaulculationShipment = () => {
                         </div>
                         </div>
                     </div>
+                </div>
             </section>
         </>
     )

@@ -31,6 +31,9 @@ const OrderForm = () => {
         <>
             <section className={Styles.form__container_section}>
                 <div className={Styles.borders}>
+                    <div className={Styles.form__coneiner_maxwidth}>
+
+                    
                     <div className={Styles.form__container}>
                         <form>
                             <div className={Styles.form__container_bg}>
@@ -67,6 +70,7 @@ const OrderForm = () => {
                             <div className={Styles.pict1}></div>
                             <div className={Styles.pict2}></div>
                         </div> 
+                    </div>
                     </div>
                 </div>
             </section>

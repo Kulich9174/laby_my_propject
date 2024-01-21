@@ -2,18 +2,26 @@
     color:white;
     position:relative;
     width:100svw;
-
     height: 100%; /* Высота контейнера */
-    /* background-image: url('/src/assets/images/FormBG.jpg'), url('/src/assets/images/flower5BG.jpg');
+    background-image: url('/src/assets/images/FormBG.jpg'),url('/src/assets/images/New_Flowers_bg_mainSlide.jpg');
+    background-position: left center, right center; /* Позиционирование изображений */
+        background-repeat: no-repeat;
+    /* background-size: 50% 50%; */
     background-size: 50% 100%, 50% 100%;
-    background-position: left center, right center;
-    background-repeat: no-repeat; */
-    /* background-image: url('/src/assets/images/FormBG.jpg');
-    background-repeat: no-repeat; */
-    background-image: url('/src/assets/images/New_Flowers_bg_mainSlide.jpg');
-    background-position:center;
-    background-repeat: no-repeat;
-
+}
+.form__coneiner_maxwidth{
+   
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position:relative;
+    max-width: 1600px;
+    /* @media(min-width:1800px){
+        padding-left: 1%;
+        max-width: 1600px;
+    } */
 }
 .borders{
     display:flex;
@@ -21,6 +29,10 @@
     justify-content:center;
     flex-direction:column;
     position:relative;
+    @media(min-width:1600px){
+        /* padding-left: 5%; */
+    }
+   
 }
 .form__borders{
     display:flex;
@@ -40,22 +52,22 @@
     @media(min-width:1500px){
         
     }
-    /* border-left: 1px solid rgba(43, 61, 82, 0.30);
-    border-right: 1px solid rgba(43, 61, 82, 0.30); */
 }
 .form__container{
     width:100%;
-    max-width:1600px;
     @media(min-width:1050px) and (max-width:1500px){
         display:grid;
         grid-template-columns:50% 50%;
     }
     @media(min-width:1500px){
         display:grid;
-        grid-template-columns:40% 60%;
+        grid-template-columns:50% 50%;
     }
+    /* border-left: 1px solid rgba(43, 61, 82, 0.30);
+    border-right: 1px solid rgba(43, 61, 82, 0.30); */
 }
 .form__container_bg{
+    width:100%;
     background-image:url('/src/assets/images/illuminatorDark.jpg');
     background-position: center; 
     background-repeat: no-repeat;
@@ -67,20 +79,24 @@
     flex-direction:column;
 }
 .form__container_paddings{
-    display:flex;
+    /* display:flex;
     align-items:center;
-    justify-content:center;
-    padding-left:5%;
-    padding-right:5%;
-    max-width:1600px;
+    justify-content:center; */
+    @media(max-width:1600px){
+        padding-left:5%;
+        padding-right:5%;
+    }
+     
 }
 .form__text_container{
-    text-align:center;
+    
     @media(max-width:1050px){
         padding-bottom:35px;
+        text-align:center;
     }
     @media(min-width:1050px) and (max-width:1500px){
         padding-bottom:50px;
+        text-align:center;
     }
     @media(min-width:1500px){
         padding-bottom:60px;
@@ -123,10 +139,12 @@
         padding-bottom:40px;
     }
     @media(min-width:1500px){
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        gap:20px;
+        display:grid;
+        grid-template-columns: 47% 47%;
+        width: 100%;
+        /* justify-content: center;
+        align-items: center; */
+        gap:6%;
         padding-bottom:50px;
     }
 }
@@ -205,10 +223,9 @@ input[type="text"] {
         
     }
     @media(min-width:1500px){
-        display:flex;
-        /* gap:20px; */
-        justify-content: center;
-        padding-bottom:50px;
+        display:grid;
+        grid-template-columns: 47% 47%;
+        gap: 6%;
     }
 }
 .form__checkbox{

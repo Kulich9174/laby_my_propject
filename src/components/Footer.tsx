@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../assets/images/logo_image.svg';
 import { useSelector} from 'react-redux';
 import { RootState } from '../state/store';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
     const headerstatevalue = useSelector((state: RootState)=>state.headerMenuState.value);
@@ -26,18 +27,18 @@ const Footer: React.FC = () => {
                     <ul className={ headerstatevalue ? 'sm:hidden flex flex-wrap justify-center -mx-2 laptop:items-center':"flex flex-wrap justify-center -mx-2 laptop:items-center"}>
                         {/* Первая колонка */}
                         <li className="w-1/2 px-2">
-                            <a href="#" className="inline-block py-2 hover:text-[#227CE4]">ГЛАВНАЯ</a>
+                            <Link to="/" className="inline-block py-2 hover:text-[#227CE4]">ГЛАВНАЯ</Link>
                         </li>
                         <li className="w-1/2 px-2">
-                            <a href="#" className="inline-block py-2 hover:text-[#227CE4]">БРОКЕРАМ</a>
+                            <Link to="/brockers-page" className="inline-block py-2 hover:text-[#227CE4]">БРОКЕРАМ</Link>
                         </li>
 
                         {/* Вторая колонка */}
                         <li className="w-1/2 px-2">
-                            <a href="#" className="inline-block py-2 hover:text-[#227CE4]">НАШИ СКЛАДЫ</a>
+                            <Link to="/warehouses-page" className="inline-block py-2 hover:text-[#227CE4]">НАШИ СКЛАДЫ</Link>
                         </li>
                         <li className="w-1/2 px-2">
-                            <a href="#" className="inline-block py-2 hover:text-[#227CE4]">КОНТАКТЫ</a>
+                            <Link to="/contacts" className="inline-block py-2 hover:text-[#227CE4]">КОНТАКТЫ</Link>
                         </li>
                     </ul>
                 </nav>

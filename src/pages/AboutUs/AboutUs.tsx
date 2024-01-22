@@ -1,10 +1,11 @@
 import React from "react";
+import MainPageOtherPaths from "../../components/MainPageOnOtherPaths/ForBrokersMainPage/MainPageUnique";
 
 const Info = () => {
     return(
         <>
             <div>
-                <p>About us</p>
+                <MainPageOtherPaths/>
             </div>
         </>
     )

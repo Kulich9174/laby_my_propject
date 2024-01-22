@@ -6,20 +6,20 @@ const MainPageOtherPaths = () =>{
     const location = useLocation();
 
     const headers: { [key: string]: string } = {
-        '/brokers-page': 'Брокерам',
-        '/about': 'Наши склады',
+        '/brockers-page': 'Брокерам',
+        '/warehouses-page': 'Наши склады',
         '/contacts': 'Контакты'
     };
 
     const classes: { [key: string]: string } = {
-        '/brokers-page': Styles.brocker__mainPage_section_brockers,
-        '/about': Styles.brocker__mainPage_section_about,
+        '/brockers-page': Styles.brocker__mainPage_section_brockers,
+        '/warehouses-page': Styles.brocker__mainPage_section_about,
         '/contacts': Styles.brocker__mainPage_section_contacts
     };
 
     const currentHeader = headers[location.pathname] || 'Стандартный заголовок';
     const currentClass = classes[location.pathname] || Styles.brocker__mainPage_section;
-
+    console.log('Текущий путь:', location.pathname);
 
 
     return(
@@ -27,8 +27,8 @@ const MainPageOtherPaths = () =>{
         {/* Если пользователь на страницу path='/brockers-page' то выводи заголовок элемент массива Брокерам, а класс сделай ..brocker__mainPage_section_brockers и аналогично для пути '/about' и '/contacts' */}
             <section className={currentClass}>
                 <div className={Styles.brocker__mainPage_container}>
-                    <p className={Styles.brocker__mainPage_logoName}>Flower Fracht Karaganda</p>
-                    <h2 className={Styles.brocker__mainPage_header}>{currentHeader}</h2>
+                    <p className={`flowerLogo ${Styles.brocker__mainPage_logoName}`}>Flower Fracht Karaganda</p>
+                    <h1 className={Styles.brocker__mainPage_header}>{currentHeader}</h1>
                 </div>
             </section>
         </>

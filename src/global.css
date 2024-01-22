@@ -34,6 +34,9 @@ html,body {
   background-color: #1A2633;
   min-height: 100vh;
 
+  color:#FFF;
+  font-family: Montserrat;
+
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;

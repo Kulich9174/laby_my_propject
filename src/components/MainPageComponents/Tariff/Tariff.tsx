@@ -1,6 +1,6 @@
 import React from "react";
 import Styles from './Tariff.module.css';
-import Airplane from '../../assets/images/Airplane.svg'
+import Airplane from '../../../assets/images/Airplane.svg'
 
 const Tariff = () =>{
     return(

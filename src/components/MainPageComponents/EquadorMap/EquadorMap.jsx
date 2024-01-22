@@ -1,6 +1,6 @@
 import React from 'react';
 import Styles from './Equador.module.css';
-import location_icon from '../../assets/images/Location_icon.svg';
+import location_icon from '../../../assets/images/Location_icon.svg';
 
 
 export default function EquadorMap (){

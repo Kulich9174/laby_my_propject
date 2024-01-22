@@ -1,16 +1,16 @@
 import React from "react";
-import calendar from '../../assets/images/Calendar.svg';
-import weight from '../../assets/images/Weight.svg';
-import paper from '../../assets/images/Paper.svg';
-import airplane from '../../assets/images/Airplane.svg';
-import temperature from '../../assets/images/Temperature.svg';
-import smile from '../../assets/images/Smile.svg';
+import calendar from '../../../assets/images/Calendar.svg';
+import weight from '../../../assets/images/Weight.svg';
+import paper from '../../../assets/images/Paper.svg';
+import airplane from '../../../assets/images/Airplane.svg';
+import temperature from '../../../assets/images/Temperature.svg';
+import smile from '../../../assets/images/Smile.svg';
 import Styles from './Number.module.css';
-import BGDesktop from '../../assets/images/NumberSectionBG_desktop.svg';
-import BGLaptop  from '../../assets/images/NumberSectionBG_laptop.svg';
-import BGMobile from '../../assets/images/NumberSectionBG_mobile.svg';
+// import BGDesktop from '../../../assets/images/NumberSectionBG_desktop.svg';
+// import BGLaptop  from '../../../assets/images/NumberSectionBG_laptop.svg';
+// import BGMobile from '../../../assets/images/NumberSectionBG_mobile.svg';
 // import { useSelector} from 'react-redux';
-// import { RootState } from '../../state/store';
+// import { RootState } from '../../../state/store';
 
 const Numbers: React.FC = () => {
     // const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);

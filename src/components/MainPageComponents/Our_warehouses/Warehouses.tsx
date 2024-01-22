@@ -1,11 +1,11 @@
 import React from "react";
 import Styles from './Warehouses.module.css';
-import map from '../../assets/images/MAPS2.svg';
-import countries from '../../assets/images/Country.svg';
-import countriesLaptop from '../../assets/images/Countries_laptop.svg';
-import smallAirplane from '../../assets/images/Small_airplane.svg';
+import map from '../../../assets/images/MAPS2.svg';
+import countries from '../../../assets/images/Country.svg';
+import countriesLaptop from '../../../assets/images/Countries_laptop.svg';
+import smallAirplane from '../../../assets/images/Small_airplane.svg';
 // import { useSelector} from 'react-redux';
-// import { RootState } from '../../state/store';
+// import { RootState } from '../../../state/store';
 
 const Warehouses: React.FC = () => {
     // const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);

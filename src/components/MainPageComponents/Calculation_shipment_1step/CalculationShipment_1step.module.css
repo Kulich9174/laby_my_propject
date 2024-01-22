@@ -1,5 +1,5 @@
 .calc__section{
-    background:url('../../assets/images/map_calc_bg_small.svg');
+    background:url('../../../assets/images/map_calc_bg_small.svg');
     background-repeat: no-repeat;
     background-size: contain;
     position:relative;
@@ -427,5 +427,5 @@
     position:absolute;
     left:0;
     bottom:0;
-    background:url('../../assets/images/map_calc_bg_small.svg');
+    background:url('../../../assets/images/map_calc_bg_small.svg');
 }

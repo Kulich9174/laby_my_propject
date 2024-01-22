@@ -1,15 +1,15 @@
 import Button from '../ButtonConnect/Button_connection';
 import React from 'react';
-import flower1 from '../../assets/images/flower1.jpg';
+import flower1 from '../../../assets/images/flower1.jpg';
 import EquadorMap from '../EquadorMap/EquadorMap';
-import flower2 from '../../assets/images/flower2.jpg';
-import flower3 from '../../assets/images/flower3.jpg';
-import flower4 from '../../assets/images/Rectangle 1.png';
-import Phone_icon from '../../assets/images/Phone_icon.svg';
-import Mail_icon from '../../assets/images/Mail_icon.svg';
+import flower2 from '../../../assets/images/flower2.jpg';
+import flower3 from '../../../assets/images/flower3.jpg';
+import flower4 from '../../../assets/images/Rectangle 1.png';
+import Phone_icon from '../../../assets/images/Phone_icon.svg';
+import Mail_icon from '../../../assets/images/Mail_icon.svg';
 import Styles from './MainSlide.module.css';
 // import { useSelector} from 'react-redux';
-// import { RootState } from '../../state/store';
+// import { RootState } from '../../../state/store';
 
 
 const MainPage: React.FC = () => {

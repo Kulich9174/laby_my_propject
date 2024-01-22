@@ -1,14 +1,14 @@
 import React,{ useState} from "react";
 import Style from './CalculationShipment_1step.module.css';
-import location_icon from '../../assets/images/Location_icon.svg';
-// import map from '../../assets/images/mapSmall.svg';
-// import map from '../../assets/images/map_calc_bg_small.svg';
-// import map2 from '../../assets/images/mapSmall2.svg';
-import arrow from '../../assets/images/arrow.svg';
-import Way from '../../assets/images/Way.svg';
+import location_icon from '../../../assets/images/Location_icon.svg';
+// import map from '../../../assets/images/mapSmall.svg';
+// import map from '../../../assets/images/map_calc_bg_small.svg';
+// import map2 from '../../../assets/images/mapSmall2.svg';
+import arrow from '../../../assets/images/arrow.svg';
+import Way from '../../../assets/images/Way.svg';
 // import { useSelector} from 'react-redux';
-// import { RootState } from '../../state/store';
-import Map_icon from '../../assets/images/map_calc_bd.svg';
+// import { RootState } from '../../../state/store';
+import Map_icon from '../../../assets/images/map_calc_bd.svg';
 
 
 const CaulculationShipment = () => {

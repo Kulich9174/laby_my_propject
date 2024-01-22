@@ -79,14 +79,13 @@
     flex-direction:column;
 }
 .form__container_paddings{
-    /* display:flex;
-    align-items:center;
-    justify-content:center; */
     @media(max-width:1600px){
         padding-left:5%;
         padding-right:5%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
     }
-     
 }
 .form__text_container{
     

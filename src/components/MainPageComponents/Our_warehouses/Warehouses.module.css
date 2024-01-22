@@ -7,7 +7,7 @@
     opacity: 1;
     color:var(--primary-text-color);
     position: relative;
-    background-image: url('../../assets/images/airplane_sec.png');
+    background-image: url('../../../assets/images/airplane_sec.png');
     background-size: cover;
     background-position: center;
     padding-left:5%;

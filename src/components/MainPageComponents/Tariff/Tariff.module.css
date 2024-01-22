@@ -15,8 +15,8 @@
     padding-right:5%;
     width:100svw;
     background-image: image-set(
-        url("../../assets/images/tariff_bg_mobile.png") 1x,
-        url("../../assets/images/tariff_bg_laptop.png") 2x,
+        url("../../../assets/images/tariff_bg_mobile.png") 1x,
+        url("../../../assets/images/tariff_bg_laptop.png") 2x,
         url("") 3x);
     background-repeat: no-repeat;
     background-position: center;
@@ -91,7 +91,7 @@
 }
 .tariff__makePrice{
     border: 1px solid rgba(85, 122, 161, 0.30);
-    background: url('../../assets/images/Airplane_tariff_gallery_price.png');
+    background: url('../../../assets/images/Airplane_tariff_gallery_price.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

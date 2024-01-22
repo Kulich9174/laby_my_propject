@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Styles from './OrderForm.module.css';
 import { useDispatch } from 'react-redux';
-import {changeValue} from '../../state/AgreementReducer/AgreementReducer';
+import {changeValue} from '../../../state/AgreementReducer/AgreementReducer';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../state/store';
-import { addName, addPhone } from "../../state/FormDataReducer/FormDataReducer";
+import { RootState } from '../../../state/store';
+import { addName, addPhone } from "../../../state/FormDataReducer/FormDataReducer";
 
 const OrderForm = () => {
     const chackboxAgreementState = useSelector((state: RootState)=>state.agreementState.value);

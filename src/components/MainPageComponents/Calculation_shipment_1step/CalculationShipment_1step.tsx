@@ -194,17 +194,52 @@ const CaulculationShipment = () => {
                                             </div>
                                             <p className={`${Style.calc__text} text_normal_itallic`}>Что бы рассчитать дату доставки выберите день когда планируете сделать заказ</p>
                                         </div>
-                                        <div className={Style.visibility}>
-                                            <div className={`${Style.calc__container_results_date2} `}>
-                                                <p className="text_normal_itallic">Конец сбора заказов</p>
-                                                <p className="text_normal_itallic">{shipmentCollectionDate}</p>
+
+                                        <div  className={Style.calc__container_results}>
+                                            <div className={Style.country__name_main}>
+                                            <img src={location_icon} alt="location icon"/>
+                                            <p className={Style.country__name}>{countryNames[country]}</p>
                                             </div>
-                                            <div className={Style.calc__container_results_date2}>
-                                                <p className="text_normal_itallic">День поставки</p>
-                                                <p className="text_normal_itallic">{shipmentDate}</p>
-                                            </div>
+                                        <div className={Style.calc__container_results_date2}>
+                                            <label className="text_normal_itallic">Дата заказа</label>
+                                            <span className={Style.date}>
+                                                <span className={Style.datepicker__toggle_button}>
+                                                    <img src={arrow} alt="arrow" className="absolute right-1"/>
+                                                    <p className="text_normal_itallic sm:pl-2">{startDate}</p>
+                                                </span>
+                                            
+                                            <input  type="date" className={Style.datepicker_input} 
+                                                id="start" 
+                                                name="ship-start" 
+                                                value={startDate} // Используем состояние для значения
+                                                min="2018-01-01" 
+                                                max="2024-12-31" 
+                                                onChange={e => {
+                                                    setStartDate(e.target.value);
+                                                    calculateShipmentDateCollection(e.target.value);
+                                                    calculateShipmentDate(e.target.value);
+                                                    }} />
+                                            </span>
                                         </div>
+
+                                    <div className={`${Style.calc__container_results_date} `}>
+                                        <p className="text_normal_itallic">Конец сбора заказов</p>
+                                        <p className="text_normal_itallic">{shipmentCollectionDate}</p>
+                                    </div>
+                                    <div className={`laptop:hidden desktop:hidden ${Style.calc__container_results_date2}`}>
+                                        <p className="text_normal_itallic">Доставка</p>
+                                        <p className="text_normal_itallic">7 дней</p>
+                                    </div>
+
+                                    <div className={Style.calc__container_results_date}>
+                                        <p className="text_normal_itallic">День поставки</p>
+                                        <p className="text_normal_itallic">{shipmentDate}</p>
+                                    </div>
+                                </div>
                                 </legend>
+
+                                
+
                                 
                         </div>
                         
@@ -226,24 +261,16 @@ const CaulculationShipment = () => {
                                                 </div>
                                                 <img src={Way} alt="way of" className={Style.way}/>
                                             </div>
+                                            
                                         </div>
                                     </div>
-                                    <div className={Style.country__name_main}>
-                                        <img src={location_icon} alt="location icon"/>
-                                        <p className={Style.country__name}>{countryNames[country]}</p>
-                                    </div>
-                                </div>
-                                    
-                                    
-                                {/* DATES */}
-                                <div  className={Style.calc__container_results}>
                                     <div className={Style.calc__container_results_date1}>
-                                        <label className="text_normal_itallic">Дата заказа</label>
-                                        <span className={Style.date}>
-                                            <span className={Style.datepicker__toggle_button}>
-                                                <img src={arrow} alt="arrow" className="absolute right-3"/>
-                                                <p className="text_normal_itallic sm:pl-6">{startDate}</p>
-                                            </span>
+                                            <label className="text_normal_itallic">Дата заказа</label>
+                                            <span className={Style.date}>
+                                                <span className={Style.datepicker__toggle_button}>
+                                                    <img src={arrow} alt="arrow" className="absolute right-3"/>
+                                                    <p className="text_normal_itallic sm:pl-6">{startDate}</p>
+                                                </span>
                                             
                                             <input  type="date" className={Style.datepicker_input} 
                                                 id="start" 
@@ -256,22 +283,8 @@ const CaulculationShipment = () => {
                                                     calculateShipmentDateCollection(e.target.value);
                                                     calculateShipmentDate(e.target.value);
                                                     }} />
-                                        </span>
-                                    </div>
-
-                                    <div className={`${Style.calc__container_results_date} `}>
-                                        <p className="text_normal_itallic">Конец сбора заказов</p>
-                                        <p className="text_normal_itallic">{shipmentCollectionDate}</p>
-                                    </div>
-                                    <div className={Style.calc__container_results_date}>
-                                        <p className="text_normal_itallic">Доставка</p>
-                                        <p className="text_normal_itallic">7 дней</p>
-                                    </div>
-
-                                    <div className={Style.calc__container_results_date}>
-                                        <p className="text_normal_itallic">День поставки</p>
-                                        <p className="text_normal_itallic">{shipmentDate}</p>
-                                    </div>
+                                            </span>
+                                        </div>
                                 </div>
                             </div>
                         </div>

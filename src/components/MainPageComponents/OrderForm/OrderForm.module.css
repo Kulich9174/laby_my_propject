@@ -218,9 +218,6 @@ input[type="text"] {
         justify-content: center;
         align-items: center;
     }
-    @media(min-width:1050px) and (max-width:1500px){
-        
-    }
     @media(min-width:1500px){
         display:grid;
         grid-template-columns: 47% 47%;

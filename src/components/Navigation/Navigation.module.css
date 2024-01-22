@@ -20,11 +20,11 @@
     }
 }
 /* 'm-0 gap-4  not-italic list-none' */
-.nav__link{
+/* .nav__link{
     @media(max-width: 1050px){
         padding-top:24px;
     }
-}
+} */
 
 .nav__link:hover{
     color: #227CE4;

@@ -1,0 +1,246 @@
+.brocker__content{
+    position: relative;
+    width:100svw;
+}
+.brocker__content_section{
+    padding-left:5%;
+    padding-right:5%;
+}
+.brocker__content_container{
+    
+}
+.brocker__content_borders{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    position:relative;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:60px;
+    padding-bottom:60px;
+    @media(min-width:1300px){
+        padding-top:120px;
+        padding-bottom:120px;
+    }
+    border-left: 1px solid rgba(43, 61, 82, 0.30);
+    border-right: 1px solid rgba(43, 61, 82, 0.30);
+}
+.brocker__content_positioning{
+    @media(max-width:800px){
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        display:flex;
+    }
+    @media(min-width:1501px){
+        display:grid;
+    }
+}
+.brocker__content_bg{
+    @media (max-width:650px){
+        opacity:0.9;
+        display:block;
+        width: 320.053px;
+        height: 167.416px;
+        transform: rotate(4.493deg);
+        background-image:url('/src/assets/images/BrockersBGMobile.svg');
+        background-repeat: no-repeat;
+        flex-shrink: 0; 
+        position:absolute;
+        /* left:-20px;
+        top:16px; */
+        overflow:hidden;
+    }
+    @media (min-width:651px) and (max-width: 1280px){
+        opacity:0.9;
+        display:block;
+        width: 100%;
+        height: 380.642px;
+        transform: rotate(4.483deg);
+        background-image:url('/src/assets/images/BrockersBGLaptop.svg');
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        position:absolute;
+        /* left:-20px;
+        top:65px; */
+        overflow:hidden;
+    }
+    @media (min-width:1281px){
+        opacity:0.9;
+        display:block;
+        width: 100%;
+        height: 600px;
+        transform: rotate(4.493deg);
+        background-image:url('/src/assets/images/BrockersBGDesktop.svg');
+        background-repeat: no-repeat; 
+        flex-shrink: 0;
+        position:absolute;
+        /* left:-50px;
+        top:150px; */
+        overflow:hidden;
+    }
+}
+.brocker__content_bg_down{
+    @media (max-width:650px){
+        opacity:0.9;
+        width: 100%;
+        height: 380.642px;
+        bottom:-35%;
+        left:70%;
+        display:block;
+        background-image:url('/src/assets/images/BrokersPageBGDownMobile.svg');
+        background-repeat: no-repeat;
+        flex-shrink: 0; 
+        position:absolute;
+        overflow:hidden;
+    }
+    @media (min-width:651px) and (max-width: 1280px){
+        opacity:0.9;
+        display:block;
+        width: 100%;
+        height: 380.642px;
+        transform: rotate(4.483deg);
+        /* background-image:url('/src/assets/images/BrockersBGLaptop.svg'); */
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        position:absolute;
+        /* left:-20px;
+        top:65px; */
+        overflow:hidden;
+    }
+    @media (min-width:1281px){
+        opacity:0.9;
+        display:block;
+        width: 100%;
+        height: 600px;
+        transform: rotate(4.493deg);
+        background-image:url('/src/assets/images/BrokersPageBGDownDesktop.svg');
+        background-repeat: no-repeat; 
+        flex-shrink: 0;
+        position:absolute;
+        /* left:-50px;
+        top:150px; */
+        overflow:hidden;
+    }
+}
+.brocker__content_header{
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    @media(max-width:800px){
+        font-size: 20px;
+        line-height: 32px;
+        padding-bottom:50px;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        font-size: 32px;
+        line-height: 42px;
+        padding-bottom:40px;
+    }
+    @media(min-width:1501px){
+        font-size: 36px;
+        line-height: 46px;
+        padding-bottom:80px;
+    }
+}
+.brocker__content_image{
+    width:70%;
+    height:70%;
+}
+.brocker__content_gallery{
+    @media(max-width:800px){
+        padding-top:60px;
+        gap:18px;
+        display:flex;
+        flex-direction:column;
+    }
+    @media(min-width:1500px){
+        display:grid;
+        grid-template-columns:50% 50%;
+    }
+}
+.brocker__content_gallery_element{
+    border: 1px solid rgba(85, 122, 161, 0.30);
+    background: #23303F;
+    display:flex;
+    @media(max-width:650px){
+        align-items:center;
+        justify-content:space-between;
+        gap:10%;
+        min-width:290px;
+        min-height:75px;
+    }
+    @media(min-width:651px) and (max-width:1500px){
+        
+    }
+    @media(min-width:1501px){
+        
+    }
+}
+.brocker__content_gallery_element_text{
+    position:relative;
+    @media(max-width:650px){
+        padding:10px 0px 10px 46px;
+    }
+    @media(min-width:651px) and (max-width:1500px){
+        padding:20px 0px 20px 35px;
+    }
+    @media(min-width:1501px){
+        padding:40px 0px 40px 35px;
+    }
+}
+.brocker__content_gallery_element_header{
+    color: var(--light-blue-text);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media(max-width:800px){
+        font-size: 15px;
+        padding-bottom:4px;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        font-size: 25px;
+        padding-bottom:10px;
+    }
+    @media(min-width:1501px){
+        font-size: 30px;
+        padding-bottom:14px;
+    }
+}
+.brocker__content_gallery_element_paragraph{
+    color: var(--invisible-text);
+    font-style: normal;
+    font-weight: 500;
+    @media(max-width:800px){
+        font-size: 8px;
+        line-height: 12px;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        font-size: 13px;
+        line-height: 22px;
+    }
+    @media(min-width:1501px){
+        font-size: 16px;
+        line-height: 22px; /* 137.5% */
+    }
+}
+.brocker__content_gallery_element_number{
+    color: #BCC9DA;
+    opacity: 0.08;
+    text-align: right;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-right:20px;
+    @media(max-width:800px){
+        font-size: 30px;
+    }
+    @media(min-width:801px){
+        font-size: 72px;
+    }
+}

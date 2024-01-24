@@ -29,6 +29,9 @@
     border-left: 1px solid rgba(43, 61, 82, 0.30);
     border-right: 1px solid rgba(43, 61, 82, 0.30);
 }
+.brocker__content_container{
+    max-width: 1600px;
+}
 .brocker__content_positioning{
     @media(max-width:800px){
         display:flex;

@@ -25,9 +25,9 @@ export const theme = {
   screens: {
     'sm': { 'max': '1050px' },
     // => @media (max-width: 639px) { ... }
-    'laptop': { 'min': '1050px', 'max': '1300px' },
+    'laptop': { 'min': '1051px', 'max': '1300px' },
     // => @media (min-width: 1024px) { ... }
-    'desktop': { 'min': '1300px' },
+    'desktop': { 'min': '1301px' },
     // => @media (min-width: 1280px) { ... }
   },
 

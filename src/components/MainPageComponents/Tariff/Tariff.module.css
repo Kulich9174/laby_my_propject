@@ -14,10 +14,11 @@
     padding-left:5%;
     padding-right:5%;
     width:100svw;
-    background-image: image-set(
-        url("../../../assets/images/tariff_bg_mobile.png") 1x,
+    background-image: url('../../../assets/images/BrockersBG.png');
+    /* background-image: image-set(
+        url("../../assets/images/BrockersBG.png") 1x,
         url("../../../assets/images/tariff_bg_laptop.png") 2x,
-        url("") 3x);
+        url("") 3x); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

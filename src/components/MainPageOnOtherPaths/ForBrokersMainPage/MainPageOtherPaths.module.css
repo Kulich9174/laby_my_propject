@@ -1,23 +1,34 @@
 .brocker__mainPage_section_brockers{
     width:100%;
-    background-image:url('../../../assets/images/MainPageBGBrockers.jpg');
+    /* background-image:url('../../../assets/images/MainPageBGBrockers.jpg'); */
+    background-image:url('../../../assets/images/BrockerMainPage.png');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .brocker__mainPage_section_about{
     width:100%;
-    background-image:url('../../../assets/images/MainPageBGWarehouses.jpg');
+    background-image:url('../../../assets/images/WarehousesMainPage.png');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .brocker__mainPage_section_contacts{
     width:100%;
-    background-image:url('../../../assets/images/MainPageBGContacts.jpg');
+    background-image:url('../../../assets/images/ContactsMainPage.png');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .brocker__mainPage_container{
     display:flex;

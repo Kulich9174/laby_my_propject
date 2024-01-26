@@ -9,8 +9,8 @@ const BrockersPageComponent = () => {
             <div className={Styles.brocker__content_bg}></div>
             <section className={Styles.brocker__content_section}>
                 <div className={Styles.brocker__content_borders}>
-                    <h2 className={Styles.brocker__content_header}>Помогаем брокерам из любых стан с доставкой цветов по всему СНГ</h2>
                     <div className={Styles.brocker__content_container}>
+                        <h2 className={Styles.brocker__content_header}>Помогаем брокерам из любых стан с доставкой цветов по всему СНГ</h2>
                         <div className={Styles.brocker__content_positioning}>
                             <img src={Way} alt="way for brockers" className={Styles.brocker__content_image}/>
                             <div className={Styles.brocker__content_gallery}>

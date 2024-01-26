@@ -1,13 +1,15 @@
 .brocker__content{
     position: relative;
     width:100svw;
+    width:100%;
+    background-image:url('../../assets/images/BrockersBG.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
 }
 .brocker__content_section{
     padding-left:5%;
     padding-right:5%;
-}
-.brocker__content_container{
-    
 }
 .brocker__content_borders{
     display:flex;
@@ -26,6 +28,9 @@
     }
     border-left: 1px solid rgba(43, 61, 82, 0.30);
     border-right: 1px solid rgba(43, 61, 82, 0.30);
+}
+.brocker__content_container{
+    max-width: 1600px;
 }
 .brocker__content_positioning{
     @media(max-width:800px){
@@ -48,6 +53,9 @@
     }
     @media(min-width:1501px){
         display:grid;
+        grid-template-columns:40% 60%;
+        align-items:center;
+        justify-content:center;
     }
 }
 .brocker__content_bg{
@@ -87,7 +95,7 @@
         width: 90%;
         height: 600px;
         transform: rotate(4.493deg);
-        background-image:url('/src/assets/images/BrockersBGDesktop.svg');
+        background-image:url('/src/assets/images/BrockersBGLaptop.svg');
         background-repeat: no-repeat; 
         flex-shrink: 0;
         position:absolute;
@@ -127,12 +135,15 @@
         opacity:0.9;
         display:block;
         width: 90%;
-        height: 600px;
-        transform: rotate(4.493deg);
+        width: 422.785px;
+        height: 143.336px;
+        /* transform: rotate(4.493deg); */
         background-image:url('/src/assets/images/BrokersPageBGDownDesktop.svg');
         background-repeat: no-repeat; 
         flex-shrink: 0;
         position:absolute;
+        right:-10%;
+        bottom:-20px;
         /* left:-50px;
         top:150px; */
         overflow:hidden;
@@ -184,7 +195,8 @@
     }
     @media(min-width:1501px){
         display:grid;
-        grid-template-columns:60% 40%;
+        grid-template-columns:47% 47%;
+        gap:30px;
         
     }
 }
@@ -216,7 +228,12 @@
         min-height: 130px;
     }
     @media(min-width:1501px){
-        
+        display:grid;
+        grid-template-columns:60% 40%;
+        /* align-items:center; */
+        justify-content:space-between;
+        min-width: 360px;
+        min-height: 175px;
     }
 }
 .brocker__content_gallery_element_text{

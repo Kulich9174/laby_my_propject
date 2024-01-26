@@ -1,9 +1,9 @@
 import Button from '../ButtonConnect/Button_connection';
 import React from 'react';
-import flower1 from '../../../assets/images/flower1.jpg';
+import flower1 from '../../../assets/images/flower1.png';
 import EquadorMap from '../EquadorMap/EquadorMap';
-import flower2 from '../../../assets/images/flower2.jpg';
-import flower3 from '../../../assets/images/flower3.jpg';
+import flower2 from '../../../assets/images/flower2.png';
+import flower3 from '../../../assets/images/flower3.png';
 import flower4 from '../../../assets/images/Rectangle 1.png';
 import Phone_icon from '../../../assets/images/Phone_icon.svg';
 import Mail_icon from '../../../assets/images/Mail_icon.svg';
@@ -68,12 +68,12 @@ const MainPage: React.FC = () => {
                             laptop:gap-4
                             desktop: gap-[30px] '>
                             <div className='flex flex-col items-center justify-center text-center sm:hidden'>
-                                <div className='min-w-[90px] h-[140px]'></div>
+                                <div className={Styles.img}></div>
                                 <span className={Styles.countries}>Equador</span>
                             </div>
                             <div className='hidden
                         sm:flex sm:flex-col sm:items-center sm:justify-center sm:text-center'>
-                                <img src={flower4} alt='picture with pink flowers' className='min-w-[90px] h-[140px]'></img>
+                                <img src={flower4} alt='picture with pink flowers' className={Styles.img}></img>
                                 <span className={Styles.countries}>EC</span>
                             </div>
 
@@ -82,27 +82,27 @@ const MainPage: React.FC = () => {
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>
-                                <img src={flower1} alt='picture with pink flowers' className='min-w-[90px] h-[140px]'></img>
+                                <img src={flower1} alt='picture with pink flowers' className={Styles.img}></img>
                                 <span className={Styles.countries}>EC</span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>
-                                <img src={flower2} alt='picture with pink flowers' className='min-w-[90px] h-[140px]'></img>
+                                <img src={flower2} alt='picture with pink flowers' className={Styles.img}></img>
                                 <span className={Styles.countries}>CO</span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>
-                                <img src={flower3} alt='picture with pink flowers' className='min-w-[90px] h-[140px]'></img>
+                                <img src={flower3} alt='picture with pink flowers' className={Styles.img}></img>
                                 <span className={Styles.countries}>CL</span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>
-                                <div className='min-w-[90px] h-[140px]'></div>
+                                <div className={Styles.img}></div>
                                 <span className={Styles.countries}>holl</span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>
-                                <div className='min-w-[90px] h-[140px]'></div>
+                                <div className={Styles.img}></div>
                                 <span className={Styles.countries}>isr</span>
                             </div>
                         </div>

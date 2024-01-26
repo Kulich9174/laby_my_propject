@@ -22,7 +22,7 @@ const App: React.FC = () => {
           <Route index element={<MainPage/>}/>
           <Route path='/about' element={<Info/>}/>
           <Route path='/contacts' element={<Contacts/>}/>
-          <Route path='/error-page' element={<ErrorPage/>}/>
+          <Route path='*' element={<ErrorPage/>}/>
           <Route path='/brockers-page' element={<BrockersPage/>}/>
           <Route path='/warehouses-page' element={<WarehousesPage/>}/>
           <Route path='/MenuNav' element={<MenuNavPage/>}/>

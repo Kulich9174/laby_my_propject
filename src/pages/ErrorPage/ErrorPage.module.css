@@ -1,3 +1,121 @@
 .error__section_bg{
-    
+    background-image:url('../../assets/images/ErrorBG.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    width:100svw;
+    width:100%;
+    background-position:center;
+}
+.error__container_div{
+    padding-left:5%;
+    padding-right:5%;
+}
+.error__border{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:60px;
+    padding-bottom:60px;
+    @media(min-width:800px) and (max-width:1500px){
+        padding-top:100px;
+        padding-bottom:100px;
+    }
+    @media(min-width:1501px){
+        padding-top:176px;
+        padding-bottom:176px;
+    }
+    border-left: 1px solid rgba(43, 61, 82, 0.30);
+    border-right: 1px solid rgba(43, 61, 82, 0.30);
+}
+.error__paragraph{
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    @media(max-width:800px){
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    @media(min-width:1501px){
+        font-size: 12px;
+        letter-spacing: 1.2px;
+    }
+}
+.error__header{
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media(max-width:800px){
+        font-size: 120px;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        font-size: 200px;
+    }
+    @media(min-width:1501px){
+        font-size: 280px;
+    }
+}
+.error__text{
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    @media(max-width:800px){
+        font-size: 10px;;
+        line-height: 17px;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        font-size: 15px;
+        line-height: 25px;
+    }
+    @media(min-width:1501px){
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+.error__text_bold{
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    @media(max-width:800px){
+        font-size: 10px;;
+        line-height: 17px;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        font-size: 15px;
+        line-height: 25px;
+    }
+    @media(min-width:1501px){
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+.error__button_container{
+    position:relative;
+}
+.error__button_input{
+
+}
+.error__button_text{
+    padding: 25px 100px;
+    border: 1px solid rgba(255, 255, 255, 0.36);
+}
+.error__button_leftCorner{
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.error__button_rightCorner{
+    position:absolute;
+    top:0;
+    right:0;
 }

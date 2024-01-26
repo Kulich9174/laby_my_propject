@@ -55,7 +55,7 @@ const MainPage: React.FC = () => {
                                         </li>
                                     </div>
                                 </div>
-                                <div className='pt-8'>
+                                <div className='pt-8 relative'>
                                     <Button />
                                 </div>
                             </ul>

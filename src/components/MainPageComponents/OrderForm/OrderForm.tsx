@@ -59,7 +59,14 @@ const OrderForm = () => {
                                                 <label htmlFor="agreement" className={`text_normal_itallic ${Styles.form__checkbox_lable}`}>Даю согласие на обработку персональных данных</label>
                                             </div>
                                             <div className={Styles.form__container_button}>
-                                                <button className={`text_button ${Styles.form__button}`}>Заказать звонок</button>
+                                                {/* <button className={`text_button ${Styles.form__button}`}>Заказать звонок</button> */}
+                                                <button className={Styles.button_size}>
+                                                    <div className={Styles.button_input}>
+                                                        <div className={Styles.border_top}></div>
+                                                        <p className={Styles.button_text}>Заказать звонок</p>
+                                                        <div className={Styles.border_bottom}></div>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

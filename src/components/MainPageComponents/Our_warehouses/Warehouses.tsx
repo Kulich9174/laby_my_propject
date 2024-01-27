@@ -4,6 +4,7 @@ import map from '../../../assets/images/MAPS2.svg';
 import countries from '../../../assets/images/Country.svg';
 import countriesLaptop from '../../../assets/images/Countries_laptop.svg';
 import smallAirplane from '../../../assets/images/Small_airplane.svg';
+import Button from '../ButtonConnect/Button_connection';
 // import { useSelector} from 'react-redux';
 // import { RootState } from '../../../state/store';
 
@@ -48,9 +49,10 @@ const Warehouses: React.FC = () => {
                             </div>
                             {/* BUTTON */}
                             <div className="sm:pb-[50px]">
-                                <button className={Styles.warehouse__button_size}>
+                                {/* <button className={Styles.warehouse__button_size}>
                                     <p className="text_button">Связаться с нами</p>
-                                </button>
+                                </button> */}
+                                <Button/>
                             </div>
                         </div>
 

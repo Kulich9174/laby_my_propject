@@ -103,10 +103,10 @@
         overflow:hidden;
     }
 }
-.brocker__content_bg_down{
+/* .brocker__content_bg_down{
     @media (max-width:650px){
         opacity:0.9;
-        width: 90%;
+        width: 20%;
         height: 380.642px;
         bottom:-35%;
         left:70%;
@@ -120,24 +120,22 @@
     @media (min-width:651px) and (max-width: 1500px){
         opacity:0.9;
         display:block;
-        width: 90%;
         height: 380.642px;
         transform: rotate(4.483deg);
-        /* background-image:url('/src/assets/images/BrockersBGLaptop.svg'); */
+        /* background-image:url('/src/assets/images/BrockersBGLaptop.svg'); 
         background-repeat: no-repeat;
         flex-shrink: 0;
         position:absolute;
         /* left:-20px;
-        top:65px; */
+        top:65px; 
         overflow:hidden;
     }
     @media (min-width:1501px){
         opacity:0.9;
         display:block;
-        width: 90%;
         width: 422.785px;
         height: 143.336px;
-        /* transform: rotate(4.493deg); */
+        /* transform: rotate(4.493deg); 
         background-image:url('/src/assets/images/BrokersPageBGDownDesktop.svg');
         background-repeat: no-repeat; 
         flex-shrink: 0;
@@ -145,10 +143,10 @@
         right:-10%;
         bottom:-20px;
         /* left:-50px;
-        top:150px; */
+        top:150px; 
         overflow:hidden;
     }
-}
+} */
 .brocker__content_header{
     text-align: center;
     font-style: normal;

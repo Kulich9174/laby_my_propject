@@ -327,3 +327,406 @@ input[type="text"] {
     border-color: #FFFFFF;
     background-image: url("/src/assets/images/icons_check.svg");
 }
+
+.separate_line{
+    /* @media(max-width:1050px){
+        border: 1px solid rgba(85, 122, 161, 0.30);
+        width:100svw;
+    } */
+    @media(min-width:1050px){
+        display:hidden;
+        visibility:hidden;
+    }
+}
+.tariff__container_section{
+    color:white;
+    position:relative;
+    padding-left:5%;
+    padding-right:5%;
+    width:100svw;
+    background-image: url('../../../assets/images/BrockersBG.png');
+    /* background-image: image-set(
+        url("../../assets/images/BrockersBG.png") 1x,
+        url("../../../assets/images/tariff_bg_laptop.png") 2x,
+        url("") 3x); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.tariff__container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    padding-top:60px;
+    padding-bottom:60px;
+    position:relative;
+    padding-left:1%;
+    padding-right:1%;
+    border-left: 1px solid rgba(43, 61, 82, 0.30);
+    border-right: 1px solid rgba(43, 61, 82, 0.30);
+}
+.tariff__gallery{
+    padding-left:1%;
+    padding-right:1%;
+    @media(max-width:1050px){
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        display:grid;
+        grid-template-columns:50% 50%;
+        gap:30px;
+    }
+    @media(min-width:1300px){
+        display:grid;
+        grid-template-columns:33% 33% 33%;
+        gap:35px;
+    }
+}
+.tariff__name{
+    text-align: center;
+}
+.tariff__header_name{
+    text-align: center;
+    @media(max-width:1050px){
+        line-height: 32px; /* 114.286% */
+        padding-bottom:30px;
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        line-height: 40px; /* 187.5% */
+        padding-bottom:40px;
+    }
+    @media(min-width:1300px){
+        line-height: 40px; /* 120% */
+        padding-bottom:55px;
+    }
+}
+.tariff__gallery_element{
+    border: 1px solid rgba(85, 122, 161, 0.30);
+    background: #23303F;      
+    @media(max-width:1050px){
+        padding:24px;
+
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        padding:40px 20px;
+        width:400px
+    }
+    @media(min-width:1300px){
+        padding:40px 30px;
+        
+    }
+}
+.tariff__makePrice{
+    border: 1px solid rgba(85, 122, 161, 0.30);
+    background: url('../../../assets/images/Airplane_tariff_gallery_price.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    @media(max-width:1050px){
+        
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        width:400px;
+    }
+    @media(min-width:1300px){
+        
+    }
+}
+.tariff__gallery_elementInfo{
+    display:flex;
+    align-items:center;
+    @media(max-width:1050px){
+        padding-bottom:16px;
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        padding-bottom:18px;
+    }
+    @media(min-width:1300px){
+        padding-bottom:24px;
+    }
+}
+.tariff__gallery_text_section{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    @media(max-width:1050px){
+        padding-left:20px;
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        padding-left:20px;
+    }
+    @media(min-width:1300px){
+        padding-left:30px;
+    }
+}
+.tariff__gallery_header{
+    color: var(--light-blue-text);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media(max-width:1050px){
+        font-size: 20px;
+        /* letter-spacing: 0.8px; */
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        font-size: 24px;
+        /* letter-spacing: 1px; */
+    }
+    @media(min-width:1300px){
+        font-size: 30px;
+        /* letter-spacing: 1.2px; */
+    }
+}
+.tariff__gallery_header_bold{
+    color: var(--light-blue-text);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media(max-width:1050px){
+        font-size: 20px;
+        /* letter-spacing: 0.8px; */
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        font-size: 24px;
+        /* letter-spacing: 1px; */
+    }
+    @media(min-width:1300px){
+        font-size: 30px;
+        /* letter-spacing: 1.2px; */
+    }
+
+}
+.tariff__gallery_text{
+    color: #BCC9DA;;
+    font-style: normal;
+    font-weight: 400;; 
+    @media(max-width:1050px){
+        font-size: 16px;
+        line-height: 24px; /* 150% */
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        font-size: 16px;
+        line-height: 20px;
+    }
+    @media(min-width:1300px){
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+}
+.tariff__gallery_icon{
+    /* max-width:60px;
+    max-height:82px; */
+    width:100%;
+    max-width:70px;
+}
+.tariff__small_text{
+    color: #BCC9DA;
+    font-style: normal;
+    font-weight: 400;
+    @media(max-width:1050px){
+        font-size: 10px;
+        line-height: 14px; /* 150% */
+        padding-top:16px;
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        font-size: 13px;
+        line-height: 16px;
+        padding-top:18px;
+    }
+    @media(min-width:1300px){
+        font-size: 16px;
+        line-height: 22px;
+        padding-top:24px;
+    }
+}
+.tariff__button_container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    @media(max-width:1050px){
+        padding:60px 24px;
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        padding:60px;
+    }
+}
+.tariff__dowland_button{
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+
+    border:1px solid white;
+    @media(max-width:1050px){
+        padding:20px 60px;
+    }
+    @media(min-width:1050px) and (max-width:1300px){
+        padding:18px 36px;
+    }
+    @media(min-width:1300px){
+        font-size: 16px;
+        line-height: 22px;
+        padding:25px 60px;
+    }
+}
+
+
+.button_size{
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    position:relative;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    @media(max-width: 1050px){
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding-left:60px;
+        padding-right:60px;
+        padding-top:21px;
+        padding-bottom:21px;
+    }
+    @media(min-width: 1050px) and (max-width: 1280px){
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        white-space: nowrap;
+        padding:14px 32px;
+    }
+    @media(min-width: 1280px){
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        padding: 25px 55px;
+        white-space: nowrap;
+    }
+}
+.button_size:active{
+    background-color:white;
+    color: var(--Blue, #227CE4);
+    text-transform: uppercase;
+    @media(max-width: 1050px){
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding-left:60px;
+        padding-right:60px;
+        padding-top:21px;
+        padding-bottom:21px;
+    }
+    @media(min-width: 1050px) and (max-width: 1280px){
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        white-space: nowrap;
+        padding:14px 32px;
+    }
+    @media(min-width: 1280px){
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        padding: 25px 55px;
+        white-space: nowrap;
+    }
+}
+/* Создание псевдоэлементов для анимированной границы */
+.button_size::before, .button_size::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px; /* Ширина анимированной границы */
+    background: rgba(255, 255, 255, 1); /* Цвет границы */
+    transition: transform 0.3s ease;
+}
+
+/* Позиционирование псевдоэлементов */
+.button_size::before {
+    left: 0;
+    bottom:0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.button_size::after {
+    right: 0;
+    top:0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+/* Анимация при наведении */
+.button_size:hover::before, .button_size:hover::after {
+    transform: scaleX(1);
+    transform: scaleY(1);
+}
+
+
+/* Псевдоэлементы для верхней и нижней границ */
+.button_size::before:nth-of-type(2), .button_size::after:nth-of-type(2) {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px; /* Высота горизонтальной границы */
+    background: rgba(255, 255, 255, 1);
+    transition: transform 0.3s ease;
+}
+
+.button_size::before:nth-of-type(2) {
+    top: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.button_size::after:nth-of-type(2) {
+    bottom: 0;
+    left:0;
+    transform: scaleY(0);
+    transform-origin: left;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+
+/* Стили для верхней и нижней границ */
+.border_top, .border_bottom {
+    content: '';
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 1);
+    transition: transform 0.3s ease;
+}
+.border_top {
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.border_bottom {
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+/* Анимация при наведении */
+.button_size:hover::before, .button_size:hover::after,
+.button_size:hover .border_top, .button_size:hover .border_bottom {
+    transform: scaleX(1);
+}

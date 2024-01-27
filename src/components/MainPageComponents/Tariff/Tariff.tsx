@@ -23,7 +23,14 @@ const Tariff = () =>{
                         </div>
                         <div className={Styles.tariff__makePrice}>
                             <div className={Styles.tariff__button_container}>
-                                <button className={Styles.tariff__dowland_button}>Скачать прайс</button>
+                                {/* <button className={Styles.tariff__dowland_button}>Скачать прайс</button> */}
+                                <button className={Styles.button_size}>
+                                    <div className={Styles.button_input}>
+                                        <div className={Styles.border_top}></div>
+                                        <p className={Styles.button_text}>Скачать прайс</p>
+                                        <div className={Styles.border_bottom}></div>
+                                    </div>
+                                </button>
                             </div>
                         </div>
                         

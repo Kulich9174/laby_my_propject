@@ -5,7 +5,7 @@ import BrockersPageComponent from "../../components/ForBrokersComponents/Brocker
 const BrockersPage = () => {
     return(
         <>
-            <div>
+            <div className="">
                 <MainPageOtherPaths/>
                 <BrockersPageComponent/>
             </div>

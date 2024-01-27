@@ -50,7 +50,6 @@ const BrockersPageComponent = () => {
                     </div>
                 </div>
                 </section>
-                <div className={Styles.brocker__content_bg_down}></div>
             </section>
         </>
     )

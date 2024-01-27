@@ -4,9 +4,11 @@ import agreementStateReducer from './AgreementReducer/AgreementReducer';
 import formDataStateReducer from './FormDataReducer/FormDataReducer';
 import calcCountryStateReducer from './CalcuationStateReducer/CalcCountryReducer';
 import CalcDateReducer from './CalcuationStateReducer/CalcDateReducer';
+import LangStateReducer from './Language/LangStateReducer';
 export const store = configureStore({
     reducer:{
         headerMenuState : headerMenuStateReducer,
+        LangStateReducer : LangStateReducer,
         calcCountryState : calcCountryStateReducer,
         CalcDateReducer:CalcDateReducer,
         formDataStateReducer : formDataStateReducer,

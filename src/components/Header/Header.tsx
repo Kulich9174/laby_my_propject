@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Close from '../../assets/images/close-line.svg';
 import Navigation from '../Navigation/Navigation';
 import HeaderLogo from './HeaderLogo';
@@ -6,33 +6,43 @@ import {changeValue} from '../../state/HeaderMenuReducer/HeaderMenuReducer';
 import { useDispatch,useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
 import { useNavigate } from 'react-router-dom';
-// interface HeaderProps {
-//     headerStateValue: boolean;
-//     // setheaderStateValue: (state: boolean) => void;
-// }
+import  { changeLanguage as changeLangRedux }  from '../../state/Language/LangStateReducer';
+import { useTranslation } from 'react-i18next';
+
+
+import Style from './Header.module.css';
 
 const Header: React.FC = () => {
     const dispatch = useDispatch();
-    const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
+    const headerStateValue = useSelector((state: RootState) => state.headerMenuState.value);
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
     const navigate = useNavigate();
-    // const changeMenuState = () => {
-    //     setheaderStateValue(!headerStateValue);
-    // };
+    const { i18n } = useTranslation();
+    const [arrowClass, setArrowClass] = useState(Style.arrow_up);
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+    const changeLanguage = (language:string) => { //смена языка на клик
+        i18n.changeLanguage(language);
+        dispatch(changeLangRedux(language));
+    };
+    const toggleArrow = () => {
+        setIsMenuVisible(!isMenuVisible);
+        setArrowClass(arrowClass === Style.arrow_up ? Style.arrow_down : Style.arrow_up);
+    };
 
     const changeMenuState = () => {
-        if(!headerStateValue){
-            navigate('/MenuNav')
+        if (!headerStateValue) {
+            navigate('/MenuNav');
+        } else {
+            navigate('/');
         }
-        else{
-            navigate('/')
-        }
-        dispatch(changeValue())
-        }
-    
-        useEffect(()=>{
-            console.log('header',headerStateValue)
-        })
+        dispatch(changeValue());
+    };
 
+    useEffect(() => {
+        i18n.changeLanguage(langState); // Обновление языка в i18next
+        console.log('язык',langState)
+    }, [langState, i18n]);
 
     if(headerStateValue){
         return(
@@ -64,26 +74,21 @@ const Header: React.FC = () => {
                 <Navigation/>
                 <div className='flex items-center gap-2 pl-[50px] sm:pr-5px laptop:float-left'>
                     <div className='border-solid border border-[#80828D]'>
-                        <p className='text-[#FFFFFF] font-header not-italic font-semibold uppercase text-sm tracking-[1.2px] px-9px py-11px'>RU</p>
+                        <p className='text-[#FFFFFF] font-header not-italic font-semibold uppercase text-sm tracking-[1.2px] px-9px py-11px'>{langState}</p>
                     </div>
                     {/*language */}
                     <div className=' sm:pr-[1%]'>
-                    <button  id='useref' onClick={()=>{console.log('')}}> 
-                        <svg  xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none">
-                        {/* <g clip-Path="url(#clip0_405_7706)"> */}
-                        <path d="M4.00866 4.74995C3.94199 4.74995 3.80866 4.67667 3.74199 4.60339L0.141992 0.646134C0.00865886 0.499569 0.00865886 0.20644 0.141992 0.0598748C0.275326 -0.08669 0.541992 -0.08669 0.675326 0.0598748L4.00866 3.79728L7.40866 0.0598748C7.54199 -0.08669 7.80866 -0.08669 7.94199 0.0598748C8.07533 0.20644 8.07533 0.499569 7.94199 0.646134L4.27533 4.67667C4.20866 4.74995 4.07533 4.74995 4.00866 4.74995Z" fill="#227CE4"/>
-                        {/* </g> */}
-                        <defs>
-                        <clipPath id="clip0_405_7706">
-                        <rect width="10" height="6.5" fill="white"/>
-                        </clipPath>
-                        </defs>
-                        </svg>
+                    <button id='useref' className={Style.button} onClick={toggleArrow}> 
+                        <div className={arrowClass}></div>
                     </button>
                     </div>
     
+                    <div className={`${Style.langMenu} ${isMenuVisible ? 'block' : Style.langMenu__hidden}`}>
+                        <button className={Style.button__lang_menu_element} onClick={() => changeLanguage('ru')}>Ru</button>
+                        <button className={Style.button__lang_menu_element} onClick={() => changeLanguage('en')}>Eng</button>
+                    </div>
                     {/* menu burger */}
-                    <div id='toggleID' className='pl-[1%] w-32px h-32px sm:pl-2 laptop:hidden desktop:hidden'onClick={changeMenuState}>
+                    <div id='toggleID' className='pl-[1%] w-32px h-32px sm:pl-[14px] laptop:hidden desktop:hidden'onClick={changeMenuState}>
                     <svg className={headerStateValue ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
                         <rect width="26" height="1" fill="white"/>
                         <rect x="3" y="11" width="23" height="1" fill="white"/>

@@ -49,6 +49,19 @@ i18n
           'warehouses_shipment':'Delivery to Moscow takes from ',
           "to":"to",
           "days":"days",
+        //Tariff
+          'tariff_header':'Main Rates',
+          'tariff_from':'from ',
+          'tariff_block_header1':'$5.7 per 1kg',
+          'tariff_block_text1':'Ecuador, Kenya, Colombia',
+          'tariff_delivery_home':'Order delivery is made to your door',
+          'tariff_block_header2':'$3.6 per 1kg',
+          'tariff_block_text2':'Netherlands',
+          'tariff_block_header3':' $4.8 per 1kg',
+          'tariff_block_text3':'Spain, Chile',
+          'tariff_block_header4':'$6.3 per 1kg',
+          'tariff_block_text4':'Israel',
+          'tariff_button':'DOWNLOAD PRICE LIST',
         }
     },
         ru: {
@@ -94,6 +107,19 @@ i18n
             'warehouses_shipment':'Доставка в Москву занимает от ',
             "to":"до",
             "days":"дней",
+          //Teriff
+            'tariff_header':'Основные тарифы',
+            'tariff_from':'от',
+            'tariff_block_header1':'5.7$/1кг',
+            'tariff_block_text1':'Эквадор, Кения, Колумбия',
+            'tariff_delivery_home':'Доставка заказа осуществляется до двери',
+            'tariff_block_header2':'3.6$/1кг',
+            'tariff_block_text2':'Голландия',
+            'tariff_block_header3':'4.8$/1кг',
+            'tariff_block_text3':'Испания, Чили',
+            'tariff_block_header4':'6.3$/1кг',
+            'tariff_block_text4':'Израиль',
+            'tariff_button':'Скачать прайс',
           }
         }
     },

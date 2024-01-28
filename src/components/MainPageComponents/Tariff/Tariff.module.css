@@ -143,11 +143,11 @@
         /* letter-spacing: 0.8px; */
     }
     @media(min-width:1050px) and (max-width:1300px){
-        font-size: 24px;
+        font-size: 20px;
         /* letter-spacing: 1px; */
     }
     @media(min-width:1300px){
-        font-size: 30px;
+        font-size: 24px;
         /* letter-spacing: 1.2px; */
     }
 }
@@ -161,11 +161,11 @@
         /* letter-spacing: 0.8px; */
     }
     @media(min-width:1050px) and (max-width:1300px){
-        font-size: 24px;
+        font-size: 20px;
         /* letter-spacing: 1px; */
     }
     @media(min-width:1300px){
-        font-size: 30px;
+        font-size: 24px;
         /* letter-spacing: 1.2px; */
     }
 
@@ -183,7 +183,7 @@
         line-height: 20px;
     }
     @media(min-width:1300px){
-        font-size: 22px;
+        font-size: 20px;
         line-height: 22px;
     }
 

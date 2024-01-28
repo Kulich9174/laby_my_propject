@@ -8,13 +8,15 @@ import flower4 from '../../../assets/images/Rectangle 1.png';
 import Phone_icon from '../../../assets/images/Phone_icon.svg';
 import Mail_icon from '../../../assets/images/Mail_icon.svg';
 import Styles from './MainSlide.module.css';
+import { useTranslation } from 'react-i18next';
+import '../../../Translation/Translation';
 // import { useSelector} from 'react-redux';
 // import { RootState } from '../../../state/store';
 
 
 const MainPage: React.FC = () => {
     // const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
-
+    const { t } = useTranslation();
     return (
         <>
             {/* <div className={headerStateValue ? `sm:hidden min-h-screen ${Styles.container_hidden}` : Styles.container}> */}
@@ -26,30 +28,30 @@ const MainPage: React.FC = () => {
                             desktop:py-[3%]'>
                             <div className={Styles.textarea}>
                                 <p className={`${Styles.flowerLogoWhite} flowerLogo`}>Flower Fracht Karaganda</p>
-                                <h1 className='max-w-[40%] font-semibold leading-10 pr-[15px]
+                                <h1 className='font-semibold leading-10 pr-[15px]
                                 sm:max-w-full sm:text-[38px] sm:whitespace-normal
                                 laptop:text-[44px] laptop:leading-[46px]
-                                desktop:text-[60px] desktop:leading-[65px]'>Авиаперевозка цветов</h1>
+                                desktop:text-[60px] desktop:leading-[65px]'>{t('aviatransport')}</h1>
                                 <div className='sm:max-w-[85%]'>
-                                    <p className={`${Styles.mainSlide__text_norm} text_normal_itallic`}>Занимаемся только АВИА перевозкой свеже срезанных цветов и растений из <span className={`${Styles.mainSlide__text_bold} text_normal_bold`}>
-                                        Эквадора, Кении, Колумбии, Чили, Голландии, Израиля </span> до конечного заказчика.</p>
-                                    <p className={`${Styles.mainSlide__text_bold} sm:leading-[18px] leading-[26px]`}>Максимальный срок достовки товара - 7 дней от заказа</p>
+                                    <p className={`${Styles.mainSlide__text_norm} text_normal_itallic`}>{t('main-text_itallc1')}<span className={`${Styles.mainSlide__text_bold} text_normal_bold`}>
+                                        {t('span')} </span> {t('main-text_itallc2')}</p>
+                                    <p className={`${Styles.mainSlide__text_bold} sm:leading-[18px] leading-[26px]`}></p>
                                 </div>
                             </div>
                         </div>
 
                         <div className='flex justify:between sm:justify-center sm:items-center sm:text-center py-[20px] px-[5%] '>
                             <ul className=' list-none font-normal text-[13px] leading-[24px] py-8 '>
-                                <div className='flex items-center'>
+                                <div className='flex items-center justify-center'>
                                     <div className='sm:hidden border-solid border-white border-[1px] h-10'>
                                         {/**линия разделяющая блоки */}
                                     </div>
                                     <div className={`${Styles.mainSlide__text_bold} sm:hidden flex flex-col justify-between` }>
-                                        <li className='flex pb-[6%]'>
+                                        <li className={`flex  items-center pb-[6%]`}>
                                             <img src={Phone_icon} alt='phone icon' className='pr-2 pl-[14px]'></img>
                                             <a href='tel:+74957378585'>+7 (495) 737 8585</a>
                                         </li>
-                                        <li className='flex '>
+                                        <li className={`flex items-center`}>
                                             <img src={Mail_icon} alt='mail icon' className='pr-2 pl-[14px]'></img>
                                             <a href='mailto:ffkaragandainfo@info.ru'>ffkaragandainfo@info.ru</a>
                                         </li>

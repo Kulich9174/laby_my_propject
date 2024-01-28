@@ -18,6 +18,14 @@ i18n
           // Equador
             "equador_text":'Shipping cost for one full box starts ',
             'equador_span':' from $105',
+          // NavPage
+            "main":"Home",
+            "about_us":"About us",
+            "our_warehouses":"OUR WAREHOUSES",
+            "brockers":'OUR WAREHOUSES',
+            "contacts":"Contacts",
+          //Footer
+          "privat_policy":'Privat Policy',
         }
     },
         ru: {
@@ -30,8 +38,16 @@ i18n
             'main-text_itallc2': 'до конечного заказчика.',
             'max_delay' : 'Максимальный срок доставки товара - 7 дней от заказа',
           // Equador
-          "equador_text":'Стоимость доставки 1 фулбокса',
-          'equador_span':' от 105 $',
+            "equador_text":'Стоимость доставки 1 фулбокса',
+            'equador_span':' от 105 $',
+          // NavPage
+            "main":"Главная",
+            "about_us":"О нас",
+            "our_warehouses":"Наги склады",
+            "brockers":'Брокерам',
+            "contacts":"Контакты",
+          //Footer
+          "privat_policy":'Политика конфиденциальности',
         }
         }
     },

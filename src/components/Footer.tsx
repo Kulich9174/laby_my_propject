@@ -3,10 +3,12 @@ import Logo from '../assets/images/logo_image.svg';
 import { useSelector} from 'react-redux';
 import { RootState } from '../state/store';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import '../Translation/Translation';
 
 const Footer: React.FC = () => {
     const headerstatevalue = useSelector((state: RootState)=>state.headerMenuState.value);
-
+    const {t} = useTranslation();
 
     return (
         <>
@@ -24,21 +26,21 @@ const Footer: React.FC = () => {
 
 
                 <nav className="text-[#BCC9DA] ">
-                    <ul className={ headerstatevalue ? 'sm:hidden flex flex-wrap justify-center -mx-2 laptop:items-center':"flex flex-wrap justify-center -mx-2 laptop:items-center"}>
+                    <ul className={ headerstatevalue ? 'sm:hidden flex flex-wrap justify-center -mx-2 laptop:items-center uppercase':"uppercase flex flex-wrap justify-center -mx-2 laptop:items-center"}>
                         {/* Первая колонка */}
                         <li className="w-1/2 px-2">
-                            <Link to="/" className="inline-block py-2 hover:text-[#227CE4]">ГЛАВНАЯ</Link>
+                            <Link to="/" className="inline-block py-2 hover:text-[#227CE4]">{t('main')}</Link>
                         </li>
                         <li className="w-1/2 px-2">
-                            <Link to="/brockers-page" className="inline-block py-2 hover:text-[#227CE4]">БРОКЕРАМ</Link>
+                            <Link to="/brockers-page" className="inline-block py-2 hover:text-[#227CE4]">{t('our_warehouses')}</Link>
                         </li>
 
                         {/* Вторая колонка */}
                         <li className="w-1/2 px-2">
-                            <Link to="/warehouses-page" className="inline-block py-2 hover:text-[#227CE4]">НАШИ СКЛАДЫ</Link>
+                            <Link to="/warehouses-page" className="inline-block py-2 hover:text-[#227CE4]">{t('brockers')}</Link>
                         </li>
                         <li className="w-1/2 px-2">
-                            <Link to="/contacts" className="inline-block py-2 hover:text-[#227CE4]">КОНТАКТЫ</Link>
+                            <Link to="/contacts" className="inline-block py-2 hover:text-[#227CE4]">{t('contacts')}</Link>
                         </li>
                     </ul>
                 </nav>
@@ -55,7 +57,7 @@ const Footer: React.FC = () => {
 
                 <div className={headerstatevalue ? 'relative sm:block flex flex-col lg:items-end justify-center items-start pt-[15px]': "flex flex-col lg:items-end justify-center items-start pt-[15px]"}>
                     <div className="mb-2 sm:pb-[8px]">
-                        <a href="#" className="text-[#BCC9DA] hover:text-[#227CE4]">Политика конфиденциальности</a>
+                        <a href="#" className="text-[#BCC9DA] hover:text-[#227CE4]">{t('privat_policy')}</a>
                     </div>
                     <div className="mb-2">
                         <a href="#" className="text-[#BCC9DA] hover:text-[#227CE4]">Copyright © 2021 All rights reserved</a>

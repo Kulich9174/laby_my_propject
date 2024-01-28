@@ -25,7 +25,21 @@ i18n
             "brockers":'OUR WAREHOUSES',
             "contacts":"Contacts",
           //Footer
-          "privat_policy":'Privat Policy',
+            "privat_policy":'Privat Policy',
+          //About us 
+          'about_us_header':'About Us in Numbers',
+          'aboutUs_block_header1':'7 Years',
+          'aboutUs_block_text1':'Successfully operating for more than seven years',
+          'aboutUs_block_header2':'775 Tons',
+          'aboutUs_block_text2':'We have transported almost 780 tons of cargo',
+          'aboutUs_block_header3':'94%',
+          'aboutUs_block_text3':'Average order fulfillment rate of 94%',
+          'aboutUs_block_header4':'14 Countries',
+          'aboutUs_block_text4':'Conducting transportations from 14 countries',
+          'aboutUs_block_header5':'+2/8 Degrees',
+          'aboutUs_block_text5':'Maintaining temperature during transportation',
+          'aboutUs_block_header6':'174 Clients',
+          'aboutUs_block_text6':'Working with 174 corporations and thousands of individuals worldwide',
         }
     },
         ru: {
@@ -47,8 +61,23 @@ i18n
             "brockers":'Брокерам',
             "contacts":"Контакты",
           //Footer
-          "privat_policy":'Политика конфиденциальности',
-        }
+            "privat_policy":'Политика конфиденциальности',
+          //About us 
+          //About Us in Numbers
+            'about_us_header':'О нас в цифрах',
+            'aboutUs_block_header1':'7 лет',
+            'aboutUs_block_text1':'Успешно работаем уже более семи лет',
+            'aboutUs_block_header2':'775 тонн',
+            'aboutUs_block_text2':'Мы перевезли почти 780 тонн груза',
+            'aboutUs_block_header3':'94 %',
+            'aboutUs_block_text3':'Средний процент выполнения заказа 94%',
+            'aboutUs_block_header4':'14 стран',
+            'aboutUs_block_text4':'Осуществляем перевозки из 14 стран',
+            'aboutUs_block_header5':'+2/8 градуса',
+            'aboutUs_block_text5':'Соблюдение температур при перевозке',
+            'aboutUs_block_header6':'174 клиента',
+            'aboutUs_block_text6':'С нами работают 174 корпорации, а также тысячи людей по всему миру',
+          }
         }
     },
     lng: "ru", // устанавливаем начальный язык

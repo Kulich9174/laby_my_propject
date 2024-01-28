@@ -5,15 +5,13 @@ import countries from '../../../assets/images/Country.svg';
 import countriesLaptop from '../../../assets/images/Countries_laptop.svg';
 import smallAirplane from '../../../assets/images/Small_airplane.svg';
 import Button from '../ButtonConnect/Button_connection';
-// import { useSelector} from 'react-redux';
-// import { RootState } from '../../../state/store';
+import { useTranslation } from 'react-i18next';
+import '../../../Translation/Translation';
 
 const Warehouses: React.FC = () => {
-    // const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
-
+    const { t } = useTranslation();
     return (
         <>
-            {/* <section className={headerStateValue ? `sm:hidden min-h-screen ${Styles.section_hidden}` : Styles.warehouses__section} > */}
             <section className={Styles.warehouses__section} >
                 {/* CONTAINER GLOBAL*/}
                 <div className={Styles.borders}>
@@ -28,24 +26,24 @@ const Warehouses: React.FC = () => {
                         sm:pb-[30px] sm:text-center
                         laptop:pb-6
                         desktop:pb-[54px] 
-                        ${Styles.header_text}`}>Откуда мы везем наши цветы</h1>
+                        ${Styles.header_text}`}>{t('warehouses_header')}</h1>
 
                             {/* TEXT SECTION */}
                             <div className={Styles.conteiner}>
                                 <span className= "text_normal_bold">
-                                    Наши цветы — не только произведения природы, но и воплощение мирового многообразия, доставляемого нам прямо из живописных уголков планеты.
+                                    {t('warehouses_textBold1')}
                                 </span>
                                 <p className={`text_normal_itallic
                                     sm:py-[14px]
                                     laptop:py-5
                                     desktop:py-6
-                                    ${Styles.warehouse__text_italic}`}>Прекрасные цветы, несут в себе великолепие и свежесть, привезенные непосредственно из самых питательных уголков природы. Наша компания Flower Fracht Karaganda гордится тем, что мы тщательно подбираем каждый вид цветов.</p>
+                                    ${Styles.warehouse__text_italic}`}>{t('warehouses_text_1par')}</p>
                                 <p className={`text_normal_itallic
                                     sm:pb-[30px]
                                     laptop:pb-[40px]
                                     desktop:pb-[70px]
                                     ${Styles.warehouse__text_italic}`}>
-                                    Мы привозим цветы и растения в горшках из <span className={Styles.warehouse__text_bold}>Эквадора, Кении, Колумбии, Чили, Голландии, Израиля</span> и доставляем их свежими во все регионы <span>СНГ</span>.</p>
+                                    {t('warehouses_text_2par')} <span className={Styles.warehouse__text_bold}>{t('span')}</span> {t('warehouses_text_2par.2')}</p>
                             </div>
                             {/* BUTTON */}
                             <div className="sm:pb-[50px]">
@@ -66,7 +64,8 @@ const Warehouses: React.FC = () => {
                             <div className="sm:hidden
                             laptop:pb-10 laptop:ml-[20%] max-w-[30%] laptop:pt-2 desktop:pt-2
                             desktop:pb-[60px] ">
-                                <p className={`text_normal_itallic ${Styles.warehouse__text_italic}`}>Доставка в Москву занимает от <span className={Styles.warehouse__text_bold}>1</span> до <span className={Styles.warehouse__text_bold}>2</span> дней</p>
+                                <p className={`text_normal_itallic ${Styles.warehouse__text_italic}`}>{t('warehouses_shipment')} 
+                                <span className={Styles.warehouse__text_bold}>1</span> {t('to')} <span className={Styles.warehouse__text_bold}>2</span> {t('days')}</p>
                             </div>
 
                             {/* SMALL AIRPLANE */}
@@ -80,7 +79,8 @@ const Warehouses: React.FC = () => {
                             <div className="sm:py-[20px]
                             laptop:hidden
                             desktop:hidden">
-                                <p className={`text_normal_itallic ${Styles.warehouse__text_italic}`}>Доставка в Москву занимает от <span className={Styles.warehouse__text_bold}>1</span> до <span className={Styles.warehouse__text_bold}>2</span> дней</p>
+                                <p className={`text_normal_itallic ${Styles.warehouse__text_italic}`}>{t('warehouses_shipment')} 
+                                <span className={Styles.warehouse__text_bold}>1</span> {t('to')} <span className={Styles.warehouse__text_bold}>2</span> {t('days')}</p>
                             </div>
                             {/* MAP */}
                             <div className="w-full overflow-hidden contain

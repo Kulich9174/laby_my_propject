@@ -40,6 +40,15 @@ i18n
           'aboutUs_block_text5':'Maintaining temperature during transportation',
           'aboutUs_block_header6':'174 Clients',
           'aboutUs_block_text6':'Working with 174 corporations and thousands of individuals worldwide',
+        //Our warehouses
+          'warehouses_header':'Where We Source Our Flowers From',
+          'warehouses_textBold1':"Our flowers are not just creations of nature, but also embodiments of the world's diversity, delivered directly from the picturesque corners of the planet.",
+          'warehouses_text_1par':'Beautiful flowers carry magnificence and freshness, brought directly from the most nurturing corners of nature. Our company, Flower Fracht Karaganda, takes pride in carefully selecting each type of flower.',
+          'warehouses_text_2par':'We bring flowers and potted plants from ',
+          'warehouses_text_2par.2':'delivering them fresh to all regions of the CIS.',
+          'warehouses_shipment':'Delivery to Moscow takes from ',
+          "to":"to",
+          "days":"days",
         }
     },
         ru: {
@@ -62,7 +71,6 @@ i18n
             "contacts":"Контакты",
           //Footer
             "privat_policy":'Политика конфиденциальности',
-          //About us 
           //About Us in Numbers
             'about_us_header':'О нас в цифрах',
             'aboutUs_block_header1':'7 лет',
@@ -77,6 +85,15 @@ i18n
             'aboutUs_block_text5':'Соблюдение температур при перевозке',
             'aboutUs_block_header6':'174 клиента',
             'aboutUs_block_text6':'С нами работают 174 корпорации, а также тысячи людей по всему миру',
+          //Our warehouses
+            'warehouses_header':'Откуда мы везем наши цветы',
+            'warehouses_textBold1':"Наши цветы — не только произведения природы, но и воплощение мирового многообразия, доставляемого нам прямо из живописных уголков планеты.",
+            'warehouses_text_1par':'Прекрасные цветы, несут в себе великолепие и свежесть, привезенные непосредственно из самых питательных уголков природы. Наша компания Flower Fracht Karaganda гордится тем, что мы тщательно подбираем каждый вид цветов.',
+            'warehouses_text_2par':'Мы привозим цветы и растения в горшках из ',
+            'warehouses_text_2par.2':'и доставляем их свежими во все регионы СНГ.',
+            'warehouses_shipment':'Доставка в Москву занимает от ',
+            "to":"до",
+            "days":"дней",
           }
         }
     },

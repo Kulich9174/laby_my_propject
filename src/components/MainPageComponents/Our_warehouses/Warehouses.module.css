@@ -96,6 +96,9 @@
 .warehouse__text_italic{
     color:var(--invisible-text);
 }
+.warehouse__text_bold{
+    font-weight:600;
+}
 .warehouse__button_size{
     border: 1px solid rgba(255, 255, 255, 0.36);
     @media(max-width:1050px) {

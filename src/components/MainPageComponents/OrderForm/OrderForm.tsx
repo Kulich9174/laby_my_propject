@@ -5,11 +5,15 @@ import {changeValue} from '../../../state/AgreementReducer/AgreementReducer';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../state/store';
 import { addName, addPhone } from "../../../state/FormDataReducer/FormDataReducer";
+import { useTranslation } from 'react-i18next';
+import '../../../Translation/Translation';
 
 const OrderForm = () => {
+    const { t } = useTranslation();
     const chackboxAgreementState = useSelector((state: RootState)=>state.agreementState.value);
     const nameState = useSelector((state: RootState)=>state.formDataStateReducer.name);
     const phoneState = useSelector((state: RootState)=>state.formDataStateReducer.phone);
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
     const dispatch = useDispatch();
 
     function changeMenuState (){
@@ -24,7 +28,8 @@ const OrderForm = () => {
 
     useEffect(()=>{
         console.log('Имя', nameState);
-        console.log('Телефон', phoneState)
+        console.log('Телефон', phoneState);
+        console.log('язык', langState)
         console.log('Согласие на пользовательсое соглашение',chackboxAgreementState);
     },[chackboxAgreementState,nameState,phoneState])
     return(
@@ -41,29 +46,29 @@ const OrderForm = () => {
                                     <div className={Styles.form__borders}>
                                         <div className={Styles.form__text_container}>
                                             <p className={`${Styles.flowerLogoWhite} flowerLogo`}>Flower Fraught Karaganda</p>
-                                            <h1 className={Styles.form__text_header}>Заказать звонок</h1>
-                                            <p className={`${Styles.form_textWhite} text_normal_itallic`}>Закажите звонок и наш менеджер свяжется с вами в близжайшее время</p>
+                                            <h1 className={Styles.form__text_header}>{t('form_header')}</h1>
+                                            <p className={`${Styles.form_textWhite} text_normal_itallic`}>{t('form_text')}</p>
                                         </div>
                                         <div className={Styles.form__container_inputs}>
                                             <div className={Styles.text_field}>
-                                                <input type="text" className={Styles.text_field__input} placeholder="Имя" onChange={e=>{handleAddName(e.target.value)}}></input>
+                                                <input type="text" className={Styles.text_field__input} placeholder={t('form_name')} onChange={e=>{handleAddName(e.target.value)}}></input>
                                             </div>
                                             <div className={Styles.text_field}>
-                                                <input type="phone" className={Styles.text_field__input} placeholder="Номер телефона" onChange={e=>{handleAddPhone(e.target.value)}}/>
+                                                <input type="phone" className={Styles.text_field__input} placeholder={t('form_phone')} onChange={e=>{handleAddPhone(e.target.value)}}/>
                                             </div>
                                         </div>
                                         
                                         <div className={Styles.form__checkboxButton_container}>
                                             <div className={Styles.form__checkbox}>
                                                 <input type="checkbox" onChange={changeMenuState} value="yes" id="agreement" name="agreement" className={Styles.custom_checkbox}/>
-                                                <label htmlFor="agreement" className={`text_normal_itallic ${Styles.form__checkbox_lable}`}>Даю согласие на обработку персональных данных</label>
+                                                <label htmlFor="agreement" className={`text_normal_itallic ${Styles.form__checkbox_lable}`}>{t('form_label')}</label>
                                             </div>
                                             <div className={Styles.form__container_button}>
                                                 {/* <button className={`text_button ${Styles.form__button}`}>Заказать звонок</button> */}
                                                 <button className={Styles.button_size}>
                                                     <div className={Styles.button_input}>
                                                         <div className={Styles.border_top}></div>
-                                                        <p className={Styles.button_text}>Заказать звонок</p>
+                                                        <p className={Styles.button_text}>{t('form_header')}</p>
                                                         <div className={Styles.border_bottom}></div>
                                                     </div>
                                                 </button>

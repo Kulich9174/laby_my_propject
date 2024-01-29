@@ -1,18 +1,21 @@
 import React,{ useState} from "react";
 import Style from './CalculationShipment_1step.module.css';
 import location_icon from '../../../assets/images/Location_icon.svg';
-// import map from '../../../assets/images/mapSmall.svg';
-// import map from '../../../assets/images/map_calc_bg_small.svg';
-// import map2 from '../../../assets/images/mapSmall2.svg';
 import arrow from '../../../assets/images/arrow.svg';
 import Way from '../../../assets/images/Way.svg';
-// import { useSelector} from 'react-redux';
-// import { RootState } from '../../../state/store';
+import WayEng from '../../../assets/images/WayEng.svg';
+import { useSelector} from 'react-redux';
+import { RootState } from '../../../state/store';
 import Map_icon from '../../../assets/images/map_calc_bd.svg';
+import { useTranslation } from 'react-i18next';
+import '../../../Translation/Translation';
 
+// type LangType = 'ru' | 'en';
 
 const CaulculationShipment = () => {
-    // const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
+    const { t } = useTranslation();
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
+
     const [country, setCountry] = useState<string>('ecuador'); // Тип для страны
     const currentDate = new Date();
     // Получаем день, месяц и год в виде строк
@@ -26,15 +29,25 @@ const CaulculationShipment = () => {
     const [shipmentDate, setShipmentDate] = useState<string>('XX-XX-2024');
     const [shipmentCollectionDate, setShipmentCollectionDate] = useState('XX-XX-2024');
 
-    const countryNames: { [key: string]: string } = {
+    const countryNamesRus: { [key: string]: string } = {
         ecuador: 'Эквадор',
         kenia: 'Кения',
-        columbia: 'Колумбия',
+        columbia: 'Колумбия', 
         chilli: 'Чили',
         israel: 'Израиль',
         golland: 'Голландия',
-        spain: 'Испания'
+        spain: 'Испания',
     };
+    const countryNamesEng: { [key: string]: string } = {
+        ecuador: 'Ecuador',
+        kenia: 'Kenya',
+        columbia: 'Colombia',
+        chilli:'Chile',
+        israel: 'Israel',
+        golland: 'Netherlands',
+        spain: 'Spain'
+    };
+    
 
     const handleCountryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setCountry(event.target.value); // Обновить состояние при выборе страны
@@ -70,7 +83,7 @@ const CaulculationShipment = () => {
                             <div className={Style.calc__container_stepOne}>
                                 {/* <img src={map} alt="map" className="absolute right-0 top-0"/> */}
                             <p className="flowerLogo">flower fracht karaganda</p>
-                            <h1 className={Style.calc__header_text}>Калькулятор доставки</h1>
+                            <h1 className={Style.calc__header_text}>{t('calc_header')}</h1>
 
                             {/* COUNTY CHOICE BAR */}
                             <fieldset className={Style.radioGroup}>
@@ -79,7 +92,7 @@ const CaulculationShipment = () => {
                                             <div className={Style.calc__container_number}>
                                                 <p className={Style.calc__number}>01</p>
                                             </div>
-                                            <p className={`${Style.calc__text} text_normal_itallic`}>Выберите страну по которой хотите узнать время достатвки</p>
+                                            <p className={`${Style.calc__text} text_normal_itallic`}>{t('calc_step1_header')}</p>
                                         </div>
                                 </legend>
 
@@ -95,7 +108,7 @@ const CaulculationShipment = () => {
                                             onChange={handleCountryChange} 
                                         />
                                         <span className={Style.radio}></span>
-                                        <span className={Style.text}>Эквадор</span>
+                                        <span className={Style.text}>{t('calc_countyName_equador')}</span>
                                         </label>
                                     </div>
 
@@ -109,7 +122,7 @@ const CaulculationShipment = () => {
                                             checked={country === 'kenia'} 
                                             onChange={handleCountryChange}/>
                                         <span className={Style.radio}></span>
-                                        <span className={Style.text}>Кения</span>
+                                        <span className={Style.text}>{t('calc_countyName_kenia')}</span>
                                         </label>
                                     </div>
 
@@ -123,7 +136,7 @@ const CaulculationShipment = () => {
                                             checked={country === 'columbia'} 
                                             onChange={handleCountryChange} />
                                         <span className={Style.radio}></span>
-                                        <span className={Style.text}>Колумбия</span>
+                                        <span className={Style.text}>{t('calc_countyName_columbia')}</span>
                                         </label>
                                     </div>
 
@@ -137,7 +150,7 @@ const CaulculationShipment = () => {
                                             checked={country === 'chilli'} 
                                             onChange={handleCountryChange}/>
                                         <span className={Style.radio}></span>
-                                        <span className={Style.text}>Чили</span>
+                                        <span className={Style.text}>{t('calc_countyName_chilli')}</span>
                                         </label>
                                     </div>
 
@@ -151,7 +164,7 @@ const CaulculationShipment = () => {
                                             checked={country === 'israel'} 
                                             onChange={handleCountryChange}/>
                                         <span className={Style.radio}></span>
-                                        <span className={Style.text}>Израель</span>
+                                        <span className={Style.text}>{t('calc_countyName_israel')}</span>
                                         </label>
                                     </div>
 
@@ -165,7 +178,7 @@ const CaulculationShipment = () => {
                                             checked={country === 'golland'} 
                                             onChange={handleCountryChange}/>
                                         <span className={Style.radio}></span>
-                                        <span className={Style.text}>Голландия</span>
+                                        <span className={Style.text}>{t('calc_countyName_netherland')}</span>
                                         </label>
                                     </div>
 
@@ -179,7 +192,7 @@ const CaulculationShipment = () => {
                                             checked={country === 'spain'} 
                                             onChange={handleCountryChange}/>
                                         <span className={Style.radio}></span>
-                                        <span className={`${Style.text} text_normal_itallic`}>Испания</span>
+                                        <span className={`${Style.text} text_normal_itallic`}>{t('calc_countyName_spain')}</span>
                                         </label>
                                     </div>
                                 </div>
@@ -192,16 +205,17 @@ const CaulculationShipment = () => {
                                             <div className={Style.calc__container_number}>
                                                 <p className={Style.calc__number}>02</p>
                                             </div>
-                                            <p className={`${Style.calc__text} text_normal_itallic`}>Что бы рассчитать дату доставки выберите день когда планируете сделать заказ</p>
+                                            <p className={`${Style.calc__text} text_normal_itallic`}>{t('calc_step2_header')}</p>
                                         </div>
 
                                         <div  className={Style.calc__container_results}>
                                             <div className={Style.country__name_main}>
                                             <img src={location_icon} alt="location icon"/>
-                                            <p className={Style.country__name}>{countryNames[country]}</p>
+                                            {/* если английски, то вывести ключи, если русский, то значения */}
+                                            <p className={Style.country__name}>{langState==='ru' ? countryNamesRus[country]:countryNamesEng[country]}</p>
                                             </div>
                                         <div className={Style.calc__container_results_date2}>
-                                            <label className="text_normal_itallic">Дата заказа</label>
+                                            <label className="text_normal_itallic">{t('calc_orderDate')}</label>
                                             <span className={Style.date}>
                                                 <span className={Style.datepicker__toggle_button}>
                                                     <img src={arrow} alt="arrow" className="absolute right-1"/>
@@ -223,16 +237,16 @@ const CaulculationShipment = () => {
                                         </div>
 
                                     <div className={`${Style.calc__container_results_date} `}>
-                                        <p className="text_normal_itallic">Конец сбора заказов</p>
+                                        <p className="text_normal_itallic">{t('calc_endOfOrdering')}</p>
                                         <p className="text_normal_itallic">{shipmentCollectionDate}</p>
                                     </div>
                                     <div className={`laptop:hidden desktop:hidden ${Style.calc__container_results_date2}`}>
-                                        <p className="text_normal_itallic">Доставка</p>
-                                        <p className="text_normal_itallic">7 дней</p>
+                                        <p className="text_normal_itallic">{t('calc_shipment')}</p>
+                                        <p className="text_normal_itallic">{t('calc_shipment_last')}</p>
                                     </div>
 
                                     <div className={Style.calc__container_results_date}>
-                                        <p className="text_normal_itallic">День поставки</p>
+                                        <p className="text_normal_itallic">{t('calc_day_shipment')}</p>
                                         <p className="text_normal_itallic">{shipmentDate}</p>
                                     </div>
                                 </div>
@@ -257,15 +271,16 @@ const CaulculationShipment = () => {
                                             <div className={Style.map__div}>
                                                 <div className="flex gap-2 left sm:pb-6 pb-5">
                                                     <img src={location_icon} alt="location icon"/>
-                                                    <p className={Style.country__name}>{countryNames[country]}</p>
+                                                    {/* При выборе языка вывести ключ */}
+                                                    <p className={Style.country__name}>{langState==='ru' ? countryNamesRus[country]:countryNamesEng[country]}</p>
                                                 </div>
-                                                <img src={Way} alt="way of" className={Style.way}/>
+                                                <img src={langState==='ru' ? Way : WayEng } alt="way of" className={Style.way}/>
                                             </div>
                                             
                                         </div>
                                     </div>
                                     <div className={Style.calc__container_results_date1}>
-                                            <label className="text_normal_itallic">Дата заказа</label>
+                                            <label className="text_normal_itallic">{t('calc_orderDate')}</label>
                                             <span className={Style.date}>
                                                 <span className={Style.datepicker__toggle_button}>
                                                     <img src={arrow} alt="arrow" className="absolute right-3"/>

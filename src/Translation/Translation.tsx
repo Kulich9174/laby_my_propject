@@ -49,6 +49,22 @@ i18n
           'warehouses_shipment':'Delivery to Moscow takes from ',
           "to":"to",
           "days":"days",
+        //Calc
+        'calc_header': 'Delivery Calculator',
+        'calc_step1_header': 'Choose a country to find out the delivery time',
+        'calc_countyName_equador': 'Ecuador',
+        'calc_countyName_kenia': 'Kenya',
+        'calc_countyName_columbia': 'Colombia',
+        'calc_countyName_chilli': 'Chile',
+        'calc_countyName_israel': 'Israel',
+        'calc_countyName_netherland': 'Netherlands',
+        'calc_countyName_spain': 'Spain',
+        'calc_step2_header': 'To calculate the delivery date, select the day you plan to make an order',
+        'calc_orderDate': 'Order Date',
+        'calc_endOfOrdering': 'End of Order Collection',
+        'calc_shipment': 'Delivery',
+        'calc_shipment_last': '7 days',
+        'calc_day_shipment': 'Delivery Day',
         //Tariff
           'tariff_header':'Main Rates',
           'tariff_from':'from ',
@@ -62,6 +78,12 @@ i18n
           'tariff_block_header4':'$6.3 per 1kg',
           'tariff_block_text4':'Israel',
           'tariff_button':'DOWNLOAD PRICE LIST',
+        //Form
+          'form_header':'Order a Call',
+          'form_text':'Order a call and our manager will contact you shortly',
+          'form_name':'Name',
+          'form_phone':'Phone Number',
+          'form_label':'I consent to the processing of personal data',
         }
     },
         ru: {
@@ -107,6 +129,23 @@ i18n
             'warehouses_shipment':'Доставка в Москву занимает от ',
             "to":"до",
             "days":"дней",
+          //Calc
+            'calc_header':'Калькулятор доставки',
+            'calc_step1_header':'Выберите страну по которой хотите узнать время достатвки',
+            'calc_countyName_equador':'Эквадор',
+            'calc_countyName_kenia':'Кениа',
+            'calc_countyName_columbia':'Колумбия',
+            'calc_countyName_chilli':'Чили',
+            'calc_countyName_israel':'Израиль',
+            'calc_countyName_netherland':'Голландия',
+            'calc_countyName_spain':'Испания',
+            'calc_step2_header':'Что бы рассчитать дату доставки выберите день когда планируете сделать заказ',
+            'calc_orderDate':'Дата заказа',
+            'calc_endOfOrdering':'Конец сбора заказов',
+            'calc_shipment':'Доставка',
+            'calc_shipment_last':'7 дней',
+            'calc_day_shipment':'День поставки',
+
           //Teriff
             'tariff_header':'Основные тарифы',
             'tariff_from':'от',
@@ -120,6 +159,12 @@ i18n
             'tariff_block_header4':'6.3$/1кг',
             'tariff_block_text4':'Израиль',
             'tariff_button':'Скачать прайс',
+          //Form
+            'form_header':'Заказать звонок',
+            'form_text':'Закажите звонок и наш менеджер свяжется с вами в близжайшее время',
+            'form_name':'Имя',
+            'form_phone':'Номер телефона',
+            'form_label':'Даю согласие на обработку персональных данных',
           }
         }
     },

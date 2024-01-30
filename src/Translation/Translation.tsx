@@ -84,6 +84,21 @@ i18n
           'form_name':'Name',
           'form_phone':'Phone Number',
           'form_label':'I consent to the processing of personal data',
+        //MainPageHeadersOthers
+          'header_brockers': 'For Brokers',
+          'header_warehouses': 'Our Warehouses',
+          'header_contacts': 'Contacts',
+          'header_others': 'Standard Header',
+        //Brockers
+          'broc_header': 'Helping Brokers from Any Country with Flower Delivery Across the CIS',
+          'broc_block_header1': 'Step 1',
+          'broc_block_text1': 'The client contacts/works with a broker',
+          'broc_block_header2': 'Step 2',
+          'broc_block_text2': 'The client places an order',
+          'broc_block_header3': 'Step 3',
+          'broc_block_text3': 'The broker hands over the client’s cargo to our company for delivery',
+          'broc_block_header4': 'Step 4',
+          'broc_block_text4': 'We perform the delivery of the broker’s order to the client’s door',
         }
     },
         ru: {
@@ -165,6 +180,21 @@ i18n
             'form_name':'Имя',
             'form_phone':'Номер телефона',
             'form_label':'Даю согласие на обработку персональных данных',
+          //MainPageHeadersOthers
+            'header_brockers': 'Брокерам',
+            'header_warehouses': 'Наши склады',
+            'header_contacts':  'Контакты',
+            'header_others': 'Стандартный заголовок',
+          //Brockers
+            'broc_header':'Помогаем брокерам из любых стан с доставкой цветов по всему СН',
+            'broc_block_header1':'1 шаг',
+            'broc_block_text1':'Клиент обращается/работает с брокером',
+            'broc_block_header2':'2 шаг',
+            'broc_block_text2':'Клиент делает заказ',
+            'broc_block_header3':'3 шаг',
+            'broc_block_text3':'Брокер передает груз клиента в нашу компанию для поставки',
+            'broc_block_header4':'4 шаг',
+            'broc_block_text4':'Осуществляем доставку клиенту заказа брокером до двери',
           }
         }
     },

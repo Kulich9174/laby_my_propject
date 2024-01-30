@@ -1,14 +1,17 @@
 import React from "react";
 import Styles from './MainPageOtherPaths.module.css';
 import { useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import '../../../Translation/Translation';
 
 const MainPageOtherPaths = () =>{
     const location = useLocation();
+    const {t} = useTranslation();
 
     const headers: { [key: string]: string } = {
-        '/brockers-page': 'Брокерам',
-        '/warehouses-page': 'Наши склады',
-        '/contacts': 'Контакты'
+        '/brockers-page': t('header_brockers'),
+        '/warehouses-page': t('header_warehouses'),
+        '/contacts': t('header_contacts'),
     };
 
     const classes: { [key: string]: string } = {
@@ -17,7 +20,7 @@ const MainPageOtherPaths = () =>{
         '/contacts': Styles.brocker__mainPage_section_contacts
     };
 
-    const currentHeader = headers[location.pathname] || 'Стандартный заголовок';
+    const currentHeader = headers[location.pathname] || t('header_others');
     const currentClass = classes[location.pathname] || Styles.brocker__mainPage_section;
     console.log('Текущий путь:', location.pathname);
 

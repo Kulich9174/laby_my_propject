@@ -99,6 +99,10 @@ i18n
           'broc_block_text3': 'The broker hands over the client’s cargo to our company for delivery',
           'broc_block_header4': 'Step 4',
           'broc_block_text4': 'We perform the delivery of the broker’s order to the client’s door',
+        //Error
+          'error_header': 'Error',
+          'error_text': 'Unfortunately, the page was not found, it has most likely been deleted.',
+          'error_bold': 'We recommend returning to the main page.',
         }
     },
         ru: {
@@ -195,6 +199,10 @@ i18n
             'broc_block_text3':'Брокер передает груз клиента в нашу компанию для поставки',
             'broc_block_header4':'4 шаг',
             'broc_block_text4':'Осуществляем доставку клиенту заказа брокером до двери',
+          //Error
+            'error_header':'Ошибка',
+            'error_text':'К сожалению страница не найдена, скорее всего она была удалена.',
+            'error_bold':'Рекомендуем вернуться на главную.',
           }
         }
     },

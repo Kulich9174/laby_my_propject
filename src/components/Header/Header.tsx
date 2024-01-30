@@ -85,7 +85,7 @@ const Header: React.FC = () => {
     
                     <div className={`${Style.langMenu} ${isMenuVisible ? 'block' : Style.langMenu__hidden}`}>
                         <button className={Style.button__lang_menu_element} onClick={() => changeLanguage('ru')}>Ru</button>
-                        <button className={Style.button__lang_menu_element} onClick={() => changeLanguage('en')}>Eng</button>
+                        <button className={Style.button__lang_menu_element} onClick={() => changeLanguage('en')}>En</button>
                     </div>
                     {/* menu burger */}
                     <div id='toggleID' className='pl-[1%] w-32px h-32px sm:pl-[14px] laptop:hidden desktop:hidden'onClick={changeMenuState}>

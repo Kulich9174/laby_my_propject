@@ -16,6 +16,12 @@
     flex-direction:column;
     
 }
+.radioGroup{
+    display:flex;
+    align-items:start;
+    width:100%;
+    padding-left:1%;
+}
 .calc__container_div{
     width:100%;
     display:flex;

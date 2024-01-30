@@ -101,7 +101,7 @@ i18n
           // NavPage
             "main":"Главная",
             "about_us":"О нас",
-            "our_warehouses":"Наги склады",
+            "our_warehouses":"Наши склады",
             "brockers":'Брокерам',
             "contacts":"Контакты",
           //Footer

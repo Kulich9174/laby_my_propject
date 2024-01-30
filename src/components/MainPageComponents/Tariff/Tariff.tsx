@@ -4,8 +4,17 @@ import Airplane from '../../../assets/images/Airplane.svg';
 import { useTranslation } from 'react-i18next';
 import '../../../Translation/Translation';
 
+
+
 const Tariff = () =>{
     const { t } = useTranslation();
+    const fileUrl = '';
+
+    const handleDownload = () => {
+        window.location.href = fileUrl;
+    };
+
+
     return(
         <>
         <div className={Styles.separate_line}></div>
@@ -27,7 +36,7 @@ const Tariff = () =>{
                         <div className={Styles.tariff__makePrice}>
                             <div className={Styles.tariff__button_container}>
                                 {/* <button className={Styles.tariff__dowland_button}>Скачать прайс</button> */}
-                                <button className={Styles.button_size}>
+                                <button className={Styles.button_size} onClick={ handleDownload }>
                                     <div className={Styles.button_input}>
                                         <div className={Styles.border_top}></div>
                                         <p className={Styles.button_text}>{t('tariff_button')}</p>

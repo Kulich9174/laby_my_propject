@@ -103,6 +103,14 @@ i18n
           'error_header': 'Error',
           'error_text': 'Unfortunately, the page was not found, it has most likely been deleted.',
           'error_bold': 'We recommend returning to the main page.',
+        //Contacts
+          'contact_block_header1': 'Phone Number',
+          'contact_block_text1': '+7(495)7378585',
+          'contact_block_text1.1':'+7(495)7378282',
+          'contact_block_header2': 'E-mail',
+          'contact_block_text2': 'ffkaragandainfo@info.ru',
+          'contact_block_header3': 'Адрес',
+          'contact_block_text3': 'Kazakhstan, Karaganda, Bukhar-Zhyrau Ave 59/2, Office 214',
         }
     },
         ru: {
@@ -203,6 +211,14 @@ i18n
             'error_header':'Ошибка',
             'error_text':'К сожалению страница не найдена, скорее всего она была удалена.',
             'error_bold':'Рекомендуем вернуться на главную.',
+          //Contacts
+            'contact_block_header1': 'Телефон',
+            'contact_block_text1': '+7(495)7378585',
+            'contact_block_text1.1':'+7(495)7378282',
+            'contact_block_header2': 'E-mail',
+            'contact_block_text2': 'ffkaragandainfo@info.ru',
+            'contact_block_header3': 'Адрес',
+            'contact_block_text3': 'Казахстан, г. Караганда, Просп. Бухар-Жырау 59/2, офис 214',
           }
         }
     },

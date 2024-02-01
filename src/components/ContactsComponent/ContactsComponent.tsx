@@ -18,39 +18,45 @@ const ContactComponent = () =>{
             <section className={Styles.contacts__content_section}>
                 <div className={Styles.contacts__content_borders}>
                     <div className={Styles.contacts__content_container}>
-                        <div className={Styles.contacts__content_positioning}>
-                            <div className={Styles.contacts__content_gallery}>
-                                <div className={Styles.contacts__content_gallery_element}>
-                                    <div className={Styles.contacts_element_in}>
-                                        <img src={phone} alt="phone icon"/>
-                                        <div className={Styles.contacts__content_gallery_element_text}>
-                                            <h3 className={Styles.contacts__content_gallery_element_header}>{t('contact_block_header1')}</h3>
-                                            <p className={Styles.contacts__content_gallery_element_paragraph}>{t('contact_block_text1')}</p>
-                                        </div>
+                        <div className={Styles.contacts__content_gallery}>
+                            <div className={Styles.contacts__content_gallery_element}>
+                                <div className={Styles.contacts_element_in}>
+                                    <img src={phone} alt="phone icon" className={Styles.contacts__icon}/>
+                                    <div className={Styles.contacts__content_gallery_element_text}>
+                                        <h3 className={Styles.contacts__content_gallery_element_header}>{t('contact_block_header1')}</h3>
+                                        <p className={Styles.contacts__content_gallery_element_paragraph}>{t('contact_block_text1')}</p>
                                     </div>
-                                </div>
-
-                                <div className={Styles.contacts__content_gallery_element}>
-                                    <div className={Styles.contacts_element_in}>
-                                        <img src={email} alt="mail icon" className={Styles.contacts__icon}/>
-                                        <div className={Styles.contacts__content_gallery_element_text}>
-                                            <h3 className={Styles.contacts__content_gallery_element_header}>{t('contact_block_header2')}</h3>
-                                            <p className={Styles.contacts__content_gallery_element_paragraph}>{t('contact_block_text2')}</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className={Styles.contacts__content_gallery_element}>
-                                    <div className={Styles.contacts_element_in}>
-                                        <img src={location} alt="location icon"/>
-                                        <div className={Styles.contacts__content_gallery_element_text}>
-                                            <h3 className={Styles.contacts__content_gallery_element_header}>{t('contact_block_header3')}</h3>
-                                            <p className={Styles.contacts__content_gallery_element_paragraph}>{t('contact_block_text3')}</p>
-                                        </div>
-                                    </div>
-                                    
                                 </div>
                             </div>
+
+                            <div className={Styles.contacts__content_gallery_element}>
+                                <div className={Styles.contacts_element_in}>
+                                    <img src={email} alt="mail icon" className={Styles.contacts__icon}/>
+                                    <div className={Styles.contacts__content_gallery_element_text}>
+                                        <h3 className={Styles.contacts__content_gallery_element_header}>{t('contact_block_header2')}</h3>
+                                        <p className={Styles.contacts__content_gallery_element_paragraph}>{t('contact_block_text2')}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={Styles.contacts__content_gallery_element}>
+                                <div className={Styles.contacts_element_in}>
+                                    <img src={location} alt="location icon" className={Styles.contacts__icon}/>
+                                    <div className={Styles.contacts__content_gallery_element_text}>
+                                        <h3 className={Styles.contacts__content_gallery_element_header}>{t('contact_block_header3')}</h3>
+                                        <p className={Styles.contacts__content_gallery_element_paragraph}>{t('contact_block_text3')}</p>
+                                    </div>
+                                </div>
+                                    
+                                </div>
+                        </div>
+                        <div className={Styles.contacts__map_container}>
+                            <div className={Styles.contacts_picture}>
+                                <img src="" alt=""/>
+                            </div>
+                            <canvas>
+                                {/* map */}
+                            </canvas>
                         </div>
                     </div>
                 </div>

@@ -259,10 +259,9 @@ const CaulculationShipment = () => {
                         
                         <div className={`sm:hidden sm:invisible ${Style.calc__container_stepTwo}`}>
                             <div className={Style.map_icon_small_bg}></div>
-
                             {/* <img src={map} alt="map left" className="absolute left-0 bottom-0"/> */}
                             {/* DATE CHOICE BAR */}
-                            <div className={Style.calc__container_stepTwo_without_number}>
+                            <div className={`sm:hidden sm:invisible ${Style.calc__container_stepTwo_without_number}`}>
                                 
                                 {/* MAP WAY */}
                                 <div className="flex flex-col w-full relative">

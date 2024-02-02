@@ -78,12 +78,8 @@
 }
 .calc__container_stepTwo{
     @media(max-width:1050px){
-        /* padding:0px 15px 60px 15px; */
-        
-        /* align-items:center; */
-        /* padding-left: 15px; */
-       
-        /* max-width:470px;  */
+        visibility:hidden;
+        display:none;
         width:100%;
     }
     @media(min-width:1050px){
@@ -262,6 +258,11 @@
 }
 .calc__container_stepTwo_without_number{
     padding-left:1%;
+    @media(max-width:1050px){
+        visibility:hidden;
+        display:none;
+    }
+
 }
 .calc__container_results_date{
     @media(max-width:1050px){

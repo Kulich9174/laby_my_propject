@@ -56,7 +56,7 @@ const Header: React.FC = () => {
                         <rect width="26" height="1" fill="white"/>
                         <rect x="3" y="11" width="23" height="1" fill="white"/>
                         <rect y="22" width="26" height="1" fill="white"/></svg> */}
-                         <img src={Menu} alt='nav' className={headerStateValue ? 'hidden': ' cursor-pointer transition-opacity delay-[0.4s]'}/>
+                        <img src={Menu} alt='nav' className={headerStateValue ? 'hidden': 'w-[32px] h-[32px] m-auto cursor-pointer'}/>
                         <img src={Close} alt='close' className={headerStateValue ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'}/>
                 </div>
             </div>
@@ -95,7 +95,7 @@ const Header: React.FC = () => {
                         <rect width="26" height="1" fill="white"/>
                         <rect x="3" y="11" width="23" height="1" fill="white"/>
                         <rect y="22" width="26" height="1" fill="white"/></svg> */}
-                        <img src={Menu} alt='nav' className={headerStateValue ? 'hidden': ' cursor-pointer transition-opacity delay-[0.4s]'}/>
+                        <img src={Menu} alt='nav' className={headerStateValue ? 'hidden': ' w-[32px] h-[32px]  m-auto cursor-pointer'}/>
                         <img src={Close} alt='close' className={headerStateValue ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'} />
                     </div>
                 </div>

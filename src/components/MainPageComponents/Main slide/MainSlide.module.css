@@ -72,7 +72,8 @@ visibility:hidden;
     color:white;
 }
 .img{
-    
+    min-width:90px;
+    min-height:140px;      
     @media (max-width: 1300px){
         max-width:90px;
         max-height:140px; 

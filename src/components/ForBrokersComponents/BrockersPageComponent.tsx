@@ -13,7 +13,7 @@ const BrockersPageComponent = () => {
     return(
         <>
             <section className={Styles.brocker__content}>
-            <div className={Styles.brocker__content_bg}></div>
+            {/* <div className={Styles.brocker__content_bg}></div> */}
             <section className={Styles.brocker__content_section}>
                 <div className={Styles.brocker__content_borders}>
                     <div className={Styles.brocker__content_container}>

@@ -57,7 +57,7 @@ const Warehouses: React.FC = () => {
                         <div className={Styles.container_map}>
                             <div className="flex 
                             laptop:justify-end laptop:items-start">
-                                <img src={countriesLaptop} alt="" className={Styles.countriesLaptop}/>
+                                <img src={countriesLaptop} alt="" className={`sm:hidden ${Styles.countriesLaptop}`}/>
                             </div>
 
                             {/* PARAGRAF LAPTOP/DESKTOP*/}

@@ -85,7 +85,7 @@ const MainPage: React.FC = () => {
 
                             <div className='flex flex-col items-center justify-center text-center'>
                                 <img src={flower1} alt='picture with pink flowers' className={Styles.img}></img>
-                                <span className={Styles.countries}>US</span>
+                                <span className={Styles.countries}></span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>

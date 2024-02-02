@@ -69,11 +69,9 @@
         height: 167.416px;
         transform: rotate(4.493deg);
         background-image:url('/src/assets/images/BrockersBGMobile.svg');
-        background-repeat: no-repeat;
+        background-repeat:no-repeat;
         flex-shrink: 0; 
         position:absolute;
-        /* left:-20px;
-        top:16px; */
         top:20px;
         overflow:hidden;
     }

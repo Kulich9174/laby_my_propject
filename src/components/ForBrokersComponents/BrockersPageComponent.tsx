@@ -19,7 +19,7 @@ const BrockersPageComponent = () => {
                     <div className={Styles.brocker__content_container}>
                         <h2 className={Styles.brocker__content_header}>{t('broc_header')}</h2>
                         <div className={Styles.brocker__content_positioning}>
-                            <img src={langState === 'ru' ? Way : WayEn} alt="way for brockers" className={Styles.brocker__content_image}/>
+                            <img src={langState === 'ru' ? Way : WayEn} alt="way for brockers" className={`block ${Styles.brocker__content_image}`}/>
                             <div className={Styles.brocker__content_gallery}>
                                 <div className={Styles.brocker__content_gallery_element}>
                                     <div className={Styles.brocker__content_gallery_element_text}>

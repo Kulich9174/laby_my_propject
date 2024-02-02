@@ -74,7 +74,7 @@ const MainPage: React.FC = () => {
                                 <span className={Styles.countries}>Equador</span>
                             </div>
                             <div className='hidden
-                        sm:flex sm:flex-col sm:items-center sm:justify-center sm:text-center'>
+                                sm:flex sm:flex-col sm:items-center sm:justify-center sm:text-center'>
                                 <img src={flower4} alt='picture with pink flowers' className={Styles.img}></img>
                                 <span className={Styles.countries}>EC</span>
                             </div>
@@ -85,7 +85,7 @@ const MainPage: React.FC = () => {
 
                             <div className='flex flex-col items-center justify-center text-center'>
                                 <img src={flower1} alt='picture with pink flowers' className={Styles.img}></img>
-                                <span className={Styles.countries}>EC</span>
+                                <span className={Styles.countries}>US</span>
                             </div>
 
                             <div className='flex flex-col items-center justify-center text-center'>

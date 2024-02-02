@@ -32,12 +32,12 @@ const Footer: React.FC = () => {
                             <Link to="/" className="inline-block py-2 hover:text-[#227CE4]">{t('main')}</Link>
                         </li>
                         <li className="w-1/2 px-2">
-                            <Link to="/brockers-page" className="inline-block py-2 hover:text-[#227CE4]">{t('our_warehouses')}</Link>
+                            <Link to="/warehouses-page" className="inline-block py-2 hover:text-[#227CE4]">{t('our_warehouses')}</Link>
                         </li>
 
                         {/* Вторая колонка */}
                         <li className="w-1/2 px-2">
-                            <Link to="/warehouses-page" className="inline-block py-2 hover:text-[#227CE4]">{t('brockers')}</Link>
+                            <Link to="/brockers-page" className="inline-block py-2 hover:text-[#227CE4]">{t('brockers')}</Link>
                         </li>
                         <li className="w-1/2 px-2">
                             <Link to="/contacts" className="inline-block py-2 hover:text-[#227CE4]">{t('contacts')}</Link>

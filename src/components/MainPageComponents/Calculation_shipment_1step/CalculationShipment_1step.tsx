@@ -257,7 +257,7 @@ const CaulculationShipment = () => {
                                 
                         </div>
                         
-                        <div className={Style.calc__container_stepTwo}>
+                        <div className={`sm:hidden sm:invisible ${Style.calc__container_stepTwo}`}>
                             <div className={Style.map_icon_small_bg}></div>
 
                             {/* <img src={map} alt="map left" className="absolute left-0 bottom-0"/> */}

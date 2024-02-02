@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Close from '../../assets/images/close-line.svg';
+import Menu from '../../assets/images/MenuBurger.svg';
 import Navigation from '../Navigation/Navigation';
 import HeaderLogo from './HeaderLogo';
 import {changeValue} from '../../state/HeaderMenuReducer/HeaderMenuReducer';
@@ -51,10 +52,11 @@ const Header: React.FC = () => {
                 <HeaderLogo/> 
                 {/* крестик */}
                 <div id='toggleID' className='pl-[1%] w-32px h-32px sm:pl-2 laptop:hidden desktop:hidden' onClick={changeMenuState}>
-                    <svg className={headerStateValue ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
+                    {/* <svg className={headerStateValue ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
                         <rect width="26" height="1" fill="white"/>
                         <rect x="3" y="11" width="23" height="1" fill="white"/>
-                        <rect y="22" width="26" height="1" fill="white"/></svg>
+                        <rect y="22" width="26" height="1" fill="white"/></svg> */}
+                         <img src={Menu} alt='nav' className={headerStateValue ? 'hidden': ' cursor-pointer transition-opacity delay-[0.4s]'}/>
                         <img src={Close} alt='close' className={headerStateValue ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'}/>
                 </div>
             </div>
@@ -88,11 +90,12 @@ const Header: React.FC = () => {
                         <button className={Style.button__lang_menu_element} onClick={() => changeLanguage('en')}>En</button>
                     </div>
                     {/* menu burger */}
-                    <div id='toggleID' className='pl-[1%] w-[32px] h-[32px] sm:pl-[14px] laptop:hidden desktop:hidden'onClick={changeMenuState}>
-                    <svg className={headerStateValue ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
+                    <div id='toggleID' className='pl-[1%] w-[32px] h-[32px] sm:pl-[14px] flex items-center justify-center laptop:hidden desktop:hidden'onClick={changeMenuState}>
+                    {/* <svg className={headerStateValue ? 'hidden': 'w-max h-max m-auto cursor-pointer transition-opacity delay-[0.4s]'} xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
                         <rect width="26" height="1" fill="white"/>
                         <rect x="3" y="11" width="23" height="1" fill="white"/>
-                        <rect y="22" width="26" height="1" fill="white"/></svg>
+                        <rect y="22" width="26" height="1" fill="white"/></svg> */}
+                        <img src={Menu} alt='nav' className={headerStateValue ? 'hidden': ' cursor-pointer transition-opacity delay-[0.4s]'}/>
                         <img src={Close} alt='close' className={headerStateValue ? 'w-[32px] h-[32px] m-auto cursor-pointer':'hidden'} />
                     </div>
                 </div>

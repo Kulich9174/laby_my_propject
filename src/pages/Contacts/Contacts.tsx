@@ -1,7 +1,8 @@
 import React from "react";
 import MainPageOtherPaths from "../../components/MainPageOnOtherPaths/ForBrokersMainPage/MainPageUnique";
 import OrderForm from "../../components/MainPageComponents/OrderForm/OrderForm";
-import ContactComponent from '../../components/ContactsComponent/ContactsComponent';
+import ContactComponent from '../../components/ContactsComponentData/ContactsComponent';
+import ContactsSalesGroup from "../../components/ContactsSalesGroup/ContactsSalesGroup";
 
 const Contacts = () => {
     return(
@@ -9,6 +10,7 @@ const Contacts = () => {
             <div>
                 <MainPageOtherPaths/>
                 <ContactComponent/>
+                <ContactsSalesGroup/>
                 <OrderForm/>
             </div>
         </>

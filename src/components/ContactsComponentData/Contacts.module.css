@@ -93,9 +93,9 @@
     }
     @media(min-width:901px){
         display:grid;
-        grid-template-columns:30% 30% 30%;
+        grid-template-columns:32% 32% 32%;
         
-        gap:3%;
+        gap:2%;
         width:100%;
     }
 }
@@ -190,6 +190,7 @@
 }
 .contacts__map_container{
     padding-top:30px;
+    padding-bottom:60px;
     @media(max-width:900px){
         gap:20px;
         display:flex;
@@ -203,7 +204,15 @@
         width:100%;
     }
 }
+.contacts_picture_container{
+    width:100%;
+}
+.contacts__frame{
+    border:1px solid rgba(85, 122, 161, 0.30);
+    height:100%;
+}
 .contacts_picture{
-    background-image:url('/src/assets/images/Rectangle 1.png');
-    
+    width:100%;
+    height:140px;
+    min-height:300px;
 }

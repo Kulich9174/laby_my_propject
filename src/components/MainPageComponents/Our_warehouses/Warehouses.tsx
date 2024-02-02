@@ -57,7 +57,7 @@ const Warehouses: React.FC = () => {
                         <div className={Styles.container_map}>
                             <div className="flex 
                             laptop:justify-end laptop:items-start">
-                                <img src={countriesLaptop} alt="" className={`sm:hidden ${Styles.countriesLaptop}`}/>
+                                <img src={countriesLaptop} alt="" className={`sm:hidden sm:invisible ${Styles.countriesLaptop}`}/>
                             </div>
 
                             {/* PARAGRAF LAPTOP/DESKTOP*/}
@@ -90,7 +90,7 @@ const Warehouses: React.FC = () => {
                                 laptop:w-full laptop:h-full
                                 desktop:w-[850px] desktop:h-auto"/> 
                             </div>
-                            <img className={Styles.countriesMobile} src={countries} alt="Ruler countries" />
+                            <img className={`laptop:hidden desktop:hidden laptop:invisible desktop:invisible ${Styles.countriesMobile}`} src={countries} alt="Ruler countries" />
                         </div>
                     </div>
                 </div>

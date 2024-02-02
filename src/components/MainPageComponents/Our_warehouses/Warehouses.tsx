@@ -88,7 +88,7 @@ const Warehouses: React.FC = () => {
                                 <img src={map} alt="map" className="
                                 sm:w-[850px] sm:h-[100%] sm:overflow-hidden
                                 laptop:w-full laptop:h-full
-                                desktop:w-[850px] desktop:h-auto"/>
+                                desktop:w-[850px] desktop:h-auto"/> 
                             </div>
                             <img className={Styles.countriesMobile} src={countries} alt="Ruler countries" />
                         </div>

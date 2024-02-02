@@ -69,6 +69,7 @@
 .countriesLaptop{
     @media (max-width: 1050px) { 
         display:none;
+        visibility:hidden;
     }
 }
 .countriesMobile{

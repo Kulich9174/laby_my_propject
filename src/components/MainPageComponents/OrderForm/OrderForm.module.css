@@ -40,6 +40,8 @@
     justify-content:center; */
     flex-direction:column;
     position:relative;
+    padding-left:2%;
+    padding-right:2%;
     @media(max-width:470px){
         padding-bottom:30px;
     }

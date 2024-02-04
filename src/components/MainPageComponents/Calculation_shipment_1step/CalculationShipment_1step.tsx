@@ -19,13 +19,11 @@ const CaulculationShipment = () => {
 
     const [country, setCountry] = useState<string>('ecuador'); // Тип для страны
     const currentDate = new Date();
-    // Получаем день, месяц и год в виде строк
     const day = String(currentDate.getDate()).padStart(2, '0');
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Месяцы начинаются с 0
-    const year = String(currentDate.getFullYear()).substring(2); // Получаем последние 2 цифры года
-
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const year = currentDate.getFullYear();
     const formattedDate = `${year}-${month}-${day}`;
-    const [startDate, setStartDate] = useState<string>(formattedDate); // Тип для начальной даты
+    const [startDate, setStartDate] = useState<string>(formattedDate);
 
     const [shipmentDate, setShipmentDate] = useState<string>('XX-XX-2024');
     const [shipmentCollectionDate, setShipmentCollectionDate] = useState('XX-XX-2024');
@@ -63,43 +61,8 @@ const CaulculationShipment = () => {
     // };
 
     
-    const langDate = (shipment : string,current : Date) =>{
-        // Форматируем дату обратно в строку 'YYYY-MM-DD'
-        const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
-        if(langState === 'ru'){
-            shipment = new Intl.DateTimeFormat('ru-RU', options).format(current) + ' в 16:00';
-        }
-        else{
-            shipment = new Intl.DateTimeFormat('en-En', options).format(current) + ' at 16:00';
-        }
-        setShipmentCollectionDate(shipment);
-    }
-
-    function calculateShipmentDateCollection(date:string) {
-        const current = new Date(date);
-        current.setDate(current.getDate() + 3);
-        const shipmentCollectionDateString = '';
-        langDate(shipmentCollectionDateString , current);
-    }
     
-
-    const calculateShipmentDate = (date: string) => {
-        const current = new Date(date);
-        current.setDate(current.getDate() + 7);  // Добавляем 10 дней к текущей дате
-        const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
-        let shipmentDateString = '';
-        if(langState === 'ru'){
-            shipmentDateString = new Intl.DateTimeFormat('ru-RU', options).format(current);
-        }
-        else{
-            shipmentDateString = new Intl.DateTimeFormat('en-En', options).format(current);
-        }
-        setShipmentDate(shipmentDateString);
-        // useEffect(()=>{
-        //     setShipmentDate(shipmentDateString);
-        // },[langState]);
-    }
-
+    
     // useEffect(() => {
     //     calculateShipmentDateCollection(startDate);
     //     calculateShipmentDate(startDate);
@@ -124,6 +87,36 @@ const CaulculationShipment = () => {
     //     setShipmentDate(shipmentDateString);
     // };
 
+    useEffect(() => {
+        const langDate = (current: Date) => {
+            // Форматируем дату обратно в строку 'YYYY-MM-DD'
+            const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
+            let formattedDate;
+            if (langState === 'ru') {
+                formattedDate = new Intl.DateTimeFormat('ru-RU', options).format(current) + ' в 16:00';
+            } else {
+                formattedDate = new Intl.DateTimeFormat('en-En', options).format(current) + ' at 16:00';
+            }
+            return formattedDate;
+        };
+    
+        const calculateShipmentDateCollection = (date: string) => {
+            const current = new Date(date);
+            current.setDate(current.getDate() + 3);
+            const shipmentCollectionDate = langDate(current);
+            setShipmentCollectionDate(shipmentCollectionDate);
+        };
+    
+        const calculateShipmentDate = (date: string) => {
+            const current = new Date(date);
+            current.setDate(current.getDate() + 7);  // Добавляем 7 дней к текущей дате
+            const shipmentDateString = langDate(current);
+            setShipmentDate(shipmentDateString);
+        };
+    
+        calculateShipmentDateCollection(startDate);
+        calculateShipmentDate(startDate);
+    }, [startDate, langState]); // Эффект будет перезапускаться при изменении startDate или langState
 
     return(
         <>
@@ -275,17 +268,18 @@ const CaulculationShipment = () => {
                                                     <p className="text_normal_itallic sm:pl-2">{startDate}</p>
                                                 </span>
                                             
-                                            <input  type="date" className={Style.datepicker_input} 
-                                                id="start" 
-                                                name="ship-start" 
+                                            <input
+                                                type="date"
+                                                className={Style.datepicker_input}
+                                                id="start"
+                                                name="ship-start"
                                                 value={startDate} // Используем состояние для значения
-                                                min="2018-01-01" 
-                                                max="2024-12-31" 
+                                                min="2018-01-01"
+                                                max="2024-12-31"
                                                 onChange={e => {
                                                     setStartDate(e.target.value);
-                                                    calculateShipmentDateCollection(e.target.value);
-                                                    calculateShipmentDate(e.target.value);
-                                                    }} />
+                                                }}
+                                            />
                                             </span>
                                         </div>
 
@@ -339,17 +333,18 @@ const CaulculationShipment = () => {
                                                     <p className="text_normal_itallic sm:pl-6">{startDate}</p>
                                                 </span>
                                             
-                                            <input  type="date" className={Style.datepicker_input} 
-                                                id="start" 
-                                                name="ship-start" 
-                                                value={startDate} // Используем состояние для значения
-                                                min="2018-01-01" 
-                                                max="2024-12-31" 
-                                                onChange={e => {
-                                                    setStartDate(e.target.value);
-                                                    calculateShipmentDateCollection(e.target.value);
-                                                    calculateShipmentDate(e.target.value);
-                                                    }} />
+                                                <input
+                                                    type="date"
+                                                    className={Style.datepicker_input}
+                                                    id="start"
+                                                    name="ship-start"
+                                                    value={startDate} // Используем состояние для значения
+                                                    min="2018-01-01"
+                                                    max="2024-12-31"
+                                                    onChange={e => {
+                                                        setStartDate(e.target.value);
+                                                    }}
+                                                />
                                             </span>
                                         </div>
                                 </div>

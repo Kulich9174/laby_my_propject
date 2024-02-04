@@ -52,50 +52,15 @@ const CaulculationShipment = () => {
         setCountry(event.target.value); // Обновить состояние при выборе страны
     };
 
-    // const formatDate = (date : Date, addDays:number) => {
-    //     const current = new Date(date);
-    //     current.setDate(current.getDate() + addDays);
-    //     const options : Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
-    //     const langFormat = langState === 'ru' ? 'ru-RU' : 'en-En';
-    //     return new Intl.DateTimeFormat(langFormat, options).format(current) + (langState === 'ru' ? ' в 16:00' : ' at 16:00');
-    // };
-
-    
-    
-    
-    // useEffect(() => {
-    //     calculateShipmentDateCollection(startDate);
-    //     calculateShipmentDate(startDate);
-    //     // Этот useEffect будет вызываться каждый раз, когда меняется langState или startDate
-    // }, [langState, startDate]);
-    
-    // const calculateShipmentDateCollection = (date: string) => {
-    //     const current = new Date(date);
-    //     current.setDate(current.getDate() + 3); // Пример для добавления 3 дней к текущей дате
-    //     const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
-    //     const format = langState === 'ru' ? 'ru-RU' : 'en-En';
-    //     const shipment = new Intl.DateTimeFormat(format, options).format(current);
-    //     setShipmentCollectionDate(shipment);
-    // };
-    
-    // const calculateShipmentDate = (date: string) => {
-    //     const current = new Date(date);
-    //     current.setDate(current.getDate() + 7); // Пример для добавления 7 дней к текущей дате
-    //     const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
-    //     const format = langState === 'ru' ? 'ru-RU' : 'en-En';
-    //     const shipmentDateString = new Intl.DateTimeFormat(format, options).format(current);
-    //     setShipmentDate(shipmentDateString);
-    // };
-
     useEffect(() => {
         const langDate = (current: Date) => {
             // Форматируем дату обратно в строку 'YYYY-MM-DD'
             const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
             let formattedDate;
             if (langState === 'ru') {
-                formattedDate = new Intl.DateTimeFormat('ru-RU', options).format(current) + ' в 16:00';
+                formattedDate = new Intl.DateTimeFormat('ru-RU', options).format(current);
             } else {
-                formattedDate = new Intl.DateTimeFormat('en-En', options).format(current) + ' at 16:00';
+                formattedDate = new Intl.DateTimeFormat('en-En', options).format(current);
             }
             return formattedDate;
         };

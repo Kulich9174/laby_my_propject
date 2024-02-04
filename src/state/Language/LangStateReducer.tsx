@@ -6,7 +6,7 @@ interface LangState{
 }
 
 const initialState : LangState = {
-    language: '',
+    language: 'ru',
 }
 
 // generation of the actioins

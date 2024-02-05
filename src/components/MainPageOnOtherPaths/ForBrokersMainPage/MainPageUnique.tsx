@@ -3,10 +3,13 @@ import Styles from './MainPageOtherPaths.module.css';
 import { useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import '../../../Translation/Translation';
+import { useSelector} from 'react-redux';
+import { RootState } from '../../../state/store';
 
 const MainPageOtherPaths = () =>{
     const location = useLocation();
     const {t} = useTranslation();
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
 
     const headers: { [key: string]: string } = {
         '/brockers-page': t('header_brockers'),

@@ -193,6 +193,7 @@
 }
 .countryMenu__hidden{
     display:none;
+    visibility: hidden;
 }
 .button__country_menu_element:hover{
     color:white;

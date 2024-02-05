@@ -9,7 +9,7 @@ import Pict from '../../../assets/images/ContactsMeetingPhotoMobile.png';
 import { useSelector} from 'react-redux';
 import { RootState } from '../../../state/store';
 
-const ContactComponent = () =>{
+const ContactComponent = () =>{ 
     const { t } = useTranslation();
     const langState = useSelector((state: RootState) => state.LangStateReducer.language);
     return(

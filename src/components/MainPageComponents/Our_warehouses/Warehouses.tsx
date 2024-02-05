@@ -7,9 +7,12 @@ import smallAirplane from '../../../assets/images/Small_airplane.svg';
 import Button from '../ButtonConnect/Button_connection';
 import { useTranslation } from 'react-i18next';
 import '../../../Translation/Translation';
+import { useSelector} from 'react-redux';
+import { RootState } from '../../../state/store';
 
 const Warehouses: React.FC = () => {
     const { t } = useTranslation();
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
     return (
         <>
             <section className={Styles.warehouses__section} >

@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../Translation/Translation';
 
+
 const Footer: React.FC = () => {
     const headerstatevalue = useSelector((state: RootState)=>state.headerMenuState.value);
     const {t} = useTranslation();
-
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
     return (
         <>
             <footer className="bg-[#1A2633] flex-grow-[1] m-0">

@@ -1,5 +1,5 @@
 import Button from '../ButtonConnect/Button_connection';
-import React from 'react';
+import React, { useEffect } from 'react';
 import flower1 from '../../../assets/images/flower1.png';
 import EquadorMap from '../EquadorMap/EquadorMap';
 import flower2 from '../../../assets/images/flower2.png';
@@ -10,13 +10,17 @@ import Mail_icon from '../../../assets/images/Mail_icon.svg';
 import Styles from './MainSlide.module.css';
 import { useTranslation } from 'react-i18next';
 import '../../../Translation/Translation';
-// import { useSelector} from 'react-redux';
-// import { RootState } from '../../../state/store';
+import { useSelector} from 'react-redux';
+import { RootState } from '../../../state/store';
 
 
 const MainPage: React.FC = () => {
     // const headerStateValue = useSelector((state: RootState)=>state.headerMenuState.value);
     const { t } = useTranslation();
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
+    useEffect(()=>{
+        console.log('main slide', langState)
+    })
     return (
         <>
             {/* <div className={headerStateValue ? `sm:hidden min-h-screen ${Styles.container_hidden}` : Styles.container}> */}

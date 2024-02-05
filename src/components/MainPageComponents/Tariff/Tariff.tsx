@@ -3,7 +3,8 @@ import Styles from './Tariff.module.css';
 import Airplane from '../../../assets/images/Airplane.svg';
 import { useTranslation } from 'react-i18next';
 import '../../../Translation/Translation';
-
+import { useSelector} from 'react-redux';
+import { RootState } from '../../../state/store';
 
 
 const Tariff = () =>{

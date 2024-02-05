@@ -8,9 +8,12 @@ import smile from '../../../assets/images/Smile.svg';
 import Styles from './Number.module.css';
 import { useTranslation } from 'react-i18next';
 import '../../../Translation/Translation';
+import { useSelector} from 'react-redux';
+import { RootState } from '../../../state/store';
 
 const Numbers: React.FC = () => {
     const { t } = useTranslation();
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
 
     return (
         <>

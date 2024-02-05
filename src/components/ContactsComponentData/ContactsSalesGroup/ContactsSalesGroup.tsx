@@ -98,7 +98,7 @@ const ContactsSalesGroup = () =>{
                                             </button>
                                         </div>
                                     </div>
-                                    <div className={`${Styles.countryMenu} ${isMenuCityVisible ? 'block' : Styles.countryMenu__hidden}`}>
+                                    <div className={`${Styles.countryMenu} ${isMenuCityVisible ? 'block' : `hidden invisible ${Styles.countryMenu__hidden}`}`}>
                                             {cityButtons}
                                     </div>
                                 </div>

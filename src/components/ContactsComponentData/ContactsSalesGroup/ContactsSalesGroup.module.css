@@ -108,6 +108,16 @@
     display: grid;
     grid-template-columns: 50% 50%;
     
+    @media(max-width:800px){
+        padding-left: 2%;
+        padding-bottom: 30px;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        padding-bottom: 30px;
+    }
+    @media(min-width:1501px){
+        padding-bottom: 40px;
+    }
 }
 .contacts__container_element{
     @media(min-width:800px){
@@ -186,4 +196,103 @@
 }
 .button__country_menu_element:hover{
     color:white;
+}
+.contacts__list{
+    @media(max-width:800px){
+        display: flex;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        
+    }
+    @media(min-width:1501px){
+        
+    }
+}
+.contacts__list_container{
+    @media(max-width:550px){
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+    @media(min-width:551px) and (max-width:1500px){
+        
+    }
+    @media(min-width:1501px){
+        
+    }
+}
+.contacts__list_container_info{
+    @media(max-width:800px){
+        padding: 45px 2%;
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        
+    }
+    @media(min-width:1501px){
+        
+    }
+}
+.contacts__photo{
+    width:100%;
+}
+.contacts__name{
+    color: #9FCCFF;
+    font-style: normal;
+    font-weight: 500;
+    @media(max-width:800px){
+        font-size: 22px;
+        line-height: 22px; /* 100% */
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        
+    }
+    @media(min-width:1501px){
+        
+    }
+}
+.contacts__description{
+    color: #BCC9DA;
+    font-style: normal;
+    font-weight: 400;
+    @media(max-width:800px){
+        font-size: 10px;
+        line-height: 15px; /* 150% */
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        
+    }
+    @media(min-width:1501px){
+        
+    }
+}
+
+.contacts__phone_text{
+    color: #BCC9DA;
+    font-style: normal;
+    font-weight: 400;
+    @media(max-width:800px){
+        font-size: 13px;
+        line-height: 18px; /* 150% */
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        
+    }
+    @media(min-width:1501px){
+        
+    }
+}
+.contacts__mail_text{
+    color: #BCC9DA;
+    font-style: normal;
+    font-weight: 400;
+    @media(max-width:800px){
+        font-size: 13px;
+        line-height: 24px; /* 150% */
+    }
+    @media(min-width:801px) and (max-width:1500px){
+        
+    }
+    @media(min-width:1501px){
+        
+    }
 }

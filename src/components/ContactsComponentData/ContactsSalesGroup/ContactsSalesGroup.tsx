@@ -3,16 +3,25 @@ import Styles from './ContactsSalesGroup.module.css';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../state/store';
 import { useTranslation } from 'react-i18next';
+
+import Phone from '../../../assets/images/Phone_icon.svg';
+import Mail from '../../../assets/images/Mail_icon.svg';
+import Oleg from '../../../assets/images/OlegPhoto.png';
+
 interface CountriesAndCities {
     [key: string]: string[];
   }
   
 const ContactsSalesGroup = () =>{
-    const [arrowClass, setArrowClass] = useState(Styles.arrow_up);
+    const [arrowCityClass, setArrowCityClass] = useState(Styles.arrow_up);
+    const [arrowCountryClass, setArrowCountryClass] = useState(Styles.arrow_up);
+
     const [country, setCountry] = useState('country_Russia');
+    const [city, setCity] = useState('city_Moscow');
+
     const [isMenuCountryVisible, setIsMenuCountryVisible] = useState(false);
     const [isMenuCityVisible, setIsMenuCityVisible] = useState(false);
-    const [city, setCity] = useState('city_Moscow');
+   
     const countriesAndCities: CountriesAndCities = {
         'country_Russia': ['city_Moscow', 'city_Yaroslavl', 'city_Tula'],
         'country_Kz': ['city_Astana', 'city_Almaty']
@@ -22,6 +31,7 @@ const ContactsSalesGroup = () =>{
     const langState = useSelector((state: RootState) => state.LangStateReducer.language);
 
     useEffect(() => {
+        console.log(city, country);
         i18n.changeLanguage(langState);
         // Сбросить выбранный город при смене страны
         setCity(countriesAndCities[country][0]);
@@ -29,11 +39,11 @@ const ContactsSalesGroup = () =>{
 
     const toggleCountryArrow = () => {
         setIsMenuCountryVisible(!isMenuCountryVisible);
-        setArrowClass(arrowClass === Styles.arrow_up ? Styles.arrow_down : Styles.arrow_up);
+        setArrowCountryClass(arrowCountryClass === Styles.arrow_up ? Styles.arrow_down : Styles.arrow_up);
     };
     const toggleCityArrow = () => {
         setIsMenuCityVisible(!isMenuCityVisible);
-        setArrowClass(arrowClass === Styles.arrow_up ? Styles.arrow_down : Styles.arrow_up);
+        setArrowCityClass(arrowCityClass === Styles.arrow_up ? Styles.arrow_down : Styles.arrow_up);
     };
 
     // Обработчики для выбора страны, сохраняем ключи перевода в состояние
@@ -67,7 +77,7 @@ const ContactsSalesGroup = () =>{
                                         <p className="">{t(country)}</p>
                                         <div className=' sm:pr-[1%]'>
                                             <button id='useref' className={Styles.button} onClick={toggleCountryArrow}> 
-                                                <div className={arrowClass}></div>
+                                                <div className={arrowCountryClass}></div>
                                             </button>
                                         </div>
                                     </div>
@@ -84,7 +94,7 @@ const ContactsSalesGroup = () =>{
                                         <p className="">{t(city)}</p>
                                         <div className=' sm:pr-[1%]'>
                                             <button id='useref' className={Styles.button} onClick={toggleCityArrow}> 
-                                                <div className={arrowClass}></div>
+                                                <div className={arrowCityClass}></div>
                                             </button>
                                         </div>
                                     </div>
@@ -95,7 +105,33 @@ const ContactsSalesGroup = () =>{
                             </div>
                         </div>
                         <div className={Styles.contacts__list}>
-
+                            <div className={Styles.contacts__list_container}>
+                                <div className="flex items-center justify-center px-[2%]">
+                                    <img src={Oleg} alt="Oleg's photo" className={Styles.contacts__photo}/>
+                                </div>
+                                
+                                <div className={Styles.contacts__list_container_info}>
+                                    <h2 className={Styles.contacts__name}>Милич Олег</h2>
+                                    <p className={Styles.contacts__description}>Руководитель направления продаж в Москве и Моской области</p>
+                                    <div className={Styles.contacts__list_container_text}>
+                                        <div>
+                                            <div className="flex gap-2">
+                                                <img src={Phone}/>
+                                                <p className={Styles.contacts__phone_text}>+7 (495) 737 8585</p>
+                                            </div>
+                                            <div className="flex gap-2">
+                                                <img src={Phone}/>
+                                                <p className={Styles.contacts__phone_text}>+7 (495) 737 8282</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="flex gap-2">
+                                            <img src={Mail}/>
+                                            <p className={Styles.contacts__mail_text}>ffkaragandainfo@info.ru</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

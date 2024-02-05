@@ -292,7 +292,7 @@
     }
 }
 
-.calc__container_results_date2{
+/* .calc__container_results_date2{
     
     @media(max-width:1050px){
         display: grid;
@@ -305,7 +305,7 @@
         display:none;
         visibility:hidden;
     }
-}
+} */
 /* .calc__container_stepTwo_without_number{
     width: 110%;
 } */

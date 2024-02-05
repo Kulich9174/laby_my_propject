@@ -109,7 +109,7 @@ i18n
           'contact_block_text1.1':'+7(495)7378282',
           'contact_block_header2': 'E-mail',
           'contact_block_text2': 'ffkaragandainfo@info.ru',
-          'contact_block_header3': 'Адрес',
+          'contact_block_header3': 'Аdress',
           'contact_block_text3': 'Kazakhstan, Karaganda, Bukhar-Zhyrau Ave 59/2, Office 214',
 
           'country_Russia':'Russia',

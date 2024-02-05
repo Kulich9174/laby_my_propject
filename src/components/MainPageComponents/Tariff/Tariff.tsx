@@ -9,6 +9,7 @@ import { RootState } from '../../../state/store';
 
 const Tariff = () =>{
     const { t } = useTranslation();
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
     const fileUrl = '';
 
     const handleDownload = () => {

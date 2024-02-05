@@ -6,9 +6,12 @@ import phone from '../../../assets/images/Phone.svg';
 import email from '../../../assets/images/Mail.svg';
 import location from '../../../assets/images/Location.svg';
 import Pict from '../../../assets/images/ContactsMeetingPhotoMobile.png';
+import { useSelector} from 'react-redux';
+import { RootState } from '../../../state/store';
 
 const ContactComponent = () =>{
     const { t } = useTranslation();
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
     return(
         <>
         <section className={Styles.contacts__content}>

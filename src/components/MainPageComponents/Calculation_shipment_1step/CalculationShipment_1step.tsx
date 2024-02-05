@@ -225,7 +225,7 @@ const CaulculationShipment = () => {
                                             {/* если английски, то вывести ключи, если русский, то значения */}
                                             <p className={Style.country__name}>{langState==='ru' ? countryNamesRus[country]:countryNamesEng[country]}</p>
                                             </div>
-                                        <div className={Style.calc__container_results_date2}>
+                                        <div className={`${Style.calc__container_results_date2}`}>
                                             <label className="text_normal_itallic">{t('calc_orderDate')}</label>
                                             <span className={Style.date}>
                                                 <span className={Style.datepicker__toggle_button}>
@@ -252,7 +252,7 @@ const CaulculationShipment = () => {
                                         <p className="text_normal_itallic">{t('calc_endOfOrdering')}</p>
                                         <p className="text_normal_itallic">{shipmentCollectionDate}</p>
                                     </div>
-                                    <div className={`laptop:hidden desktop:hidden ${Style.calc__container_results_date2}`}>
+                                    <div className={`${Style.calc__container_results_date2}`}>
                                         <p className="text_normal_itallic">{t('calc_shipment')}</p>
                                         <p className="text_normal_itallic">{t('calc_shipment_last')}</p>
                                     </div>

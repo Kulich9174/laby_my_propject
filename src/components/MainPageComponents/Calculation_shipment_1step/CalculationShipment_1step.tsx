@@ -248,7 +248,7 @@ const CaulculationShipment = () => {
                                             </span>
                                         </div>
 
-                                    <div className={`gap-[3%] pb-[20px] grid grid-cols-2 sm:gap-[20px] sm:pb-[35px] ${Style.calc__container_results_date}`}>
+                                    <div className={`gap-[3%] pb-[20px] grid grid-cols-2 sm:gap-[20px] sm:pb-[35px] ${Style.calc__container_results_dateLaptop}`}>
                                         <p className="text_normal_itallic">{t('calc_endOfOrdering')}</p>
                                         <p className="text_normal_itallic">{shipmentCollectionDate}</p>
                                     </div>
@@ -257,7 +257,7 @@ const CaulculationShipment = () => {
                                         <p className="text_normal_itallic">{t('calc_shipment_last')}</p>
                                     </div>
 
-                                    <div className={`gap-[3%] pb-[20px] grid grid-cols-2 sm:gap-[20px] sm:pb-[35px] ${Style.calc__container_results_date}`}>
+                                    <div className={`gap-[3%] pb-[20px] grid grid-cols-2 sm:gap-[20px] sm:pb-[35px] ${Style.calc__container_results_dateLaptop}`}>
                                         <p className="text_normal_itallic">{t('calc_day_shipment')}</p>
                                         <p className="text_normal_itallic">{shipmentDate}</p>
                                     </div>
@@ -310,7 +310,7 @@ const CaulculationShipment = () => {
                                                     }}
                                                 />
                                             </span>
-                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

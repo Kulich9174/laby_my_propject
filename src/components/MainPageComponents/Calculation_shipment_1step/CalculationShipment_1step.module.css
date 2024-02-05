@@ -262,7 +262,7 @@
     }
 
 }
-.calc__container_results_date{
+.calc__container_results_dateLaptop{
     @media(max-width:1050px){
         display: grid;
         grid-template-rows: 20px;
@@ -302,9 +302,6 @@
         padding-bottom: 35px;
     }
     @media(min-width:1050px){
-        /* padding-top:10px;
-        display:grid;
-        grid-template-columns: 55% 45%; */
         display:none;
         visibility:hidden;
     }

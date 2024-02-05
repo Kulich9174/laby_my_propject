@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     const headerstatevalue = useSelector((state: RootState)=>state.headerMenuState.value);
     const {t} = useTranslation();
     const langState = useSelector((state: RootState) => state.LangStateReducer.language);
-    return (
+    return ( 
         <>
             <footer className="bg-[#1A2633] flex-grow-[1] m-0">
                 <div className=' text-[#BCC9DA] sm:grid sm:grid-rows-1 min-h-[100hv] sm:py-[30px] sm:pb-100hv sm:px-[14px] laptop:py-[47px] laptop:px-[34px] desktop:py-[40px]'>

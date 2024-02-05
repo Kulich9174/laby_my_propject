@@ -80,9 +80,9 @@ const Header: React.FC = () => {
                     </div>
                     {/*language */}
                     <div className=' sm:pr-[1%]'>
-                    <button id='useref' className={Style.button} onClick={toggleArrow}> 
-                        <div className={arrowClass}></div>
-                    </button>
+                        <button id='useref' className={Style.button} onClick={toggleArrow}> 
+                            <div className={arrowClass}></div>
+                        </button>
                     </div>
     
                     <div className={`${Style.langMenu} ${isMenuVisible ? 'block' : Style.langMenu__hidden}`}>

@@ -190,6 +190,8 @@
 }
 .contacts__map_container{
     padding-top:30px;
+    padding-left: 1%;
+    padding-right: 1%;
     padding-bottom:60px;
     @media(max-width:900px){
         gap:20px;

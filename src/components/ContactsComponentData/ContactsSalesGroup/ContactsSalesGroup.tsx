@@ -81,7 +81,7 @@ const ContactsSalesGroup = () =>{
                                             </button>
                                         </div>
                                     </div>
-                                    <div className={`${Styles.countryMenu} ${isMenuCountryVisible ? 'block' : Styles.countryMenu__hidden}`}>
+                                    <div className={`${Styles.countryMenu} ${isMenuCountryVisible ? 'block' : `hidden invisible ${Styles.countryMenu__hidden}`}`}>
                                         <button className={Styles.button__country_menu_element} onClick={() => handleSetCountry('country_Russia')}>{t('country_Russia')}</button>
                                         <button className={Styles.button__country_menu_element} onClick={() => handleSetCountry('country_Kz')}>{t('country_Kz')}</button>
                                     </div>

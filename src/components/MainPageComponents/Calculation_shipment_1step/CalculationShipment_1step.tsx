@@ -277,8 +277,8 @@ const CaulculationShipment = () => {
                                 
                                 {/* MAP WAY */}
                                 <div className="flex flex-col w-full relative">
-                                    <div className={Style.map__section}>
-                                        <div className={`"w-full h-full bg-customColor ${Style.map__way}`}>
+                                    <div className={`laptop:flex laptop:pr-8 desktop:flex desktop:pr-8 ${Style.map__section}`}>
+                                        <div className={`sm:bg-inherit sm:hidden sm:invisible w-full h-full bg-customColor ${Style.map__way}`}>
                                             <div className={`desktop:pl-[2%] desktop:pr-[2%] desktop:pt-[3%] desktop:flex desktop:flex-col desktop:items-center desktop:justify-center desktop:min-h-[350px]
                                                             laptop:-[2%] laptop:pr-[2%] laptop:pt-[3%] laptop:flex laptop:flex-col laptop:items-center laptop:justify-center laptop:min-h-[350px] ${Style.map__div}`}>
                                                 <div className="flex gap-2 left sm:pb-6 pb-5">

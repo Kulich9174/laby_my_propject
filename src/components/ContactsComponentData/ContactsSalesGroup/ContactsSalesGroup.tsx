@@ -81,10 +81,10 @@ const ContactsSalesGroup = () =>{
                                             </button>
                                         </div>
                                     </div>
-                                    <div className={`${isMenuCountryVisible ? `block ${Styles.countryMenu}` : `hidden invisible ${Styles.countryMenu__hidden}`}`}>
+                                    {/* <div className={`${isMenuCountryVisible ? `block ${Styles.countryMenu}` : `hidden invisible ${Styles.countryMenu__hidden}`}`}>
                                         <button className={Styles.button__country_menu_element} onClick={() => handleSetCountry('country_Russia')}>{t('country_Russia')}</button>
                                         <button className={Styles.button__country_menu_element} onClick={() => handleSetCountry('country_Kz')}>{t('country_Kz')}</button>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className={Styles.contacts__container_element}>
@@ -98,9 +98,9 @@ const ContactsSalesGroup = () =>{
                                             </button>
                                         </div>
                                     </div>
-                                    <div className={`${isMenuCityVisible ? `block ${Styles.countryMenu}` : `hidden invisible ${Styles.countryMenu__hidden}`}`}>
+                                    {/* <div className={`${isMenuCityVisible ? `block ${Styles.countryMenu}` : `hidden invisible ${Styles.countryMenu__hidden}`}`}>
                                             {cityButtons}
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

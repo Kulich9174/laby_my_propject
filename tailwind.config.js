@@ -16,6 +16,7 @@ export const theme = {
     colors: {
       'white': '#FFFFFF',
       'border':' rgba(43, 61, 82, 0.30)',
+      'customColor': 'rgba(85, 122, 161, 0.2)',
     },
     backgroundImage: {
       'plane': "url('/src/assets/images/Rectangle2.png')",

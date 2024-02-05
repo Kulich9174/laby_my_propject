@@ -111,6 +111,15 @@ i18n
           'contact_block_text2': 'ffkaragandainfo@info.ru',
           'contact_block_header3': 'Адрес',
           'contact_block_text3': 'Kazakhstan, Karaganda, Bukhar-Zhyrau Ave 59/2, Office 214',
+
+          'country_Russia':'Russia',
+          'country_Kz':'Kazahstan',
+
+          'city_Moscow':'Moscow',
+          'city_Yaroslavl':'Yaroslavl',
+          'city_Tula': 'Tula',
+          'city_Astana':'Astana',
+          'city_Almaty':'Almaty',
         }
     },
         ru: {
@@ -219,6 +228,16 @@ i18n
             'contact_block_text2': 'ffkaragandainfo@info.ru',
             'contact_block_header3': 'Адрес',
             'contact_block_text3': 'Казахстан, г. Караганда, Просп. Бухар-Жырау 59/2, офис 214',
+
+            "country_Russia": "Россия",
+            "country_Kz": "Казахстан",
+
+            'city_Moscow':'Москва',
+            'city_Yaroslavl':'Ярославль',
+            'city_Tula': 'Тула',
+            
+            'city_Astana':'Астана',
+            'city_Almaty':'Алматы',
           }
         }
     },

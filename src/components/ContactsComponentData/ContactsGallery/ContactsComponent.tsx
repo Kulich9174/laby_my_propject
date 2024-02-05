@@ -1,11 +1,11 @@
 import React from "react";
 import Styles from './Contacts.module.css';
 import { useTranslation } from 'react-i18next';
-import '../../Translation/Translation';
-import phone from '../../assets/images/Phone.svg';
-import email from '../../assets/images/Mail.svg';
-import location from '../../assets/images/Location.svg';
-import Pict from '../../assets/images/ContactsMeetingPhotoMobile.png';
+import '../../../Translation/Translation';
+import phone from '../../../assets/images/Phone.svg';
+import email from '../../../assets/images/Mail.svg';
+import location from '../../../assets/images/Location.svg';
+import Pict from '../../../assets/images/ContactsMeetingPhotoMobile.png';
 
 const ContactComponent = () =>{
     const { t } = useTranslation();

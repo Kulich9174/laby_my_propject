@@ -278,7 +278,7 @@ const CaulculationShipment = () => {
                                 {/* MAP WAY */}
                                 <div className="flex flex-col w-full relative">
                                     <div className={Style.map__section}>
-                                        <div className={Style.map__way}>
+                                        <div className={`${Style.map__way}`}>
                                             <div className={Style.map__div}>
                                                 <div className="flex gap-2 left sm:pb-6 pb-5">
                                                     <img src={location_icon} alt="location icon"/>

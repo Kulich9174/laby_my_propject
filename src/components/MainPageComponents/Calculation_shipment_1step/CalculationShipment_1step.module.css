@@ -252,8 +252,6 @@
     }
     @media(min-width:1050px){
         display:grid;
-        /* justify-content:center; */
-        
     }
 }
 .calc__container_stepTwo_without_number{
@@ -389,7 +387,7 @@
         visibility:hidden;
     }
     @media(min-width:1050px){
-        background-color:rgba(85, 122, 161, 0.2);
+        background:rgba(85, 122, 161, 0.2);
         width:100%;
         height:100%;
     }
@@ -404,6 +402,7 @@
         align-items:center;
         justify-content:center;
         min-height:350px;
+        /* background-color:rgba(85,122,161,0.3); */
     }
 }
 

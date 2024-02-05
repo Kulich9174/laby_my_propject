@@ -219,7 +219,7 @@ const CaulculationShipment = () => {
                                             <p className={`${Style.calc__text} text_normal_itallic`}>{t('calc_step2_header')}</p>
                                         </div>
 
-                                        <div  className={Style.calc__container_results}>
+                                        <div  className={`max-w-[470px] sm:grid sm:grid-rows-4 sm:gap-[auto] laptop:grid desktop:grid ${Style.calc__container_results}`}>
                                             <div className={Style.country__name_main}>
                                             <img src={location_icon} alt="location icon"/>
                                             {/* если английски, то вывести ключи, если русский, то значения */}
@@ -290,7 +290,7 @@ const CaulculationShipment = () => {
                                             
                                         </div>
                                     </div>
-                                    <div className={Style.calc__container_results_date1}>
+                                    <div className={`sm:hidden sm:invisible grid grid-cols-[55%_45%] w-[250px] pt-[20px] ${Style.calc__container_results_date1}`}>
                                             <label className="text_normal_itallic">{t('calc_orderDate')}</label>
                                             <span className={Style.date}>
                                                 <span className={Style.datepicker__toggle_button}>

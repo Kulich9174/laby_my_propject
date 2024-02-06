@@ -278,7 +278,7 @@
         
     }
 }
-.calc__container_results_date1{
+/* .calc__container_results_date1{
     
     @media(max-width:1050px){
         display:none;
@@ -290,7 +290,7 @@
         grid-template-columns: 55% 45%;
         width:250px;
     }
-}
+} */
 
 /* .calc__container_results_date2{
     

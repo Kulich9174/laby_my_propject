@@ -225,7 +225,7 @@ const CaulculationShipment = () => {
                                             {/* если английски, то вывести ключи, если русский, то значения */}
                                             <p className={Style.country__name}>{langState==='ru' ? countryNamesRus[country]:countryNamesEng[country]}</p>
                                             </div>
-                                        <div className={`grid pb-[35px] gap-[20px] grid-cols-2   laptop:hidden laptop:invisible desktop:hidden desktop:invisible ${Style.calc__container_results_date2}`}>
+                                        <div className={`grid pb-[35px] gap-[20px] grid-cols-2  laptop:hidden laptop:invisible desktop:hidden desktop:invisible ${Style.calc__container_results_date2}`}>
                                             <label className="text_normal_itallic">{t('calc_orderDate')}</label>
                                             <span className={Style.date}>
                                                 <span className={Style.datepicker__toggle_button}>

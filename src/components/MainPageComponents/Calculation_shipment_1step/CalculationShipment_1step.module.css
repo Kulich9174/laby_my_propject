@@ -292,7 +292,7 @@
     }
 }
 
-/* .calc__container_results_date2{
+.calc__container_results_date2{
     
     @media(max-width:1050px){
         display: grid;
@@ -305,7 +305,7 @@
         display:none;
         visibility:hidden;
     }
-} */
+}
 /* .calc__container_stepTwo_without_number{
     width: 110%;
 } */
@@ -358,14 +358,14 @@
         padding-left:1%;
     }
 }
-/* 
+
 .map__section{
     @media(min-width:1050px){
         padding-right:30px;
         display:flex;
     }
-} */
-/* .map__way{
+} 
+ .map__way{
     @media(max-width:1050px){
         background-color:inherit;
         display:none;
@@ -376,8 +376,8 @@
         width:100%;
         height:100%;
     }
-} */
-/* .map__div{
+}
+    .map__div{
     @media(min-width:1050px){
         padding-left:2%;
         padding-right:2%;
@@ -388,7 +388,7 @@
         justify-content:center;
         min-height:350px;
     }
-} */
+}
 
 .country__name{
     font-size: 16px;

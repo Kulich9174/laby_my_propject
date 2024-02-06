@@ -225,7 +225,7 @@ const CaulculationShipment = () => {
                                             {/* если английски, то вывести ключи, если русский, то значения */}
                                             <p className={Style.country__name}>{langState==='ru' ? countryNamesRus[country]:countryNamesEng[country]}</p>
                                             </div>
-                                        <div className={`grid pb-[35px] gap-[20px] grid-cols-2  laptop:hidden laptop:invisible desktop:hidden desktop:invisible ${Style.calc__container_results_date2}`}>
+                                        <div className={`grid pb-[35px] gap-[20px] grid-cols-50/50 laptop:hidden laptop:invisible desktop:hidden desktop:invisible ${Style.calc__container_results_date2}`}>
                                             <label className="text_normal_itallic">{t('calc_orderDate')}</label>
                                             <span className={Style.date}>
                                                 <span className={Style.datepicker__toggle_button}>
@@ -248,16 +248,16 @@ const CaulculationShipment = () => {
                                             </span>
                                         </div>
 
-                                    <div className={`gap-[3%] pb-[20px] grid grid-cols-2 sm:gap-[20px] sm:pb-[35px] ${Style.calc__container_results_dateLaptop}`}>
+                                    <div className={`gap-[3%] pb-[20px] grid grid-cols-50/50 sm:gap-[20px] sm:pb-[35px] ${Style.calc__container_results_dateLaptop}`}>
                                         <p className="text_normal_itallic">{t('calc_endOfOrdering')}</p>
                                         <p className="text_normal_itallic">{shipmentCollectionDate}</p>
                                     </div>
-                                    <div className={`grid pb-[35px] gap-[20px] grid-cols-2   laptop:hidden laptop:invisible desktop:hidden desktop:invisible ${Style.calc__container_results_date2}`}>
+                                    <div className={`grid pb-[35px] gap-[20px] grid-cols-50/50  grid-rows-[20px] laptop:hidden laptop:invisible desktop:hidden desktop:invisible ${Style.calc__container_results_date2}`}>
                                         <p className="text_normal_itallic">{t('calc_shipment')}</p>
                                         <p className="text_normal_itallic">{t('calc_shipment_last')}</p>
                                     </div>
 
-                                    <div className={`gap-[3%] pb-[20px] grid grid-cols-2 sm:gap-[20px] sm:pb-[35px] ${Style.calc__container_results_dateLaptop}`}>
+                                    <div className={`gap-[3%] pb-[20px] grid grid-cols-50/50 sm:gap-[20px] sm:pb-[35px] ${Style.calc__container_results_dateLaptop}`}>
                                         <p className="text_normal_itallic">{t('calc_day_shipment')}</p>
                                         <p className="text_normal_itallic">{shipmentDate}</p>
                                     </div>

@@ -359,12 +359,12 @@
     }
 }
 
-.map__section{
+/* .map__section{
     @media(min-width:1050px){
         padding-right:30px;
         display:flex;
     }
-} 
+}  */
 /* .map__way{
     @media(max-width:1050px){
         background-color:inherit;

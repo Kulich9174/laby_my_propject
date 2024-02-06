@@ -262,7 +262,7 @@
     }
 
 }
-.calc__container_results_dateLaptop{
+/* .calc__container_results_dateLaptop{
     @media(max-width:1050px){
         display: grid;
         grid-template-rows: 20px;
@@ -277,7 +277,7 @@
         gap:3%;
         
     }
-}
+} */
 /* .calc__container_results_date1{
     
     @media(max-width:1050px){

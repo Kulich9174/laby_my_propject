@@ -44,7 +44,7 @@ const OrderForm = () => {
                             <div className={Styles.form__container_bg}>
                                 <div className={Styles.form__container_paddings}>
                                     <div className={Styles.form__borders}>
-                                        <div className={Styles.form__text_container}>
+                                        <div className={`sm:pb-[35px] sm:text-center laptop:pb-[50px] laptop:text-center desktop:pb-[60px] ${Styles.form__text_container}`}>
                                             <p className={`${Styles.flowerLogoWhite} flowerLogo`}>Flower Fraught Karaganda</p>
                                             <h1 className={Styles.form__text_header}>{t('form_header')}</h1>
                                             <p className={`${Styles.form_textWhite} text_normal_itallic`}>{t('form_text')}</p>

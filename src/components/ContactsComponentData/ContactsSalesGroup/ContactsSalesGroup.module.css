@@ -52,6 +52,8 @@
     @media(min-width:1500px){
         padding-bottom:120px;
     }
+    border-left: 1px solid rgba(43, 61, 82, 0.30);
+    border-right: 1px solid rgba(43, 61, 82, 0.30);
 }
 
 .contacts__content_bg{

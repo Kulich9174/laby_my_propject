@@ -21,16 +21,37 @@
     padding-right:2%;
     @media(min-width:1500px){
         padding-top:120px;
-        padding-bottom:120px;
     }
     padding-top:60px;
-    padding-bottom:60px;
     border-left: 1px solid rgba(43, 61, 82, 0.30);
     border-right: 1px solid rgba(43, 61, 82, 0.30);
 }
 .contacts__content_container{
-    max-width: 1600px;
+    max-width: 1500px;
     width:100%;
+}
+
+.contacts__content_section2{
+    @media(min-width:501px){
+        padding-left:5%;
+        padding-right:5%;
+    }
+}
+.contacts__content_borders2{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    position:relative;
+    @media(min-width:501px){
+        padding-left:2%;
+        padding-right:2%;
+        padding-bottom:60px;
+    }
+    @media(min-width:1500px){
+        padding-bottom:120px;
+    }
 }
 
 .contacts__content_bg{
@@ -68,7 +89,7 @@
         opacity:0.9;
         display:block;
         width: 90%;
-        height: 600px;
+        height: 500px;
         transform: rotate(4.493deg);
         background-image:url('/src/assets/images/BrockersBGLaptop.svg');
         background-repeat: no-repeat; 
@@ -173,9 +194,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
-    @media(min-width:1300px){
-        /* top:70px; */
-    }
+    z-index:10;
 }
 .button__country_menu_element{
     color: var(--White, #FFF);
@@ -199,28 +218,54 @@
     color:white;
 }
 .contacts__list{
-    @media(max-width:800px){
-        display: flex;
+    position:relative;
+    @media(max-width:500px){
+        display: grid;
+        grid-template-columns:100% 100%;
         width:100%;
-        overflow:hidden;
+        height:100%;
+        /* gap:20px; */
+        overflow:auto;
     }
-    @media(min-width:801px) and (max-width:1500px){
+    @media(min-width:501px) and (max-width:1500px){
         display:flex;
         flex-direction:column;
+        gap:32px;
     }
     @media(min-width:1501px){
         
     }
 }
 .contacts__list_container{
+    @media(max-width:500px){
+        padding-left:7%;
+        padding-right:7%;
+    }
+}
+/* .contacts__list_container:nth-child(1){
+    @media(max-width:500px){
+        padding-left:15px;
+        padding-right:15px;
+    }
+}
+.contacts__list_container:last-child{
+    @media(max-width:500px){
+        padding-left:15px;
+    }
+} */
+.contacts__list_element{
+    
     background-color:#23303F;
     border:1px solid rgba(85,122,161,0.3);
-    @media(max-width:600px){
+    @media(max-width:500px){
         display: flex;
         flex-direction: column;
         width:100%;
+        overflow:auto;
+        /* max-width:512px;
+        height:530px; */
     }
-    @media(min-width:601px) and (max-width:1500px){
+    @media(min-width:501px) and (max-width:1500px){
         display:flex;
         align-items:center;
         width:100%;
@@ -229,11 +274,12 @@
         
     }
 }
+
 .contacts__list_container_info{
-    @media(max-width:600px){
-        padding: 45px 0px;
+    @media(max-width:500px){
+        padding: 45px 24px;
     }
-    @media(min-width:601px) and (max-width:1500px){
+    @media(min-width:501px) and (max-width:1500px){
         padding-left:5%;
         
     }
@@ -281,7 +327,7 @@
     }
 }
 .contacts__phone{
-    @media(min-width:601px) and (max-width:800px){
+    @media(min-width:501px) and (max-width:800px){
         display:flex;
         flex-direction:column;
         

@@ -14,4 +14,4 @@ export interface TImage {
     width?: number | `${number}` | undefined;
     height?: number | `${number}` | undefined;
     fill?: boolean | undefined;
-};
+}

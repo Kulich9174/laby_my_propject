@@ -201,6 +201,8 @@
 .contacts__list{
     @media(max-width:800px){
         display: flex;
+        width:100%;
+        overflow:hidden;
     }
     @media(min-width:801px) and (max-width:1500px){
         display:flex;

@@ -4,6 +4,10 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../../state/store';
 import { useTranslation } from 'react-i18next';
 
+import { TContact } from "../../../type/contactType";
+import {contactOfUserMoscow} from '../../../data/data';
+import {contactOfUserTula} from '../../../data/data';
+
 import Phone from '../../../assets/images/Phone_icon.svg';
 import Mail from '../../../assets/images/Mail_icon.svg';
 import Oleg from '../../../assets/images/OlegPhoto.png';
@@ -18,6 +22,13 @@ const ContactsSalesGroup = () =>{
 
     const [country, setCountry] = useState('country_Russia');
     const [city, setCity] = useState('city_Moscow');
+
+    const contactsByCity: Record<string, TContact[]> = {
+        city_Moscow: contactOfUserMoscow,
+        city_Tula: contactOfUserTula,
+        // Добавьте другие города и их контакты здесь
+    };
+    const selectedContacts = contactsByCity[city] || [];
 
     const [isMenuCountryVisible, setIsMenuCountryVisible] = useState(false);
     const [isMenuCityVisible, setIsMenuCityVisible] = useState(false);
@@ -104,7 +115,7 @@ const ContactsSalesGroup = () =>{
                                 </div>
                             </div>
                         </div>
-                        <div className={Styles.contacts__list}>
+                        {/* <div className={Styles.contacts__list}>
                             <div className={Styles.contacts__list_container}>
                                 <div className="flex items-center justify-center">
                                     <img src={Oleg} alt="Oleg's photo" className={Styles.contacts__photo}/>
@@ -132,7 +143,21 @@ const ContactsSalesGroup = () =>{
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <div className={Styles.contacts__list}>
+                                {selectedContacts.map(contact => (
+                                    <div key={contact.id} className={Styles.contacts__list_container}>
+                                    <div className="flex items-center justify-center">
+                                        <img src={contact.photo} alt={contact.name} className={Styles.contacts__photo}/>
+                                    </div>
+                                    <div className={Styles.contacts__list_container_info}>
+                                        <h2 className={Styles.contacts__name}>{contact.name}</h2>
+                                        <p className={Styles.contacts__description}>{contact.post}</p>
+                                        {/* Отображение телефона, почты и т.д. */}
+                                    </div>
+                                    </div>
+                                ))}
+                            </div>
                     </div>
                 </div>
                 </section>

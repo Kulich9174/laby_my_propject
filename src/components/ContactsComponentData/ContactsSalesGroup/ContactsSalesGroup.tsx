@@ -10,8 +10,8 @@ import Oleg from '../../../assets/images/OlegPhoto.png';
 
 interface CountriesAndCities {
     [key: string]: string[];
-  }
-  
+}
+
 const ContactsSalesGroup = () =>{
     const [arrowCityClass, setArrowCityClass] = useState(Styles.arrow_up);
     const [arrowCountryClass, setArrowCountryClass] = useState(Styles.arrow_up);
@@ -21,7 +21,7 @@ const ContactsSalesGroup = () =>{
 
     const [isMenuCountryVisible, setIsMenuCountryVisible] = useState(false);
     const [isMenuCityVisible, setIsMenuCityVisible] = useState(false);
-   
+
     const countriesAndCities: CountriesAndCities = {
         'country_Russia': ['city_Moscow', 'city_Yaroslavl', 'city_Tula'],
         'country_Kz': ['city_Astana', 'city_Almaty']
@@ -106,7 +106,7 @@ const ContactsSalesGroup = () =>{
                         </div>
                         <div className={Styles.contacts__list}>
                             <div className={Styles.contacts__list_container}>
-                                <div className="flex items-center justify-center px-[2%]">
+                                <div className="flex items-center justify-center">
                                     <img src={Oleg} alt="Oleg's photo" className={Styles.contacts__photo}/>
                                 </div>
                                 
@@ -114,13 +114,13 @@ const ContactsSalesGroup = () =>{
                                     <h2 className={Styles.contacts__name}>Милич Олег</h2>
                                     <p className={Styles.contacts__description}>Руководитель направления продаж в Москве и Моской области</p>
                                     <div className={Styles.contacts__list_container_text}>
-                                        <div>
+                                        <div className={Styles.contacts__phone}>
                                             <div className="flex gap-2">
                                                 <img src={Phone}/>
                                                 <p className={Styles.contacts__phone_text}>+7 (495) 737 8585</p>
                                             </div>
                                             <div className="flex gap-2">
-                                                <img src={Phone}/>
+                                                <img src={Phone} className={Styles.contacts__phone_icon}/>
                                                 <p className={Styles.contacts__phone_text}>+7 (495) 737 8282</p>
                                             </div>
                                         </div>

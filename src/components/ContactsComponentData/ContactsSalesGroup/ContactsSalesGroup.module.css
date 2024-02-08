@@ -344,13 +344,13 @@
         
     }
 }
-.contacts__phone_icon{
+/* .contacts__phone_icon{
     @media(min-width:801px){
         display:none;
         visibility:hidden;
     }
 
-}
+} */
 .contacts__phone_text{
     color: #BCC9DA;
     font-style: normal;

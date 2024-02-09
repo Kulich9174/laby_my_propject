@@ -22,7 +22,7 @@ i18n
             "main":"Home",
             "about_us":"About us",
             "our_warehouses":"OUR WAREHOUSES",
-            "brockers":'OUR WAREHOUSES',
+            "brockers":'for Brokers',
             "contacts":"Contacts",
           //Footer
             "privat_policy":'Privat Policy',

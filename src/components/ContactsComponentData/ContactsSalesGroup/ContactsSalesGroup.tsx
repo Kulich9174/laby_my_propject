@@ -10,8 +10,10 @@ import {contactOfUserTula, contactOfUserYaroslavl, contactOfUserAstana, contactO
 
 import Phone from '../../../assets/images/Phone_icon.svg';
 import Mail from '../../../assets/images/Mail_icon.svg';
-import Oleg from '../../../assets/images/OlegPhoto.png';
-
+import ArrowRight from '../../../assets/images/RightNotActive.svg';
+import ArrowLeft from '../../../assets/images/LeftNotActive.svg';
+import ArrowLeftActive from '../../../assets/images/Left.svg';
+import ArrowRightActive from '../../../assets/images/Right.svg';
 interface CountriesAndCities {
     [key: string]: string[];
 }
@@ -64,14 +66,34 @@ const ContactsSalesGroup = () =>{
     const handleSetCountry = (key : string) => {
         setCountry(key);
         setIsMenuCountryVisible(!isMenuCountryVisible);
+        setCurrentIndex(0);
     };
     const handleSetCity= (key : string) => {
         setCity(key);
         setIsMenuCityVisible(!isMenuCityVisible);
+        setCurrentIndex(0);
     };
     const cityButtons = countriesAndCities[country].map((cityKey) => (
         <button key={cityKey} className={Styles.button__country_menu_element} onClick={() => handleSetCity(cityKey)}>{t(cityKey)}</button>
     ));
+
+    //стрелки и сколл
+    const [isLeftActive, setIsLeftActive] = useState(false);
+    const [isRightActive, setIsRightActive] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const handleNext = () => {
+        // Убедимся, что индекс не выйдет за пределы массива
+        if (currentIndex + 2 < selectedContacts.length) {
+            setCurrentIndex(currentIndex + 2);
+        }
+    };
+    const handlePrev = () => {
+        if (currentIndex - 2 >= 0) {
+            setCurrentIndex(currentIndex - 2);
+        }
+    };
+    // let i=0;
+
     return(
         <>
         <section className={Styles.contacts__content}>
@@ -125,46 +147,71 @@ const ContactsSalesGroup = () =>{
                     <div className={Styles.contacts__content_borders2}>
                         <div className={Styles.contacts__content_container}>
                             <div className={`no-scrollbar ${Styles.contacts__list}`}>
-                                        {selectedContacts.map(contact => (
-                                            <div  key={contact.id} className={Styles.contacts__list_container}>
-                                                <div className={Styles.contacts__list_element}>
-                                                    <div className="flex items-center justify-center">
-                                                        <img src={contact.photo} alt={contact.name} className={Styles.contacts__photo}/>
+                                {selectedContacts.slice(currentIndex, currentIndex + 2).map(contact => (
+                                    <div  key={contact.id} className={Styles.contacts__list_container}>
+                                        <div className={Styles.contacts__list_element}>
+                                            <div className="flex items-center justify-center">
+                                                <img src={contact.photo} alt={contact.name} className={Styles.contacts__photo}/>
+                                            </div>
+                                            
+                                            <div className={Styles.contacts__list_container_info}>
+                                                <h2 className={Styles.contacts__name}>{contact.name}</h2>
+                                                <p className={Styles.contacts__description}>{contact.post}</p>
+                                                <div className={Styles.contacts__list_container_text}>
+                                                    <div className={Styles.contacts__phone}>
+                                                        <div className="flex gap-2">
+                                                            <img src={Phone}/>
+                                                            <p className={Styles.contacts__phone_text}>{contact.phoneNumber}</p>
+                                                        </div>
+                                                        {/* <div className="flex gap-2">
+                                                            <img src={Phone} className={Styles.contacts__phone_icon}/>
+                                                            <p className={Styles.contacts__phone_text}>+7 (495) 737 8282</p>
+                                                        </div> */}
                                                     </div>
                                                     
-                                                    <div className={Styles.contacts__list_container_info}>
-                                                        <h2 className={Styles.contacts__name}>{contact.name}</h2>
-                                                        <p className={Styles.contacts__description}>{contact.post}</p>
-                                                        <div className={Styles.contacts__list_container_text}>
-                                                            <div className={Styles.contacts__phone}>
-                                                                <div className="flex gap-2">
-                                                                    <img src={Phone}/>
-                                                                    <p className={Styles.contacts__phone_text}>{contact.phoneNumber}</p>
-                                                                </div>
-                                                                {/* <div className="flex gap-2">
-                                                                    <img src={Phone} className={Styles.contacts__phone_icon}/>
-                                                                    <p className={Styles.contacts__phone_text}>+7 (495) 737 8282</p>
-                                                                </div> */}
-                                                            </div>
-                                                            
-                                                            <div className="flex gap-2">
-                                                                <img src={Mail}/>
-                                                                <p className={Styles.contacts__mail_text}>{contact.mail}</p>
-                                                            </div>
-                                                        </div>
+                                                    <div className="flex gap-2">
+                                                        <img src={Mail}/>
+                                                        <p className={Styles.contacts__mail_text}>{contact.mail}</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                        ))}
-                                <div className={Styles.arrowsBottom_container}>
-                                    <button>
-                                        <img/>
-                                    </button>
-                                    <button>
-                                        <img/>
-                                    </button>
-                                </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
+                             <div className={Styles.arrowsBottom_container}>  
+                                <button
+                                onMouseEnter={() => setIsLeftActive(true)}
+                                onMouseLeave={() => setIsLeftActive(false)}
+                                onMouseDown={() => setIsLeftActive(true)}
+                                onMouseUp={() => setIsLeftActive(false)}
+                                onClick={handlePrev}
+                                >
+                                    <img src={isLeftActive ? ArrowLeftActive : ArrowLeft} alt="Left Arrow"/>
+                                </button>
+                                    <div className={Styles.contact__container_pages}>
+                                    {
+                                        // Создаем массив с нужным количеством элементов и итерируем его для отрисовки иконок
+                                        [...Array(Math.ceil(selectedContacts.length / 2)).keys()].map((el) => (
+                                            <div key={el}>
+                                                {/* Здесь можно отрисовать иконку */}
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect opacity="0.12" width="14" height="14" fill="#227CE4"/>
+                                                </svg>
+                                            </div>
+                                        ))
+                                    }
+                                    </div>
+                                <button
+                                    onMouseEnter={() => setIsRightActive(true)}
+                                    onMouseLeave={() => setIsRightActive(false)}
+                                    onMouseDown={() => setIsRightActive(true)}
+                                    onMouseUp={() => setIsRightActive(false)}
+                                    onClick={handleNext}
+                                >
+                                    <img src={isRightActive ? ArrowRightActive : ArrowRight} alt="Right Arrow"/>
+                                </button>
+                            </div> 
                         </div>
                     </div>
                 </section>

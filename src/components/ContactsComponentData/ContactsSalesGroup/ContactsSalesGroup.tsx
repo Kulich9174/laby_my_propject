@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { TContact } from "../../../type/contactType";
 import {contactOfUserMoscow} from '../../../data/data';
-import {contactOfUserTula, contactOfUserYaroslavl} from '../../../data/data';
+import {contactOfUserTula, contactOfUserYaroslavl, contactOfUserAstana, contactOfUserAlmaty} from '../../../data/data';
 
 import Phone from '../../../assets/images/Phone_icon.svg';
 import Mail from '../../../assets/images/Mail_icon.svg';
@@ -27,6 +27,8 @@ const ContactsSalesGroup = () =>{
         city_Moscow: contactOfUserMoscow,
         city_Tula: contactOfUserTula,
         city_Yaroslavl : contactOfUserYaroslavl,
+        city_Astana : contactOfUserAstana,
+        city_Almaty : contactOfUserAlmaty
         // Добавьте другие города и их контакты здесь
     };
     const selectedContacts = contactsByCity[city] || [];

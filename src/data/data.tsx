@@ -63,3 +63,65 @@ export const  contactOfUserYaroslavl : TContact[] = [
         mail:'ffkaragandainfo@info.ru',
     },
 ]
+export const  contactOfUserAstana : TContact[] = [
+    {
+        id:8,
+        name:'Сергей Руденский',
+        photo:'',
+        post:'Руководитель направления продаж в Астане',
+        phoneNumber:'+7 (495) 737 8684',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:9,
+        name:'Алексей Домашев',
+        photo:'',
+        post:'Руководитель направления продаж в Астане',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:10,
+        name:'Василий Гришин',
+        photo:'',
+        post:'Руководитель направления продаж в Астане',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+]
+
+export const  contactOfUserAlmaty : TContact[] = [
+    {
+        id:11,
+        name:'Виктор Ардабьев',
+        photo:'',
+        post:'Руководитель направления продаж в городе Алматы',
+        phoneNumber:'+7 (495) 737 8684',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:12,
+        name:'Артем Соседка',
+        photo:'',
+        post:'Руководитель направления продаж в городе Алматы',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:13,
+        name:'Анастасия Ковалева',
+        photo:'',
+        post:'Руководитель направления продаж в городе Алматы',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:14,
+        name:'Елизовета Колодина',
+        photo:'',
+        post:'Руководитель направления продаж в городе Алматы',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+
+]

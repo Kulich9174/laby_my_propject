@@ -151,7 +151,6 @@ const ContactsSalesGroup = () =>{
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
                                             </div>
                                         ))}
                                 <div className={Styles.arrowsBottom_container}>

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { TContact } from "../../../type/contactType";
 import {contactOfUserMoscow} from '../../../data/data';
-import {contactOfUserTula} from '../../../data/data';
+import {contactOfUserTula, contactOfUserYaroslavl} from '../../../data/data';
 
 import Phone from '../../../assets/images/Phone_icon.svg';
 import Mail from '../../../assets/images/Mail_icon.svg';
@@ -26,6 +26,7 @@ const ContactsSalesGroup = () =>{
     const contactsByCity: Record<string, TContact[]> = {
         city_Moscow: contactOfUserMoscow,
         city_Tula: contactOfUserTula,
+        city_Yaroslavl : contactOfUserYaroslavl,
         // Добавьте другие города и их контакты здесь
     };
     const selectedContacts = contactsByCity[city] || [];

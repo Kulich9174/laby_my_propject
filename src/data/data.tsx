@@ -37,3 +37,29 @@ export const  contactOfUserTula : TContact[] = [
         mail:'ffkaragandainfo@info.ru',
     },
 ]
+export const  contactOfUserYaroslavl : TContact[] = [
+    {
+        id:5,
+        name:'Василиса Пыжева',
+        photo:'',
+        post:'Руководитель направления продаж в Ярославской области',
+        phoneNumber:'+7 (495) 737 8684',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:6,
+        name:'Екатерина Шитова',
+        photo:'',
+        post:'Руководитель направления продаж в Ярославле',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:7,
+        name:'Мария Головачева',
+        photo:'',
+        post:'Руководитель направления продаж в Ярославле',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+]

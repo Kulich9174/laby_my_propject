@@ -241,46 +241,43 @@ const ContactsSalesGroup = () =>{
                             
                             
                             {/* Mobile version */}
-                            <div className={
-                                // `${isWideScreen ? 'your-wide-screen-classes' : 'your-narrow-screen-classes'} ${selectedContacts.length === 2
-                                //     ? `no-scrollbar ${Styles.contacts__list1}`
-                                //     : selectedContacts.length === 4
-                                //     ? `no-scrollbar ${Styles.contacts__list4}`
-                                //     : `no-scrollbar ${Styles.contacts__list3}`
-                            //   }`}>*/}
-                                selectedContacts.length === 2
-                                ? `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden  grid grid-cols-[100%_100%] w-full h-full overflow-auto pb-5 ${Styles.contacts__list1}`
-                                : selectedContacts.length === 4
-                                ? `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden grid grid-cols-[100%_100%_100%_100%] w-full h-full overflow-auto pb-5 ${Styles.contacts__list4}`
-                                : `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden grid grid-cols-[100%_100%_100%] w-full h-full overflow-auto pb-5 ${Styles.contacts__list3}`}>
-                                {selectedContacts.map(contact => (
-                                    <div  key={contact.id} className='px-[7%]'>
-                                        <div className={Styles.contacts__list_element}>
-                                            <div className="flex items-center justify-center">
-                                                <img src={contact.photo} alt={contact.name} className={Styles.contacts__photo}/>
-                                            </div>
-                                            
-                                            <div className={Styles.contacts__list_container_info}>
-                                                <h2 className={Styles.contacts__name}>{contact.name}</h2>
-                                                <p className={Styles.contacts__description}>{contact.post}</p>
-                                                <div className={Styles.contacts__list_container_text}>
-                                                    <div className={Styles.contacts__phone}>
-                                                        <div className="flex gap-2">
-                                                            <img src={Phone}/>
-                                                            <p className={Styles.contacts__phone_text}>{contact.phoneNumber}</p>
+                            <div className={Styles.bord}>
+                                <div className={
+                                    selectedContacts.length === 2
+                                    ? `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden  grid grid-cols-[100%_100%] w-full h-full overflow-auto pb-5 ${Styles.contacts__list1}`
+                                    : selectedContacts.length === 4
+                                    ? `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden grid grid-cols-[100%_100%_100%_100%] w-full h-full overflow-auto pb-5 ${Styles.contacts__list4}`
+                                    : `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden grid grid-cols-[100%_100%_100%] w-full h-full overflow-auto pb-5 ${Styles.contacts__list3}`}>
+                                    {selectedContacts.map(contact => (
+                                        <div  key={contact.id} className='px-[7%]'>
+                                            <div className={Styles.contacts__list_element}>
+                                                <div className="flex items-center justify-center">
+                                                    <img src={contact.photo} alt={contact.name} className={Styles.contacts__photo}/>
+                                                </div>
+                                                
+                                                <div className={Styles.contacts__list_container_info}>
+                                                    <h2 className={Styles.contacts__name}>{contact.name}</h2>
+                                                    <p className={Styles.contacts__description}>{contact.post}</p>
+                                                    <div className={Styles.contacts__list_container_text}>
+                                                        <div className={Styles.contacts__phone}>
+                                                            <div className="flex gap-2">
+                                                                <img src={Phone}/>
+                                                                <p className={Styles.contacts__phone_text}>{contact.phoneNumber}</p>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    
-                                                    <div className="flex gap-2">
-                                                        <img src={Mail}/>
-                                                        <p className={Styles.contacts__mail_text}>{contact.mail}</p>
+                                                        
+                                                        <div className="flex gap-2">
+                                                            <img src={Mail}/>
+                                                            <p className={Styles.contacts__mail_text}>{contact.mail}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
+                           
                         </div>
                     </div>
                 </section>

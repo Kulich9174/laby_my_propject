@@ -107,7 +107,7 @@ const ContactsSalesGroup = () =>{
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth >= 500);
+      setIsWideScreen(window.innerWidth <= 500);
     };
 
     // Вызов при монтировании компонента

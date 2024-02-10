@@ -103,6 +103,22 @@ const ContactsSalesGroup = () =>{
         console.log('prev',currentIndex,'page',pageIndex)
     };
     
+    const [isWideScreen, setIsWideScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth >= 500);
+    };
+
+    // Вызов при монтировании компонента
+    handleResize();
+    
+    // Подписка на событие изменения размера окна
+    window.addEventListener('resize', handleResize);
+    
+    // Отписка от события при размонтировании компонента
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
     return(
         <>
@@ -225,11 +241,18 @@ const ContactsSalesGroup = () =>{
                             
                             
                             {/* Mobile version */}
-                            <div className={selectedContacts.length === 2
-                                ? `no-scrollbar laptop:hidden desktop:hidden ${Styles.contacts__list1}`
-                                : selectedContacts.length === 4
-                                ? `no-scrollbar laptop:hidden desktop:hidden ${Styles.contacts__list4}`
-                                : `no-scrollbar laptop:hidden desktop:hidden ${Styles.contacts__list3}`}>
+                            <div className={
+                                `${isWideScreen ? 'your-wide-screen-classes' : 'your-narrow-screen-classes'} ${selectedContacts.length === 2
+                                    ? `no-scrollbar ${Styles.contacts__list1}`
+                                    : selectedContacts.length === 4
+                                    ? `no-scrollbar ${Styles.contacts__list4}`
+                                    : `no-scrollbar ${Styles.contacts__list3}`
+                                  }`}>
+                               {/* // selectedContacts.length === 2
+                                // ? `no-scrollbar laptop:hidden desktop:hidden ${Styles.contacts__list1}`
+                                // : selectedContacts.length === 4
+                                // ? `no-scrollbar laptop:hidden desktop:hidden ${Styles.contacts__list4}`
+                                // : `no-scrollbar laptop:hidden desktop:hidden ${Styles.contacts__list3}`}>  */}
                                 {selectedContacts.map(contact => (
                                     <div  key={contact.id} className={Styles.contacts__list_container}>
                                         <div className={Styles.contacts__list_element}>

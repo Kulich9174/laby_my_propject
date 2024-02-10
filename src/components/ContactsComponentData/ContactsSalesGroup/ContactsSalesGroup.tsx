@@ -226,10 +226,10 @@ const ContactsSalesGroup = () =>{
                             
                             {/* Mobile version */}
                             <div className={selectedContacts.length === 2
-                                ? `no-scrollbar ${Styles.contacts__list1}`
+                                ? `no-scrollbar laptop:hidden desktop:hidden ${Styles.contacts__list1}`
                                 : selectedContacts.length === 4
-                                ? `no-scrollbar ${Styles.contacts__list4}`
-                                : `no-scrollbar ${Styles.contacts__list3}`}>
+                                ? `no-scrollbar laptop:hidden desktop:hidden ${Styles.contacts__list4}`
+                                : `no-scrollbar laptop:hidden desktop:hidden ${Styles.contacts__list3}`}>
                                 {selectedContacts.map(contact => (
                                     <div  key={contact.id} className={Styles.contacts__list_container}>
                                         <div className={Styles.contacts__list_element}>
@@ -258,7 +258,6 @@ const ContactsSalesGroup = () =>{
                                     </div>
                                 ))}
                             </div>
-                            
                         </div>
                     </div>
                 </section>

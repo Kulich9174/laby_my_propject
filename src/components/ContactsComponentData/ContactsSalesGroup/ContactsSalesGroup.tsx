@@ -249,12 +249,12 @@ const ContactsSalesGroup = () =>{
                                 //     : `no-scrollbar ${Styles.contacts__list3}`
                             //   }`}>*/}
                                 selectedContacts.length === 2
-                                ? `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden ${Styles.contacts__list1}`
+                                ? `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden  grid grid-cols-[100%_100%] w-full h-full overflow-auto pb-5 ${Styles.contacts__list1}`
                                 : selectedContacts.length === 4
-                                ? `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden ${Styles.contacts__list4}`
-                                : `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden ${Styles.contacts__list3}`}>
+                                ? `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden grid grid-cols-[100%_100%_100%_100%] w-full h-full overflow-auto pb-5 ${Styles.contacts__list4}`
+                                : `no-scrollbar customContactGallery:hidden laptop:hidden desktop:hidden grid grid-cols-[100%_100%_100%] w-full h-full overflow-auto pb-5 ${Styles.contacts__list3}`}>
                                 {selectedContacts.map(contact => (
-                                    <div  key={contact.id} className={Styles.contacts__list_container}>
+                                    <div  key={contact.id} className='px-[7%]'>
                                         <div className={Styles.contacts__list_element}>
                                             <div className="flex items-center justify-center">
                                                 <img src={contact.photo} alt={contact.name} className={Styles.contacts__photo}/>

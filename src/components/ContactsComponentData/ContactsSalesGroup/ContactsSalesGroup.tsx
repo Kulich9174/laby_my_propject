@@ -51,7 +51,12 @@ const ContactsSalesGroup = () =>{
         i18n.changeLanguage(langState);
         // Сбросить выбранный город при смене страны
         setCity(countriesAndCities[country][0]);
+        setPageIndex(0);
     }, [langState, i18n, country]);
+    
+    useEffect(()=>{
+        setPageIndex(0);
+    },[city])
 
     const toggleCountryArrow = () => {
         setIsMenuCountryVisible(!isMenuCountryVisible);
@@ -81,24 +86,29 @@ const ContactsSalesGroup = () =>{
     const [isLeftActive, setIsLeftActive] = useState(false);
     const [isRightActive, setIsRightActive] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [pageIndex, setPageIndex] = useState(0);
     const handleNext = () => {
         // Убедимся, что индекс не выйдет за пределы массива
         if (currentIndex + 2 < selectedContacts.length) {
             setCurrentIndex(currentIndex + 2);
+            setPageIndex(pageIndex+1);
+            console.log('next',currentIndex, 'page',pageIndex)
         }
     };
     const handlePrev = () => {
         if (currentIndex - 2 >= 0) {
             setCurrentIndex(currentIndex - 2);
+            setPageIndex(pageIndex-1);
         }
+        console.log('prev',currentIndex,'page',pageIndex)
     };
-    // let i=0;
+    
 
     return(
         <>
         <section className={Styles.contacts__content}>
             <div className={Styles.contacts__content_bg}></div>
-            <section className={Styles.contacts__content_section}>
+                <section className={Styles.contacts__content_section}>
                 <div className={Styles.contacts__content_borders}>
                     <div className={Styles.contacts__content_container}>
                         <div className={Styles.contact_header}>
@@ -146,6 +156,7 @@ const ContactsSalesGroup = () =>{
                 <section className={Styles.contacts__content_section2}>
                     <div className={Styles.contacts__content_borders2}>
                         <div className={Styles.contacts__content_container}>
+                            {/* При изменении состояния city происходит перерендер компонента с помощью useEffect */}
                             <div className={`no-scrollbar ${Styles.contacts__list}`}>
                                 {selectedContacts.slice(currentIndex, currentIndex + 2).map(contact => (
                                     <div  key={contact.id} className={Styles.contacts__list_container}>
@@ -163,10 +174,6 @@ const ContactsSalesGroup = () =>{
                                                             <img src={Phone}/>
                                                             <p className={Styles.contacts__phone_text}>{contact.phoneNumber}</p>
                                                         </div>
-                                                        {/* <div className="flex gap-2">
-                                                            <img src={Phone} className={Styles.contacts__phone_icon}/>
-                                                            <p className={Styles.contacts__phone_text}>+7 (495) 737 8282</p>
-                                                        </div> */}
                                                     </div>
                                                     
                                                     <div className="flex gap-2">
@@ -179,7 +186,7 @@ const ContactsSalesGroup = () =>{
                                     </div>
                                 ))}
                             </div>
-                             <div className={Styles.arrowsBottom_container}>  
+                            <div className={Styles.arrowsBottom_container}>  
                                 <button
                                 onMouseEnter={() => setIsLeftActive(true)}
                                 onMouseLeave={() => setIsLeftActive(false)}
@@ -194,9 +201,12 @@ const ContactsSalesGroup = () =>{
                                         // Создаем массив с нужным количеством элементов и итерируем его для отрисовки иконок
                                         [...Array(Math.ceil(selectedContacts.length / 2)).keys()].map((el) => (
                                             <div key={el}>
+                                                {/* <p>{pageIndex}</p>
+                                                <p>{currentIndex}</p>
+                                                <p>{el}</p> */}
                                                 {/* Здесь можно отрисовать иконку */}
                                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect opacity="0.12" width="14" height="14" fill="#227CE4"/>
+                                                    <rect  opacity={pageIndex === el ? '1' : '0.12'} width="14" height="14" fill="#227CE4"/>
                                                 </svg>
                                             </div>
                                         ))
@@ -211,7 +221,44 @@ const ContactsSalesGroup = () =>{
                                 >
                                     <img src={isRightActive ? ArrowRightActive : ArrowRight} alt="Right Arrow"/>
                                 </button>
-                            </div> 
+                            </div>
+                            
+                            
+                            {/* Mobile version */}
+                            <div className={selectedContacts.length === 2
+                                ? `no-scrollbar ${Styles.contacts__list1}`
+                                : selectedContacts.length === 4
+                                ? `no-scrollbar ${Styles.contacts__list4}`
+                                : `no-scrollbar ${Styles.contacts__list3}`}>
+                                {selectedContacts.map(contact => (
+                                    <div  key={contact.id} className={Styles.contacts__list_container}>
+                                        <div className={Styles.contacts__list_element}>
+                                            <div className="flex items-center justify-center">
+                                                <img src={contact.photo} alt={contact.name} className={Styles.contacts__photo}/>
+                                            </div>
+                                            
+                                            <div className={Styles.contacts__list_container_info}>
+                                                <h2 className={Styles.contacts__name}>{contact.name}</h2>
+                                                <p className={Styles.contacts__description}>{contact.post}</p>
+                                                <div className={Styles.contacts__list_container_text}>
+                                                    <div className={Styles.contacts__phone}>
+                                                        <div className="flex gap-2">
+                                                            <img src={Phone}/>
+                                                            <p className={Styles.contacts__phone_text}>{contact.phoneNumber}</p>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div className="flex gap-2">
+                                                        <img src={Mail}/>
+                                                        <p className={Styles.contacts__mail_text}>{contact.mail}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            
                         </div>
                     </div>
                 </section>

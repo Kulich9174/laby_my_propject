@@ -24,6 +24,7 @@ export const theme = {
     }
   },
   screens: {
+    'customContactGallery' : { 'min': '500px'},
     'sm': { 'max': '1050px' },
     // => @media (max-width: 639px) { ... }
     'laptop': { 'min': '1051px', 'max': '1300px' },

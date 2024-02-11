@@ -306,7 +306,7 @@
 .bord{
     border-left: 1px solid rgba(43, 61, 82, 0.30);
     border-right: 1px solid rgba(43, 61, 82, 0.30);
-    border-top:1px solid rgba(43, 61, 82, 0.30);
+    /* border-top:1px solid rgba(43, 61, 82, 0.30); */
     padding-top:8px;
 }
 /* .contacts__list_container:nth-child(1){

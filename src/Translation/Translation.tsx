@@ -120,6 +120,8 @@ i18n
           'city_Tula': 'Tula',
           'city_Astana':'Astana',
           'city_Almaty':'Almaty',
+          //data
+            'OlegName':'Milich Oleg',
         }
     },
         ru: {
@@ -238,6 +240,8 @@ i18n
             
             'city_Astana':'Астана',
             'city_Almaty':'Алматы',
+              //data
+              'OlegName':'Милич Олег',
           }
         }
     },

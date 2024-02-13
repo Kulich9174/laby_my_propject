@@ -5,8 +5,8 @@ import { RootState } from '../../../state/store';
 import { useTranslation } from 'react-i18next';
 
 import { TContact } from "../../../type/contactType";
-import {contactOfUserMoscow} from '../../../data/data';
-import {contactOfUserTula, contactOfUserYaroslavl, contactOfUserAstana, contactOfUserAlmaty} from '../../../data/data';
+import {contactOfUserMoscowEng} from '../../../data/data';
+import {contactOfUserMoscow, contactOfUserTula, contactOfUserYaroslavl, contactOfUserAstana, contactOfUserAlmaty} from '../../../data/data';
 
 import Phone from '../../../assets/images/Phone_icon.svg';
 import Mail from '../../../assets/images/Mail_icon.svg';
@@ -19,6 +19,9 @@ interface CountriesAndCities {
 }
 
 const ContactsSalesGroup = () =>{
+    const { t, i18n } = useTranslation();
+    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
+
     const [arrowCityClass, setArrowCityClass] = useState(Styles.arrow_up);
     const [arrowCountryClass, setArrowCountryClass] = useState(Styles.arrow_up);
 
@@ -33,7 +36,15 @@ const ContactsSalesGroup = () =>{
         city_Almaty : contactOfUserAlmaty
         // Добавьте другие города и их контакты здесь
     };
-    const selectedContacts = contactsByCity[city] || [];
+    const contactsByCityEng: Record<string, TContact[]> = {
+        city_Moscow: contactOfUserMoscowEng,
+        city_Tula: contactOfUserTula,
+        city_Yaroslavl : contactOfUserYaroslavl,
+        city_Astana : contactOfUserAstana,
+        city_Almaty : contactOfUserAlmaty
+        // Добавьте другие города и их контакты здесь
+    };
+    const selectedContacts = (langState == 'ru') ? contactsByCity[city] : contactsByCityEng[city];
 
     const [isMenuCountryVisible, setIsMenuCountryVisible] = useState(false);
     const [isMenuCityVisible, setIsMenuCityVisible] = useState(false);
@@ -43,8 +54,7 @@ const ContactsSalesGroup = () =>{
         'country_Kz': ['city_Astana', 'city_Almaty']
     };
 
-    const { t, i18n } = useTranslation();
-    const langState = useSelector((state: RootState) => state.LangStateReducer.language);
+   
 
     useEffect(() => {
         console.log(city, country);

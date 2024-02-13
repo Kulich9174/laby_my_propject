@@ -1,4 +1,8 @@
 import { TContact } from "../type/contactType";
+import '../Translation/Translation';
+import { useTranslation } from 'react-i18next';
+
+
 import Oleg from '../assets/images/OlegPhoto.png';
 import Maria from '../assets/images/MariaPhoto.png';
 import Olga from '../assets/images/OlgaContact.jpg';
@@ -17,7 +21,7 @@ import Liza from '../assets/images/LizaPhoto.jpg';
 export const contactOfUserMoscow : TContact[] = [
     {
         id:1,
-        name:'Милич Олег',
+        name: 'Милич Олег',
         photo:Oleg,
         post:'Руководитель направления продаж в Моской области',
         phoneNumber:'+7 (495) 737 8585',
@@ -28,6 +32,24 @@ export const contactOfUserMoscow : TContact[] = [
         name:'Силина Мария',
         photo:Maria,
         post:'Руководитель направления продаж в Москве',
+        phoneNumber:'+7 (495) 737 8484',
+        mail:'ffkaragandainfo@info.ru',
+    },
+]
+export const contactOfUserMoscowEng : TContact[] = [
+    {
+        id:1,
+        name: 'Milich Oleg',
+        photo:Oleg,
+        post:'Sales Director in the Moscow region',
+        phoneNumber:'+7 (495) 737 8585',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:2,
+        name:'Silina Maria',
+        photo:Maria,
+        post:'Sales Director in the Moscow region',
         phoneNumber:'+7 (495) 737 8484',
         mail:'ffkaragandainfo@info.ru',
     },

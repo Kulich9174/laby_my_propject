@@ -120,8 +120,13 @@ i18n
           'city_Tula': 'Tula',
           'city_Astana':'Astana',
           'city_Almaty':'Almaty',
-          //data
-            'OlegName':'Milich Oleg',
+
+          'karaganda':'Karaganda',
+          'map_name':'Karaganda — Yandex Maps',
+        //Contact galllery component 
+          'contactGallery_header':'Sales Group',
+          'country':'Country: ',
+          'menager':'Manager for: ',
         }
     },
         ru: {
@@ -240,8 +245,13 @@ i18n
             
             'city_Astana':'Астана',
             'city_Almaty':'Алматы',
-              //data
-              'OlegName':'Милич Олег',
+
+            'karaganda':'Караганда',
+            'map_name':'Караганда — Яндекс Карты',
+              //Contact galllery component 
+              'contactGallery_header':'Группа продаж',
+              'country':'Страна: ',
+              'menager':'Менеджер по: ',
           }
         }
     },

@@ -1,7 +1,4 @@
 import { TContact } from "../type/contactType";
-import '../Translation/Translation';
-import { useTranslation } from 'react-i18next';
-
 
 import Oleg from '../assets/images/OlegPhoto.png';
 import Maria from '../assets/images/MariaPhoto.png';
@@ -54,10 +51,12 @@ export const contactOfUserMoscowEng : TContact[] = [
         mail:'ffkaragandainfo@info.ru',
     },
 ]
+
+
 export const  contactOfUserTula : TContact[] = [
     {
         id:3,
-        name:'Ольга Гришина',
+        name:'Гришина Ольга',
         photo:Olga,
         post:'Руководитель направления продаж в Тульской области',
         phoneNumber:'+7 (495) 737 8484',
@@ -65,17 +64,37 @@ export const  contactOfUserTula : TContact[] = [
     },
     {
         id:4,
-        name:'Елена Гришина',
+        name:'Гришина Елена',
         photo:Elena,
         post:'Руководитель направления продаж в Тульской области',
         phoneNumber:'+7 (495) 737 8484',
         mail:'ffkaragandainfo@info.ru',
     },
 ]
+export const  contactOfUserTulaEng : TContact[] = [
+    {
+        id:3,
+        name:'Grishina Olga',
+        photo:Olga,
+        post:'Sales Director for the Tula Region',
+        phoneNumber:'+7 (495) 737 8484',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:4,
+        name:'Grisina Elena',
+        photo:Elena,
+        post:'Sales Director for the Tula Region',
+        phoneNumber:'+7 (495) 737 8484',
+        mail:'ffkaragandainfo@info.ru',
+    },
+]
+
+
 export const  contactOfUserYaroslavl : TContact[] = [
     {
         id:5,
-        name:'Василиса Пыжева',
+        name:'Пыжева Василиса',
         photo: Vasilisa,
         post:'Руководитель направления продаж в Ярославской области',
         phoneNumber:'+7 (495) 737 8684',
@@ -83,7 +102,7 @@ export const  contactOfUserYaroslavl : TContact[] = [
     },
     {
         id:6,
-        name:'Екатерина Шитова',
+        name:'Шитова Екатерина',
         photo:Ekaterina,
         post:'Руководитель направления продаж в Ярославле',
         phoneNumber:'+7 (495) 737 8784',
@@ -91,17 +110,45 @@ export const  contactOfUserYaroslavl : TContact[] = [
     },
     {
         id:7,
-        name:'Мария Головачева',
+        name:'Головачева Мария',
         photo:MariaG,
         post:'Руководитель направления продаж в Ярославле',
         phoneNumber:'+7 (495) 737 8784',
         mail:'ffkaragandainfo@info.ru',
     },
 ]
+export const  contactOfUserYaroslavlEng : TContact[] = [
+    {
+        id:5,
+        name:'Pyzheva Vasilisa',
+        photo: Vasilisa,
+        post:'Sales Director in the Yaroslavl Region',
+        phoneNumber:'+7 (495) 737 8684',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:6,
+        name:'Shitova Ekaterina',
+        photo:Ekaterina,
+        post:'Sales Director in Yaroslavl',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:7,
+        name:'Golovacheva Maria',
+        photo:MariaG,
+        post:'Sales Director in Yaroslavl',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+]
+
+
 export const  contactOfUserAstana : TContact[] = [
     {
         id:8,
-        name:'Сергей Руденский',
+        name:'Руденский Сергей',
         photo:Sergay,
         post:'Руководитель направления продаж в Астане',
         phoneNumber:'+7 (495) 737 8684',
@@ -109,7 +156,7 @@ export const  contactOfUserAstana : TContact[] = [
     },
     {
         id:9,
-        name:'Алексей Домашев',
+        name:'Домашов Алексей',
         photo:Aleksey,
         post:'Руководитель направления продаж в Астане',
         phoneNumber:'+7 (495) 737 8784',
@@ -117,18 +164,45 @@ export const  contactOfUserAstana : TContact[] = [
     },
     {
         id:10,
-        name:'Василий Гришин',
+        name:'Гришин Василий',
         photo:Vasia,
         post:'Руководитель направления продаж в Астане',
         phoneNumber:'+7 (495) 737 8784',
         mail:'ffkaragandainfo@info.ru',
     },
 ]
+export const  contactOfUserAstanaEng : TContact[] = [
+    {
+        id:8,
+        name:'Rudensky Sergey',
+        photo:Sergay,
+        post:'Sales Director in Astana',
+        phoneNumber:'+7 (495) 737 8684',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:9,
+        name:'Domashov Alexey',
+        photo:Aleksey,
+        post:'Sales Director in Astana',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:10,
+        name:'Grishin Vasily',
+        photo:Vasia,
+        post:'Sales Director in Astana',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+]
+
 
 export const  contactOfUserAlmaty : TContact[] = [
     {
         id:11,
-        name:'Виктор Ардабьев',
+        name:'Ардабьев Виктор',
         photo:Viktor,
         post:'Руководитель направления продаж в городе Алматы',
         phoneNumber:'+7 (495) 737 8684',
@@ -136,7 +210,7 @@ export const  contactOfUserAlmaty : TContact[] = [
     },
     {
         id:12,
-        name:'Артем Соседка',
+        name:'Соседка Артем',
         photo:Artem,
         post:'Руководитель направления продаж в городе Алматы',
         phoneNumber:'+7 (495) 737 8784',
@@ -144,7 +218,7 @@ export const  contactOfUserAlmaty : TContact[] = [
     },
     {
         id:13,
-        name:'Анастасия Ковалева',
+        name:'Ковалева Анастасия',
         photo:Nastia,
         post:'Руководитель направления продаж в городе Алматы',
         phoneNumber:'+7 (495) 737 8784',
@@ -152,9 +226,43 @@ export const  contactOfUserAlmaty : TContact[] = [
     },
     {
         id:14,
-        name:'Елизовета Колодина',
+        name:'Колодина Елизовета',
         photo:  Liza  ,
         post:'Руководитель направления продаж в городе Алматы',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+]
+export const  contactOfUserAlmatyEng : TContact[] = [
+    {
+        id:11,
+        name:'Viktor Ardabyev',
+        photo:Viktor,
+        post:'Sales Director in Almaty',
+        phoneNumber:'+7 (495) 737 8684',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:12,
+        name:'Artem Sosedka',
+        photo:Artem,
+        post:'Sales Director in Almaty',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:13,
+        name:'Anastasia Kovaleva',
+        photo:Nastia,
+        post:'Sales Director in Almaty',
+        phoneNumber:'+7 (495) 737 8784',
+        mail:'ffkaragandainfo@info.ru',
+    },
+    {
+        id:14,
+        name:'Elizaveta Kolodina',
+        photo:Liza,
+        post:'Sales Director in Almaty',
         phoneNumber:'+7 (495) 737 8784',
         mail:'ffkaragandainfo@info.ru',
     },

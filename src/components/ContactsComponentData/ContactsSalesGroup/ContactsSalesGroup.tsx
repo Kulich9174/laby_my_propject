@@ -5,7 +5,7 @@ import { RootState } from '../../../state/store';
 import { useTranslation } from 'react-i18next';
 
 import { TContact } from "../../../type/contactType";
-import {contactOfUserMoscowEng} from '../../../data/data';
+import {contactOfUserMoscowEng, contactOfUserTulaEng, contactOfUserYaroslavlEng, contactOfUserAstanaEng, contactOfUserAlmatyEng} from '../../../data/data';
 import {contactOfUserMoscow, contactOfUserTula, contactOfUserYaroslavl, contactOfUserAstana, contactOfUserAlmaty} from '../../../data/data';
 
 import Phone from '../../../assets/images/Phone_icon.svg';
@@ -38,10 +38,10 @@ const ContactsSalesGroup = () =>{
     };
     const contactsByCityEng: Record<string, TContact[]> = {
         city_Moscow: contactOfUserMoscowEng,
-        city_Tula: contactOfUserTula,
-        city_Yaroslavl : contactOfUserYaroslavl,
-        city_Astana : contactOfUserAstana,
-        city_Almaty : contactOfUserAlmaty
+        city_Tula: contactOfUserTulaEng,
+        city_Yaroslavl : contactOfUserYaroslavlEng,
+        city_Astana : contactOfUserAstanaEng,
+        city_Almaty : contactOfUserAlmatyEng,
         // Добавьте другие города и их контакты здесь
     };
     const selectedContacts = (langState == 'ru') ? contactsByCity[city] : contactsByCityEng[city];
@@ -54,7 +54,6 @@ const ContactsSalesGroup = () =>{
         'country_Kz': ['city_Astana', 'city_Almaty']
     };
 
-   
 
     useEffect(() => {
         console.log(city, country);
@@ -112,23 +111,7 @@ const ContactsSalesGroup = () =>{
         }
         console.log('prev',currentIndex,'page',pageIndex)
     };
-    
-    // const [isWideScreen, setIsWideScreen] = useState(false);
 
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setIsWideScreen(window.innerWidth <= 500);
-//     };
-
-//     // Вызов при монтировании компонента
-//     handleResize();
-    
-//     // Подписка на событие изменения размера окна
-//     window.addEventListener('resize', handleResize);
-    
-//     // Отписка от события при размонтировании компонента
-//     return () => window.removeEventListener('resize', handleResize);
-//   }, []);
 
     return(
         <>
@@ -139,11 +122,11 @@ const ContactsSalesGroup = () =>{
                     <div className={Styles.contacts__content_container}>
                         <div className={Styles.contact_header}>
                             <p className={`flowerLogo ${Styles.contactsGroup__text}`}>Flower Fracht Karaganda</p>
-                            <h1 className={Styles.contactsGroup__header}>Группы продаж</h1>
+                            <h1 className={Styles.contactsGroup__header}>{t('contactGallery_header')}</h1>
                         </div>
                         <div className={Styles.contacts_container_inputs}>
                             <div className={Styles.contacts__container_element}>
-                                <p className={Styles.contacts__inputs_paragraph}>Страна:</p>
+                                <p className={Styles.contacts__inputs_paragraph}>{t('country')}</p>
                                 <div className="relative">
                                     <div className="flex gap-[10px]">
                                         <p className="">{t(country)}</p>
@@ -160,7 +143,7 @@ const ContactsSalesGroup = () =>{
                                 </div>
                             </div>
                             <div className={Styles.contacts__container_element}>
-                                <p className={Styles.contacts__inputs_paragraph}>Менеджер по:</p>
+                                <p className={Styles.contacts__inputs_paragraph}>{t('menager')}</p>
                                 <div className="relative">
                                     <div className="flex gap-[10px]">
                                         <p className="">{t(city)}</p>

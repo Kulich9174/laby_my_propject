@@ -9,3 +9,27 @@ export interface TContact {
 export interface TContactList{
     contactOfUser:TContact[]
 }
+
+export interface TScheduleOfWarehousesStreet {
+    idCity:number,
+    idStreet:number,
+    adress : string,
+    workWeekdays : string,
+    workHolidays : string,
+}
+
+export interface TScheduleOfWarehousesCityList {
+    scheduleOfDepartmentCity : TScheduleOfWarehousesStreet[]
+}
+
+
+export interface TContactWarehouse {
+    idCity:number,
+    idStreet:number,
+    idContact:number,
+    phone : string,
+    name : string,
+}
+export interface TContactWarehouseList {
+    contactOfDepartment : TContactWarehouse[]
+}

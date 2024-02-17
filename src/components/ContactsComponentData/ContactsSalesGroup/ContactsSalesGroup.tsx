@@ -4,6 +4,10 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../../state/store';
 import { useTranslation } from 'react-i18next';
 
+import { useDispatch } from "react-redux";
+import { setCountryValue } from "../../../state/CountryContactReducer/CountryReducer";
+import { setCityValue } from "../../../state/CountryContactReducer/CityManagerReducer";
+
 import { TContact } from "../../../type/contactType";
 import {contactOfUserMoscowEng, contactOfUserTulaEng, contactOfUserYaroslavlEng, contactOfUserAstanaEng, contactOfUserAlmatyEng} from '../../../data/data';
 import {contactOfUserMoscow, contactOfUserTula, contactOfUserYaroslavl, contactOfUserAstana, contactOfUserAlmaty} from '../../../data/data';
@@ -14,6 +18,7 @@ import ArrowRight from '../../../assets/images/RightNotActive.svg';
 import ArrowLeft from '../../../assets/images/LeftNotActive.svg';
 import ArrowLeftActive from '../../../assets/images/Left.svg';
 import ArrowRightActive from '../../../assets/images/Right.svg';
+
 interface CountriesAndCities {
     [key: string]: string[];
 }
@@ -21,12 +26,13 @@ interface CountriesAndCities {
 const ContactsSalesGroup = () =>{
     const { t, i18n } = useTranslation();
     const langState = useSelector((state: RootState) => state.LangStateReducer.language);
+    const countryState = useSelector((state: RootState) => state.CountryReducer.value);
+    const cityState = useSelector((state:RootState)=> state.CityManagerReducer.value);
+    const dispatch = useDispatch();
 
     const [arrowCityClass, setArrowCityClass] = useState(Styles.arrow_up);
     const [arrowCountryClass, setArrowCountryClass] = useState(Styles.arrow_up);
 
-    const [country, setCountry] = useState('country_Russia');
-    const [city, setCity] = useState('city_Moscow');
 
     const contactsByCity: Record<string, TContact[]> = {
         city_Moscow: contactOfUserMoscow,
@@ -44,28 +50,33 @@ const ContactsSalesGroup = () =>{
         city_Almaty : contactOfUserAlmatyEng,
         // Добавьте другие города и их контакты здесь
     };
-    const selectedContacts = (langState == 'ru') ? contactsByCity[city] : contactsByCityEng[city];
+    const selectedContacts = (langState == 'ru') ? contactsByCity[cityState] : contactsByCityEng[cityState];
 
     const [isMenuCountryVisible, setIsMenuCountryVisible] = useState(false);
     const [isMenuCityVisible, setIsMenuCityVisible] = useState(false);
 
     const countriesAndCities: CountriesAndCities = {
         'country_Russia': ['city_Moscow', 'city_Yaroslavl', 'city_Tula'],
-        'country_Kz': ['city_Astana', 'city_Almaty']
+        'country_Kz': ['city_Astana', 'city_Almaty'],
+        // 'country_Uzb' : [],
+        // 'country_Azerb' : [],
+        // 'country_Turkmenistan' : [],
+        // 'country_Armenia' : [],
+        // 'country_Belorussia' : ['city_Minsk'],
     };
 
 
     useEffect(() => {
-        console.log(city, country);
+        console.log(cityState, countryState);
         i18n.changeLanguage(langState);
         // Сбросить выбранный город при смене страны
-        setCity(countriesAndCities[country][0]);
+        dispatch(setCityValue(countriesAndCities[countryState][0]))
         setPageIndex(0);
-    }, [langState, i18n, country]);
+    }, [langState, i18n, countryState]);
     
     useEffect(()=>{
         setPageIndex(0);
-    },[city])
+    },[cityState])
 
     const toggleCountryArrow = () => {
         setIsMenuCountryVisible(!isMenuCountryVisible);
@@ -77,17 +88,18 @@ const ContactsSalesGroup = () =>{
     };
 
     // Обработчики для выбора страны, сохраняем ключи перевода в состояние
-    const handleSetCountry = (key : string) => {
-        setCountry(key);
+    const handleSetCountry = (key : string) => {       
+        dispatch(setCountryValue(key));
+
         setIsMenuCountryVisible(!isMenuCountryVisible);
         setCurrentIndex(0);
     };
     const handleSetCity= (key : string) => {
-        setCity(key);
+        dispatch(setCityValue(key));
         setIsMenuCityVisible(!isMenuCityVisible);
         setCurrentIndex(0);
     };
-    const cityButtons = countriesAndCities[country].map((cityKey) => (
+    const cityButtons = countriesAndCities[countryState].map((cityKey) => (
         <button key={cityKey} className={Styles.button__country_menu_element} onClick={() => handleSetCity(cityKey)}>{t(cityKey)}</button>
     ));
 
@@ -111,7 +123,9 @@ const ContactsSalesGroup = () =>{
         }
         console.log('prev',currentIndex,'page',pageIndex)
     };
-
+    useEffect(()=>{
+        console.log('country value redux', countryState)
+    }, [countryState])
 
     return(
         <>
@@ -129,7 +143,7 @@ const ContactsSalesGroup = () =>{
                                 <p className={Styles.contacts__inputs_paragraph}>{t('country')}</p>
                                 <div className="relative">
                                     <div className="flex gap-[10px]">
-                                        <p className="">{t(country)}</p>
+                                        <p className="">{t(countryState)}</p>
                                         <div className=' sm:pr-[1%]'>
                                             <button id='useref' className={Styles.button} onClick={toggleCountryArrow}> 
                                                 <div className={arrowCountryClass}></div>
@@ -146,7 +160,7 @@ const ContactsSalesGroup = () =>{
                                 <p className={Styles.contacts__inputs_paragraph}>{t('menager')}</p>
                                 <div className="relative">
                                     <div className="flex gap-[10px]">
-                                        <p className="">{t(city)}</p>
+                                        <p className="">{t(cityState)}</p>
                                         <div className=' sm:pr-[1%]'>
                                             <button id='useref' className={Styles.button} onClick={toggleCityArrow}> 
                                                 <div className={arrowCityClass}></div>
@@ -270,7 +284,6 @@ const ContactsSalesGroup = () =>{
                                     ))}
                                 </div>
                             </div>
-                           
                         </div>
                     </div>
                 </section>

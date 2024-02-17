@@ -5,6 +5,8 @@ import formDataStateReducer from './FormDataReducer/FormDataReducer';
 import calcCountryStateReducer from './CalcuationStateReducer/CalcCountryReducer';
 import CalcDateReducer from './CalcuationStateReducer/CalcDateReducer';
 import LangStateReducer from './Language/LangStateReducer';
+import countryReducer from './CountryContactReducer/CountryReducer';
+import CityManagerReducer from './CountryContactReducer/CityManagerReducer';
 export const store = configureStore({
     reducer:{
         headerMenuState : headerMenuStateReducer,
@@ -13,6 +15,8 @@ export const store = configureStore({
         CalcDateReducer:CalcDateReducer,
         formDataStateReducer : formDataStateReducer,
         agreementState : agreementStateReducer,
+        CountryReducer : countryReducer,
+        CityManagerReducer : CityManagerReducer,
     }
 }
 )

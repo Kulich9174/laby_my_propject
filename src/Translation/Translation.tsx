@@ -114,6 +114,11 @@ i18n
 
           'country_Russia':'Russia',
           'country_Kz':'Kazahstan',
+          'country_Belorussia' : 'Belorussia',
+          'country_Armenia': 'Armenia',
+          'country_Turkmenistan' : 'Turkmenistan',
+          'country_Azer' : 'Azerbaijan',
+          'country_Uzbek' : 'Uzbekistan',
 
           'city_Moscow':'Moscow',
           'city_Yaroslavl':'Yaroslavl',
@@ -238,6 +243,11 @@ i18n
 
             "country_Russia": "Россия",
             "country_Kz": "Казахстан",
+            'country_Belorussia' : 'Белорусь',
+            'country_Armenia': 'Армения',
+            'country_Turkmenistan' : 'Туркменистан',
+            'country_Azer' : 'Азербайджан',
+            'country_Uzbek' : 'Узбекистан',
 
             'city_Moscow':'Москва',
             'city_Yaroslavl':'Ярославль',

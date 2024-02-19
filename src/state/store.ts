@@ -7,6 +7,7 @@ import CalcDateReducer from './CalcuationStateReducer/CalcDateReducer';
 import LangStateReducer from './Language/LangStateReducer';
 import countryReducer from './CountryContactReducer/CountryReducer';
 import CityManagerReducer from './CountryContactReducer/CityManagerReducer';
+import countryWarehouseSlice from './CountryWarehouseReducer/countryWarehouseSlice';
 export const store = configureStore({
     reducer:{
         headerMenuState : headerMenuStateReducer,
@@ -17,6 +18,7 @@ export const store = configureStore({
         agreementState : agreementStateReducer,
         CountryReducer : countryReducer,
         CityManagerReducer : CityManagerReducer,
+        CountryWarehouseSlice : countryWarehouseSlice,
     }
 }
 )

@@ -23,6 +23,9 @@
     border-left: 1px solid rgba(43, 61, 82, 0.30);
     border-right: 1px solid rgba(43, 61, 82, 0.30);
 }
+.warehouse__content_container{
+    max-width:1600px;
+}
 .warehouse_countryContainer{
     display:flex;
     flex-direction:column;
